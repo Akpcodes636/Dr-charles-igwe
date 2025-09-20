@@ -44,8 +44,9 @@ const Hero = () => {
         <div className="flex items-center justify-center gap-[53px] md:gap-[93px] lg:gap-[93px]">
           {heroImage.map((i, j) => {
             return (
-              <div className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]">
+              <div className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]"   key={j}>
                 <Image
+              
                   src={i.image}
                   alt=""
                   width={500}
