@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --gradient-accent: linear-gradient(93.12deg, #e28101 0%, #6a0dad 111.11%);
+  --gradient-accent-dark: linear-gradient(
+    93.12deg,
+    #b86400 0%,
+    #4a0a80 111.11%
+  ); /* darker version */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-orange: #fb8c00;
+  --color-blue: #16366f;
+  --font-allison: "Allison", cursive;
+  --font-poppins: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .font-allison {
+    font-family: var(--font-allison);
+  }
+
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .container-sm {
+    max-width: 1400px;
+    margin: 0 auto;
+    @apply px-4 sm:px-8;
+  }
+
+  h2 {
+    @apply text-[32px] font-semibold text-[#000000] leading-[100%];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .bg-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* hover state */
+  .hover-bg-accent:hover {
+    background: var(--gradient-accent-dark);
+  }
+  body {
+    overflow-x: hidden;
+    font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+    background-color: black;
+  }
+  /* .bg-image-hero {
+    background-image: url("/images/Igwe-7.png");
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat;
+  } */ 
+
+  
 }
+
+/* 
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    @apply px-4 sm:px-8;
+  }
+
+
+  h2 {
+    @apply text-[32px] font-semibold text-[#000000] leading-[100%] tracking-0
+  }
+
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  background-color: blue;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-allison), cursive;
+}
+
+
+
+.color {
+  background-color: red;
+  font-size: 80px;
+} */
