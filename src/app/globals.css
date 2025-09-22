@@ -20,6 +20,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /* border: 1px solid orange; */
   }
   .font-allison {
     font-family: var(--font-allison);
@@ -59,55 +60,8 @@
     font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
     background-color: black;
   }
-  /* .bg-image-hero {
-    background-image: url("/images/Igwe-7.png");
-    background-size: cover;
-    /* background-position: center; */
-    /* background-repeat: no-repeat;
-  } */ 
-
-  
-}
-
-/* 
-@layer base {
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  .progressBar::-webkit-slider-runnable-track {
+    appearance: #ffffff80;
+    width: 100px;
   }
-
-  html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    @apply px-4 sm:px-8;
-  }
-
-
-  h2 {
-    @apply text-[32px] font-semibold text-[#000000] leading-[100%] tracking-0
-  }
-
 }
-
-body {
-  overflow-x: hidden;
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
-  background-color: blue;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-allison), cursive;
-}
-
-
-
-.color {
-  background-color: red;
-  font-size: 80px;
-} */

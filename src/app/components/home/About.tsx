@@ -9,7 +9,7 @@ const About = () => {
   const images = [
     "/images/Igwe-10.png",
     "/images/Igwe-10.png",
-    "images/Igwe-11.png",
+    "images/Igwe-10.png",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -22,14 +22,14 @@ const About = () => {
             About Me
           </h3>
           <div className="flex items-center gap-[30px] flex-col md:flex-col lg:flex-row">
-            <div>
-              <div className="w-[358px] md:w-[500px]  lg:w-[605px] h-[270px] md:h-[380px] lg:h-[456px]">
+            <div className="">
+              <div className="w-full mx-auto max-w-[470px] md:max-w-[500px] lg:max-w-[605px] h-[270px] md:h-[380px] lg:h-[456px]">
                 <Image
                   src={images[currentIndex]}
                   width={500}
                   height={500}
                   alt="Picture of Dr Charles Igwe"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <Pagination

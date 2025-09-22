@@ -46,7 +46,6 @@ const Hero = () => {
             return (
               <div className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]"   key={j}>
                 <Image
-              
                   src={i.image}
                   alt=""
                   width={500}
