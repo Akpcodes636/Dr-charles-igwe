@@ -3,6 +3,7 @@ import About from "../components/home/About";
 import Services from "../components/home/Service";
 import Community from "../components/home/Community";
 import Accountability from "../components/home/Accountability";
+import Testimonies from "../components/home/Testimonies";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       <Services />
       <Community />
       <Accountability />
+      <Testimonies />
     </div>
   );
 }

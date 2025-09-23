@@ -29,7 +29,7 @@ const About = () => {
                   width={500}
                   height={500}
                   alt="Picture of Dr Charles Igwe"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover lg:object-contain"
                 />
               </div>
               <Pagination

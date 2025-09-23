@@ -100,3 +100,18 @@ export const communityText = [
     content:"Charles Igwe shares insights on leading effectively in a digital world."
   }
 ]
+
+export const AccountabilityText = [
+  {
+    icons:"/icons/Sign.png",
+    title:"Sign Up – simple form to join the community."
+  },
+  {
+    icons:"/icons/Handshake.png",
+    title:"Set Your Goals – define your professional accountability targets."
+  },
+  {
+    icons:"/icons/target.png",
+    title:"Get Paired – matched with accountability partners who share your drive."
+  }
+]

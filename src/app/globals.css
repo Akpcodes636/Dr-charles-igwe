@@ -64,4 +64,15 @@
     appearance: #ffffff80;
     width: 100px;
   }
+  /* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;  
+  display: none;   /* Firefox */
+}
+
 }
