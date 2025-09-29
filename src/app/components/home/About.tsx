@@ -17,7 +17,7 @@ const About = () => {
     <section className="">
       <div>
         <SubHeader text="The VALUE Enthusiast" />
-        <div className="py-[40px] container-sm mx-auto">
+        <div className="py-[40px] container-sm mx-auto bg-[#0A1F44]">
           <h3 className="text-[18px] md:text-[28px] lg:text-[30px] font-medium text-center text-[#FFFFFF] mb-[16px] md:mb-[28px] lg:mb-[48px]">
             About Me
           </h3>
@@ -29,7 +29,7 @@ const About = () => {
                   width={500}
                   height={500}
                   alt="Picture of Dr Charles Igwe"
-                  className="w-full h-full object-cover lg:object-contain"
+                  className="w-full h-full object-contain lg:object-contain"
                 />
               </div>
               <Pagination
@@ -38,7 +38,7 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="text-[#FFFFFF] font-normal text-[16px] leading-[24px] w-full max-w-[358px] md:max-w-[480px]  mx-auto lg:max-w-[605px] pt-[32px] pb-[40px]">
+              <p className="text-[#FFFFFF] font-normal text-[16px] leading-[24px] w-full max-w-[358px] md:max-w-[500px]  mx-auto lg:max-w-[605px] pt-[32px] pb-[40px]">
                 Dr. Charles Igwe is a Program Manager, educator, and leadership
                 coach with over a decade of experience leading complex projects
                 and developing talent in highly regulated industries. As the

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Allison, Poppins } from "next/font/google";
 import "./globals.css";
 
+
 const allison = Allison({
   variable: "--font-allison",
   weight: "400", // Allison only has 400

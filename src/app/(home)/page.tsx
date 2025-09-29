@@ -4,6 +4,8 @@ import Services from "../components/home/Service";
 import Community from "../components/home/Community";
 import Accountability from "../components/home/Accountability";
 import Testimonies from "../components/home/Testimonies";
+import Booking from "../components/home/Booking";
+import Footer from "../components/Footer";
 
 export default function Page() {
   return (
@@ -15,6 +17,8 @@ export default function Page() {
       <Community />
       <Accountability />
       <Testimonies />
+      <Booking />
+      <Footer bgColor="bg-[#0A1F44]" />
     </div>
   );
 }

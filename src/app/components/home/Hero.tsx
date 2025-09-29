@@ -7,7 +7,7 @@ import Header from "../Header";
 
 const Hero = () => {
   return (
-    <section className=" bg-[url(/images/Igwe-9.png)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
+    <section className="bg-[url(/images/Igwe-9.png)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
       <Header />
       <div className="container-sm  pb-[109px]">
         <div className="mb-[44px] md:mb-[56px] lg:mb-[96px]">

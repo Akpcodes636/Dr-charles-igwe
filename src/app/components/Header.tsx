@@ -17,7 +17,7 @@ const Header = () => {
     },
     {
       title: "About",
-      router: "/About",
+      router: "/about",
     },
     {
       title: "Services",
@@ -30,11 +30,11 @@ const Header = () => {
     },
     {
       title: "Blog",
-      router: "/Blog",
+      router: "/blog",
     },
     {
       title: "Contact",
-      router: "/Contact",
+      router: "/contact",
     },
   ];
 

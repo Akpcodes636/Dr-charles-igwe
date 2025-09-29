@@ -20,7 +20,7 @@ const Services = () => {
               />
             );
           })} */}
-      <div className="py-[40px] container-sm mx-auto">
+      <div className="py-[40px] container-sm mx-auto bg-[#0A1F44]">
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]">
             <div className="w-full mx-auto max-w-[358px] md:max-w-[393px]  h-[232px] bg-[#16366F] rounded-[5px]">
@@ -41,7 +41,7 @@ const Services = () => {
 
                   {/* Text Content */}
                   <div>
-                    <h3 className="text-[22px] text-white font-medium leading-[28px] mb-[8px]">
+                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px]  xl:text-[22px] text-white font-medium leading-[28px] mb-[8px]">
                       Public Speaking
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2">
@@ -77,7 +77,7 @@ const Services = () => {
 
                   {/* Text Content */}
                   <div>
-                    <h3 className="text-[22px] text-white font-medium leading-[28px] mb-[8px]">
+                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px]  xl:text-[22px]  text-white font-medium leading-[28px] mb-[8px]">
                       Mentorship & Coaching
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2">
@@ -114,7 +114,7 @@ const Services = () => {
 
                   {/* Text Content */}
                   <div>
-                    <h3 className="text-[22px] text-white font-medium leading-[28px] mb-[8px]">
+                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px]  xl:text-[22px]  text-white font-medium leading-[28px] mb-[8px]">
                       Podcast & Fireside Chat Host
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2">
@@ -150,7 +150,7 @@ const Services = () => {
 
                   {/* Text Content */}
                   <div>
-                    <h3 className="text-[22px] text-white font-medium leading-[28px] mb-[8px] ">
+                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px]  xl:text-[22px]  text-white font-medium leading-[28px] mb-[8px] ">
                       Leadership Development & Training Programs
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2">
@@ -196,7 +196,7 @@ const Services = () => {
 
                   {/* Text Content */}
                   <div>
-                    <h3 className="text-[22px] text-white font-medium leading-[28px] mb-[8px]">
+                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px]  text-white font-medium leading-[28px] mb-[8px]">
                       Project & Program Management Advisory
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2">

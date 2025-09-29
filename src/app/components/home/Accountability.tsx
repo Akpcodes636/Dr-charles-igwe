@@ -8,7 +8,7 @@ const Accountability = () => {
   return (
     <section>
       <SubHeader text="Join the Accountability Community" />
-      <div className="container-sm mx-auto">
+      <div className="container-sm mx-auto bg-[#0A1F44]">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[40px] lg:gap-[27px] pt-[32px] pb-[162px] md:py-[89px] lg:py-[80px]">
           <div
             className="w-full max-w-[361px] md:max-w-[480px] lg:max-w-[608px] h-[320px] md:h-[420px]

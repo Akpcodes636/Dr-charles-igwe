@@ -8,7 +8,7 @@ const Community = () => {
     <section>
       <div>
         <SubHeader text="Fireside Chat Podcast" />
-        <div className="py-[40px] md:py-[80px] container-sm mx-auto">
+        <div className="py-[40px] md:py-[80px] container-sm mx-auto bg-[#0A1F44]">
           <div className="flex items-center justify-between gap-[30px] flex-col md:flex-col lg:flex-row">
             <div className="max-w-[358px] md:max-w-[480px] lg:max-w-[500px] xl:max-w-[605px] w-full mx-auto h-[240px] md:h-[400px] lg:h-[640px] rounded-[10px]">
               <Image

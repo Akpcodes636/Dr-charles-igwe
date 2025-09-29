@@ -1,6 +1,6 @@
 "use client";
-
 import TestimonialCard from "../ui/TestimonialCard";
+
 
 const Testimonies = () => {
   return (
@@ -9,7 +9,7 @@ const Testimonies = () => {
         <h3 className="text-[24px] md:text-[28px] lg:text-[32px] font-medium md:font-semibold lg:font-semibold leading-[100%] text-center text-[#000000] mb-[32px]">
           What People Say About Charles Igwe
         </h3>
-        <div className="pt-4 flex gap-[4px] overflow-x-auto  scrollbar-hide">
+        <div className="pt-4 flex gap-[4px] overflow-x-auto hide-scroll">
           <TestimonialCard
             image="/images/Testimonial.png"
             text="“Dr. Igwe is an authentic leader, impactful communicator, and catalytic voice for our time.”"

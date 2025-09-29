@@ -58,21 +58,33 @@
   body {
     overflow-x: hidden;
     font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: #0A1F44;
   }
   .progressBar::-webkit-slider-runnable-track {
     appearance: #ffffff80;
     width: 100px;
   }
-  /* globals.css */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  .hero-bg {
+    background-image: url("/images/mobile-contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .medium-bg {
+    background-color: red;
+    /* background-image: url("/images/Hero.png"); */
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: bottom center;
+  }
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;  
-  display: none;   /* Firefox */
-}
-
+@layer utilities {
+  .hide-scroll {
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .hide-scroll::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+  }
 }
