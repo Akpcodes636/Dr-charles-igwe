@@ -1,17 +1,20 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 interface BlogCardProps {
+  slug: string;
   img: string;
   title: string;
   text: string;
   avatar: string;
   authorName: string;
-  date:string
+  date: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
+  slug,
   img,
   title,
   text,
@@ -22,7 +25,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <div className="flex flex-col">
       {/* Blog image */}
-      <div className="w-full h-[160px] md:h-[250px] lg:h-[312px] rounded-[10px] overflow-hidden">
+      <div className="w-full h-[160px] md:h-[250px] lg:h-[216px] rounded-[10px] overflow-hidden">
         <Image
           src={img}
           width={600}
@@ -37,7 +40,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#000] mb-[8px]">
           {title}
         </h3>
-        <p className="text-[16px] md:text-[18px] text-[#000000B2] mb-[12px]">
+        <p className="text-[16px] md:text-[18px] text-[#000000B2] mb-[12px] line-clamp-2">
           {text}
         </p>
 
@@ -61,11 +64,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </p>
         </div>
 
-        {/* Read more */}
-        <div className="flex items-center gap-2 cursor-pointer">
+        {/* Read more link */}
+        <Link href={`/blog/${slug}`} className="flex items-center gap-2 cursor-pointer">
           <p className="text-[16px] text-[#E28101]">Read more</p>
           <FaArrowRight color="#E28101" />
-        </div>
+        </Link>
       </div>
     </div>
   );

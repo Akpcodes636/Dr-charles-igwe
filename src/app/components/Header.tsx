@@ -21,7 +21,7 @@ const Header = () => {
     },
     {
       title: "Services",
-      router: "/Services",
+      router: "/services",
     },
     {
       title: "Gallery",

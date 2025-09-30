@@ -121,51 +121,58 @@ export const AccountabilityText = [
 
 export const blogContent = [
   {
+    slug: "continuous-improvement-workplace",
     img: "/images/Blog-6.png",
     title: "Why Continuous Improvement Matters in Today’s Workplace",
     text: "From Lean to Agile, continuous improvement keeps organizations...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
   {
+    slug: "skills-for-emerging-leaders",
     img: "/images/Blog-5.png",
     title: "Top 5 Skills Every Emerging Leader Needs",
     text: "Communication, resilience, and strategic thinking are just the beginning...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
   {
+    slug: "mentorship-vs-coaching",
     img: "/images/blog-4.png",
     title: "Mentorship vs. Coaching: What’s the Difference?",
     text: "Both empower growth, but they serve different purposes. Learn how to choose the right path...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
   {
+    slug: "leading-with-empathy",
     img: "/images/blog-7.png",
     title: "Leading with Empathy: The Future of Leadership",
     text: "Empathy isn’t soft—it’s a strategic advantage that fosters trust, loyalty, and high-performing ...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
   {
+    slug: "fireside-chats-global-leaders",
     img: "/images/blog-3.png",
     title: "Lessons from Hosting Fireside Chats with Global Leaders",
     text: "Behind the mic, authentic conversations reveal timeless truths about innovation, leadership...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
   {
+    slug: "project-management-beyond-tools",
     img: "/images/Blog-2.png",
     title: "Project Management Beyond the Tools",
     text: "True project success depends on people, not just frameworks. Here’s why power skills matter ...",
     avatar: "/images/avatar.png",
     authorName: "Dr. Charles Igwe",
-    date:"10 Sept 2025"
+    date: "10 Sept 2025",
   },
 ];
+

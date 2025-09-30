@@ -15,7 +15,7 @@ const ServicesHero = () => {
       <div
         className="
           relative
-          h-[416px] sm:h-[320px] md:h-[330px] lg:h-[360px]
+          h-[416px]  sm:h-[420px] md:h-[330px] lg:h-[360px]
           bg-[url('/images/mobile-contact.png')]
           md:bg-[url('/images/Hero.png')]
           bg-no-repeat bg-cover bg-center
@@ -30,7 +30,7 @@ const ServicesHero = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative py-[16px] md:py-[56px] lg:py-[96px]">
+        <div className="relative py-[16px] sm:py-[0px] md:py-[56px] lg:py-[96px]">
           <h3 className="text-white text-center font-semibold text-[22px] md:text-[30px] lg:text-[38px] leading-[28px] md:leading-[100%] lg:leading-[100%] mb-[8px]">
             Services
           </h3>
@@ -38,8 +38,8 @@ const ServicesHero = () => {
             Empowering individuals and organizations through leadership,
             mentorship, and transformative learning experiences.
           </p>
-          <div className="flex flex-col gap-y-[32px] md:flex-row md:gap-x-[60px] md:items-center md:justify-center">
-            <Button type="button" style="danger">
+          <div className="flex flex-col gap-y-[32px] md:flex-row md:gap-x-[60px] items-center justify-center  md:items-center md:justify-center">
+            <Button type="button" style="danger" css="w-[217px]">
               Book Charles to Speak
             </Button>
             <Button type="button" style="nobg" css="w-[217px]">
