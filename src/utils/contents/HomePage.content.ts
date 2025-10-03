@@ -176,3 +176,113 @@ export const blogContent = [
   },
 ];
 
+
+export const podcastContent = [
+  {
+    img:"/images/podcast-2.png",
+    title:"Leading Through Uncertainty",
+    author:"Sarah Park, CEO",
+    date:"10 Sept 2025" 
+  },
+  {
+    img:"/images/podcast-3.png",
+    title:"The Future of Work",
+    author:"Michael Johnson, Senior VP",
+    date:"10 Sept 2025" 
+  },
+  {
+    img:"/images/podcast-4.png",
+    title:"Innovation in a Digital Age",
+    author:"Emma Brown, Product Startegist",
+    date:"10 Sept 2025" 
+  },
+
+]
+
+
+export const eventContent = [
+  {
+    title:"The Growth Mindset Sessions",
+    img:"/images/podcast-8.png",
+    authur:"Sarah Park, CEO",
+    date:"25 Nov 2025"
+  },
+  {
+    title:"Innovation Unplugged",
+    img:"/images/podcast-10.png",
+    authur:"Sarah Park, CEO",
+    date:"25 Nov 2025"
+  },
+  {
+    title:"The Leadership Exchange",
+    img:"/images/podcast-9.png",
+    authur:"Sarah Park, CEO",
+    date:"25 Nov 2025"
+  }
+]
+
+export const events = [
+  {
+    eventSlug: "leadership-summit-2024",
+    title: "Leadership Summit 2024",
+    img: "/images/podcast-1.png",
+    location: "Toronto, Canada",
+    date: "March 15, 2024",
+  },
+  {
+    eventSlug: "tech-conference-2024",
+    title: "Tech Conference 2024",
+    img: "/images/podcast-1.png",
+    location: "New York, USA",
+    date: "April 2, 2024",
+  },
+  {
+    eventSlug: "startup-expo-2024",
+    title: "Startup Expo 2024",
+    img: "/images/podcast-1.png",
+    location: "London, UK",
+    date: "May 10, 2024",
+  },
+  {
+    eventSlug: "global-health-forum-2024",
+    title: "Global Health Forum 2024",
+    img: "/images/podcast-1.png",
+    location: "Berlin, Germany",
+    date: "June 20, 2024",
+  },
+  {
+    eventSlug: "ai-innovation-week-2024",
+    title: "AI Innovation Week 2024",
+    img: "/images/podcast-1.png",
+    location: "San Francisco, USA",
+    date: "July 8, 2024",
+  },
+  {
+    eventSlug: "climate-action-summit-2024",
+    title: "Climate Action Summit 2024",
+    img: "/images/podcast-1.png",
+    location: "Paris, France",
+    date: "August 15, 2024",
+  },
+  {
+    eventSlug: "creative-leadership-forum-2024",
+    title: "Creative Leadership Forum 2024",
+    img: "/images/podcast-1.png",
+    location: "Amsterdam, Netherlands",
+    date: "September 5, 2024",
+  },
+  {
+    eventSlug: "future-of-education-2024",
+    title: "Future of Education 2024",
+    img: "/images/podcast-1.png",
+    location: "Sydney, Australia",
+    date: "October 12, 2024",
+  },
+  {
+    eventSlug: "women-in-tech-2024",
+    title: "Women in Tech 2024",
+    img: "/images/podcast-1.png",
+    location: "Dubai, UAE",
+    date: "November 18, 2024",
+  },
+];

@@ -2,15 +2,27 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { X } from "lucide-react"; // Close icon
-// import { navLinks } from "@/utils/contents/HomePage.content";
+import { X } from "lucide-react";
 import { IoIosArrowDown } from "react-icons/io";
 import Button from "./ui/Button";
 
-const Header = () => {
-  const [openNav, setOpenNav] = useState(false);
+interface NavChild {
+  title: string;
+  router: string;
+}
 
-  const navLinks = [
+interface NavLink {
+  title: string;
+  router?: string;
+  icon?: React.ReactNode;
+  children?: NavChild[];
+}
+
+const Header = () => {
+  const [openNav, setOpenNav] = useState<boolean>(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const navLinks: NavLink[] = [
     {
       title: "Home",
       router: "/",
@@ -25,8 +37,11 @@ const Header = () => {
     },
     {
       title: "Gallery",
-      router: "/Gallery",
       icon: <IoIosArrowDown />,
+      children: [
+        { title: "Events", router: "/gallery/events" },
+        { title: "Kingdom Arena", router: "/gallery/kingdom-arena" },
+      ],
     },
     {
       title: "Blog",
@@ -38,8 +53,15 @@ const Header = () => {
     },
   ];
 
-  const closeNav = () => setOpenNav(false);
+  const closeNav = () => {
+    setOpenNav(false);
+    setOpenDropdown(null);
+  };
   const openNavMenu = () => setOpenNav(true);
+
+  const toggleDropdown = (title: string) => {
+    setOpenDropdown(openDropdown === title ? null : title);
+  };
 
   return (
     <header className="bg-transparent md:bg-transparent lg:bg-white xl:bg-white p-[12px]">
@@ -70,8 +92,7 @@ const Header = () => {
             openNav
               ? "translate-x-0 duration-150"
               : "duration-150 max-lg:translate-x-[200%]"
-          } fixed left-0 right-0 top-0 z-50 min-h-screen px-8 pt-10 pb-20 max-lg:bg-white lg:relative lg:left-0 lg:right-0 lg:bottom-0 
-     xl:static lg:flex-col lg:min-h-full lg:p-0`}
+          } fixed left-0 right-0 top-0 z-50 min-h-screen px-8 pt-10 pb-20 max-lg:bg-white lg:relative lg:left-0 lg:right-0 lg:bottom-0 xl:static lg:flex-col lg:min-h-full lg:p-0`}
         >
           {/* Close Icon (mobile only) */}
           <div className="flex justify-end lg:hidden">
@@ -85,11 +106,46 @@ const Header = () => {
           {/* Nav Links */}
           <ul className="flex flex-col items-center text-[16px] font-normal text-[#00000080] max-lg:mt-9 lg:flex-row gap-10 lg:gap-[70px] xl:gap-[97px]">
             {navLinks?.map((l, i) => (
-              <li onClick={closeNav} key={i}>
-                <Link href={l.router} className="hover:text-black flex items-center justify-center gap-1">
-                  {l.title}
-                  {l.icon}
-                </Link>
+              <li key={i} className="relative group">
+                {l.children ? (
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown(l.title)}
+                    onMouseEnter={() => window.innerWidth >= 1024 && setOpenDropdown(l.title)}
+                    className="hover:text-black flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    {l.title}
+                    {l.icon}
+                  </button>
+                ) : (
+                  <Link
+                    href={l.router!}
+                    onClick={closeNav}
+                    className="hover:text-black flex items-center justify-center gap-1"
+                  >
+                    {l.title}
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {l.children && openDropdown === l.title && (
+                  <ul
+                    onMouseLeave={() => window.innerWidth >= 1024 && setOpenDropdown(null)}
+                    className="absolute left-0 top-full mt-2 min-w-[180px] flex flex-col bg-white shadow-2xl rounded-lg z-50"
+                  >
+                    {l.children.map((child, idx) => (
+                      <li key={idx}>
+                        <Link
+                          href={child.router}
+                          onClick={closeNav}
+                          className="block px-4 py-2 hover:bg-gray-100 hover:text-black"
+                        >
+                          {child.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
