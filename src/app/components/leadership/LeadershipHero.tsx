@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 const LeadershipHero = () => {
   return (
     <section className="bg-white">
-      <div className="pt-[40px] md:pt-[80px] pb-[80px] md:pb-[100px] container-sm mx-auto">
+      <div className="pt-[40px] md:pt-[80px] pb-[80px] md:pb-[150px] container-sm mx-auto">
         <div className="flex flex-col md:flex-col lg:flex-row gap-[30px] pb-[80px]">
           <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] lg:h-[296px] mb-[32px]">
             <Image
@@ -25,9 +26,11 @@ const LeadershipHero = () => {
               maximum impact.
             </p>
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
-              <Button style="danger" type="button">
-                Book Charles to Speak
-              </Button>
+              <Link href="/booking">
+                <Button style="danger" type="button">
+                  Book Charles to Speak
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -50,7 +53,7 @@ const LeadershipHero = () => {
 
           <div>
             <h3 className="hidden md:hidden lg:block text-center text-[24px] text-[#000000] font-medium mb-[16px]">
-            Program Focus Areas
+              Program Focus Areas
             </h3>
             <div className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[800px] xl:max-w-[600px] mx-auto">
               <div className="pb-[40px] md:pb-[32px]">
@@ -77,9 +80,11 @@ const LeadershipHero = () => {
                 </ul>
               </div>
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
+              <Link href="/booking">
                 <Button style="danger" type="button">
                   Book Charles to Speak
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

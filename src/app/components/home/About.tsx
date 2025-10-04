@@ -4,6 +4,7 @@ import Image from "next/image";
 import SubHeader from "../ui/Subheader";
 import Pagination from "../ui/Pagination";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 const About = () => {
   const images = [
@@ -50,9 +51,11 @@ const About = () => {
                 skills.
               </p>
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
-                <Button style="danger" type="button" css="w-[217px] h-[56px]">
-                  Explore my Story
-                </Button>
+                <Link href="/about">
+                  <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                    Explore my Story
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

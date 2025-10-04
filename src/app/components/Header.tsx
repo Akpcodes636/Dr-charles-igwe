@@ -111,7 +111,9 @@ const Header = () => {
                   <button
                     type="button"
                     onClick={() => toggleDropdown(l.title)}
-                    onMouseEnter={() => window.innerWidth >= 1024 && setOpenDropdown(l.title)}
+                    onMouseEnter={() =>
+                      window.innerWidth >= 1024 && setOpenDropdown(l.title)
+                    }
                     className="hover:text-black flex items-center justify-center gap-1 cursor-pointer"
                   >
                     {l.title}
@@ -130,7 +132,9 @@ const Header = () => {
                 {/* Dropdown Menu */}
                 {l.children && openDropdown === l.title && (
                   <ul
-                    onMouseLeave={() => window.innerWidth >= 1024 && setOpenDropdown(null)}
+                    onMouseLeave={() =>
+                      window.innerWidth >= 1024 && setOpenDropdown(null)
+                    }
                     className="absolute left-0 top-full mt-2 min-w-[180px] flex flex-col bg-white shadow-2xl rounded-lg z-50"
                   >
                     {l.children.map((child, idx) => (
@@ -152,17 +156,21 @@ const Header = () => {
 
           {/* CTA Button (mobile only, inside nav) */}
           <div className="mt-10 max-w-full w-[217px] h-[56px] mx-auto lg:hidden flex items-center justify-center">
-            <Button type="button" style="danger" css="w-full">
-              Book Charles to Speak
-            </Button>
+            <Link href="/booking">
+              <Button type="button" style="danger" css="w-full">
+                Book Charles to Speak
+              </Button>
+            </Link>
           </div>
         </nav>
 
         {/* CTA Button (desktop only) */}
         <div className="hidden lg:block">
-          <Button type="button" style="danger" css="w-[217px]">
-            Book Charles to Speak
-          </Button>
+          <Link href="/booking">
+            <Button type="button" style="danger" css="w-[217px]">
+              Book Charles to Speak
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

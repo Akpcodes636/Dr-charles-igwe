@@ -11,7 +11,7 @@ const Page = () => {
     <section className="bg-[#FFFFFF]">
       <Header />
       <div className="container-sm mx-auto">
-        <div className="py-[32px] md:py-[40px]">
+        <div className="py-[32px] md:py-[90px]">
           <div className="w-full max-w-[358px] md:max-w-full mx-auto h-[160px] md:h-[240px] rounded-[10px] mb-[24px] md:mb-[30px] lg:mb-[44px]">
             <Image
               src="/images/Blog-12.png"

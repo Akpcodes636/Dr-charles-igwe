@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 const ProjectHero = () => {
   return (
@@ -24,9 +25,11 @@ const ProjectHero = () => {
               practical insights for measurable outcomes.
             </p>
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
-              <Button style="danger" type="button">
-                Book Charles to Speak
-              </Button>
+              <Link href="/booking">
+                <Button style="danger" type="button">
+                  Book Charles to Speak
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -69,9 +72,11 @@ const ProjectHero = () => {
                 </ul>
               </div>
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
-                </Button>
+                <Link href="/booking">
+                  <Button style="danger" type="button">
+                    Book Charles to Speak
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

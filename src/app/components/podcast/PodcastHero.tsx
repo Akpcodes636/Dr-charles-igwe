@@ -5,7 +5,10 @@ import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import { CiCalendar } from "react-icons/ci";
 import { AiFillAudio } from "react-icons/ai";
-import { eventContent, podcastContent } from "@/utils/contents/HomePage.content";
+import {
+  eventContent,
+  podcastContent,
+} from "@/utils/contents/HomePage.content";
 
 const PodcastHero = () => {
   return (
@@ -34,10 +37,12 @@ const PodcastHero = () => {
                 experts, ask questions, and connect with a community of
                 professionals passionate about making an impact.
               </p>
-              <div className="flex items-center justify-center md:items-start md:justify-start ">
-                <Button style="danger" type="button">
-                  Listen to Podcast
-                </Button>
+              <div className="flex items-center justify-center md:items-start md:justify-start">
+                <Link href="/podcast">
+                  <Button style="danger" type="button">
+                    Listen to Podcast
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

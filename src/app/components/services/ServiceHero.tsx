@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Header from "../Header";
 import Button from "../ui/Button";
 
@@ -39,12 +40,16 @@ const ServicesHero = () => {
             mentorship, and transformative learning experiences.
           </p>
           <div className="flex flex-col gap-y-[32px] md:flex-row md:gap-x-[60px] items-center justify-center  md:items-center md:justify-center">
-            <Button type="button" style="danger" css="w-[217px]">
-              Book Charles to Speak
-            </Button>
-            <Button type="button" style="nobg" css="w-[217px]">
-              Listen to Podcast
-            </Button>
+            <Link href="/booking">
+              <Button style="danger" type="button">
+                Book Charles to Speak
+              </Button>
+            </Link>
+            <Link href="/podcast">
+              <Button type="button" style="nobg" css="w-[217px]">
+                Listen to Podcast
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

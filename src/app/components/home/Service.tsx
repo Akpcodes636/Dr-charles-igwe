@@ -169,7 +169,7 @@ const Services = () => {
             {/* Fifth service context */}
             <div className="w-full mx-auto max-w-[358px]  md:max-w-[393px]   h-[232px] bg-[#16366F] rounded-[5px] hidden md:block lg:block">
               <Image
-                src="/images/Igwe-9.png"
+                src="/images/service-1.png"
                 alt=""
                 width={500}
                 height={500}

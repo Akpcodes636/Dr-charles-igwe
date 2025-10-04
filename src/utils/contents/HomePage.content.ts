@@ -176,50 +176,47 @@ export const blogContent = [
   },
 ];
 
-
 export const podcastContent = [
   {
-    img:"/images/podcast-2.png",
-    title:"Leading Through Uncertainty",
-    author:"Sarah Park, CEO",
-    date:"10 Sept 2025" 
+    img: "/images/podcast-2.png",
+    title: "Leading Through Uncertainty",
+    author: "Sarah Park, CEO",
+    date: "10 Sept 2025",
   },
   {
-    img:"/images/podcast-3.png",
-    title:"The Future of Work",
-    author:"Michael Johnson, Senior VP",
-    date:"10 Sept 2025" 
+    img: "/images/podcast-3.png",
+    title: "The Future of Work",
+    author: "Michael Johnson, Senior VP",
+    date: "10 Sept 2025",
   },
   {
-    img:"/images/podcast-4.png",
-    title:"Innovation in a Digital Age",
-    author:"Emma Brown, Product Startegist",
-    date:"10 Sept 2025" 
+    img: "/images/podcast-4.png",
+    title: "Innovation in a Digital Age",
+    author: "Emma Brown, Product Startegist",
+    date: "10 Sept 2025",
   },
-
-]
-
+];
 
 export const eventContent = [
   {
-    title:"The Growth Mindset Sessions",
-    img:"/images/podcast-8.png",
-    authur:"Sarah Park, CEO",
-    date:"25 Nov 2025"
+    title: "The Growth Mindset Sessions",
+    img: "/images/podcast-8.png",
+    authur: "Sarah Park, CEO",
+    date: "25 Nov 2025",
   },
   {
-    title:"Innovation Unplugged",
-    img:"/images/podcast-10.png",
-    authur:"Sarah Park, CEO",
-    date:"25 Nov 2025"
+    title: "Innovation Unplugged",
+    img: "/images/podcast-10.png",
+    authur: "Sarah Park, CEO",
+    date: "25 Nov 2025",
   },
   {
-    title:"The Leadership Exchange",
-    img:"/images/podcast-9.png",
-    authur:"Sarah Park, CEO",
-    date:"25 Nov 2025"
-  }
-]
+    title: "The Leadership Exchange",
+    img: "/images/podcast-9.png",
+    authur: "Sarah Park, CEO",
+    date: "25 Nov 2025",
+  },
+];
 
 export const events = [
   {
@@ -284,5 +281,38 @@ export const events = [
     img: "/images/podcast-1.png",
     location: "Dubai, UAE",
     date: "November 18, 2024",
+  },
+];
+
+export const kingdomContent = [
+  {
+    img: "/images/Kingdom-1.png",
+    title: "Taopheek A. BABAYEJU",
+    text: "Taopheek is a transformation expert with 25+ years in strategy, digital transformation, and organizational change.",
+  },
+  {
+    img: "/images/Kingdom-2.png",
+    title: "Taiwo Abraham",
+    text: "Taiwo is a PhD candidate with 15+ years in consulting and teaching, specializing in corporate sustainability and strategic leadership.",
+  },
+  {
+    img: "/images/Kingdom-3s.png",
+    title: "Billy S Mwape",
+    text: "Billy is a strategist and agile consultant with 18+ years in banking and mining, specializing in enterprise agility, risk management, and leadership.",
+  },
+  {
+    img: "/images/Kingdom-4.png",
+    title: "Sepo Mwangelwa",
+    text: "Sepo is a behavioral-strategy advisor with 20+ years of experience, specializing in influence, leadership, and AI-era project management.",
+  },
+  {
+    img: "/images/Kingdom-5.png",
+    title: "Temisan Sagay",
+    text: "Alex is a program leader with 10+ years in AI, data, and enterprise transformation, delivering measurable impact and leadership growth.",
+  },
+  {
+    img: "/images/Kingdom-6.png",
+    title: "Ugochinyere Amaonyeanaso",
+    text: "Ugochinyere is an IT Project Manager and Business Operations Analyst with expertise in Agile delivery, workflow automation, and system integration.",
   },
 ];

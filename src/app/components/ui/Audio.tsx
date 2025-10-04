@@ -6,7 +6,7 @@ import { communityText } from "@/utils/contents/HomePage.content";
 
 const Audio = () => {
   return (
-    <div className="grid gap-[40px] w-full max-w-[1200px] mx-auto">
+    <div className="grid gap-[20px] w-full max-w-[1200px] mx-auto">
       {communityText.map((item, index) => (
         <div
           key={index}

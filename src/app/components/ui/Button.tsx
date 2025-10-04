@@ -6,7 +6,7 @@ interface ButtonProps {
   fn?: () => void; // The function to be executed when the button is clicked
   loading?: boolean;
   disabled?: boolean;
-  style: "danger" | "nobg";
+  style: "danger" | "nobg" | "border";
   css?: string;
 }
 
@@ -30,6 +30,8 @@ const Button: React.FC<ButtonProps> = ({
       } ${
         style === "nobg" &&
         "border-[2px] border-[#FFFFFF] bg-transparent text-[#FFFFFF] rounded-[5px] cursor-pointer duration-150 ease-in-out hover:bg-[#FFFFFF] hover:text-[#000000]"
+      } ${
+        style === "border" && "border-[1px] border-[#000000] rounded-[5px] cursor-pointer duration-150 ease-in-out hover:bg-[#000000] hover:text-[#FFFFFF] w-full h-[45px]"
       }
        
         `} // Add your button styles here

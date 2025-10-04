@@ -1,6 +1,7 @@
 "use client";
 
 "use client";
+import Link from "next/link";
 import Header from "../Header";
 import Button from "../ui/Button";
 
@@ -36,9 +37,11 @@ const PodcastHeader = () => {
             leadership, innovation, and growth.
           </p>
           <div className="flex items-center justify-center mt-[16px]">
+            <Link href="/">
             <Button style="nobg" type="button">
               Listen to Podcast
             </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -77,7 +77,7 @@ const SocialIcons = () => (
       <FaLinkedinIn size={20} color="white" />
     </Link>
     <Link href="#">
-      <IoLogoYoutube  size={20} color="white" />
+      <IoLogoYoutube size={20} color="white" />
     </Link>
   </div>
 );
@@ -128,13 +128,13 @@ const Footer = ({ bgColor }: FooterProps) => {
         <Link href="/mentorship" className="text-white text-[12px]">
           Mentorship & Coaching
         </Link>
-        <Link href="/training" className="text-white text-[12px]">
+        <Link href="/leadership" className="text-white text-[12px]">
           Leadership Development & Training Programs
         </Link>
-        <Link href="/Podcast" className="text-white text-[12px]">
+        <Link href="/podcast" className="text-white text-[12px]">
           Podcast & Fireside Chat Host
         </Link>
-        <Link href="/Program" className="text-white text-[12px]">
+        <Link href="/project" className="text-white text-[12px]">
           Project & Program Management Advisory
         </Link>
       </>
@@ -143,7 +143,7 @@ const Footer = ({ bgColor }: FooterProps) => {
 
   // Newsletter form
   const Newsletter = () => (
-    <div className="w-[365px]">
+    <div className="w-full max-w-[365px]">
       <h2 className="text-[16px] md:text-[18px] font-medium text-white mb-3">
         Subscribe to My Newsletter
       </h2>
@@ -237,7 +237,7 @@ const Footer = ({ bgColor }: FooterProps) => {
                   <span className="text-white">
                     charlesjulius.igwe@gmail.com
                   </span>
-                  <span className="text-white text-[12px]">+1 900 765 47879</span>
+                  {/* <span className="text-white text-[12px]">+1 900 765 47879</span> */}
                   <SocialIcons />
                 </div>
               </div>

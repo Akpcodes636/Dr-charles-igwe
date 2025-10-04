@@ -21,7 +21,7 @@ const Page = () => {
           <BlogSearch />
           <BlogFilter />
         </div>
-        <div className="pt-[40px] md:pt-[48px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="pt-[40px] md:pt-[48px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-20">
           {blogContent.map((b, i) => (
             <BlogCard key={i} {...b} />
           ))}

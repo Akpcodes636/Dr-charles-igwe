@@ -4,10 +4,11 @@ import { heroImage } from "@/utils/contents/HomePage.content";
 import Button from "../ui/Button";
 import Image from "next/image";
 import Header from "../Header";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-[url(/images/Igwe-9.png)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
+    <section className="bg-[url(/images/Hero-1.png)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
       <Header />
       <div className="container-sm  pb-[109px]">
         <div className="mb-[44px] md:mb-[56px] lg:mb-[96px]">
@@ -33,18 +34,25 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex items-center flex-col md:flex-row lg:flex-row justify-center gap-[32px] md:gap-[60px] lg:gap-[60px] mb-[80px]">
-          <Button style="danger" css="" type="button">
-            Book Charles to Speak
-          </Button>
-          <Button style="nobg" css="w-[217px]" type="button">
-            Listen to Podcast
-          </Button>
+          <Link href="/booking">
+            <Button style="danger" css="" type="button">
+              Book Charles to Speak
+            </Button>
+          </Link>
+          <Link href="/podcast">
+            <Button style="nobg" css="w-[217px]" type="button">
+              Listen to Podcast
+            </Button>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center gap-[53px] md:gap-[93px] lg:gap-[93px]">
           {heroImage.map((i, j) => {
             return (
-              <div className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]"   key={j}>
+              <div
+                className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]"
+                key={j}
+              >
                 <Image
                   src={i.image}
                   alt=""
