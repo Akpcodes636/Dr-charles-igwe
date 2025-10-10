@@ -77,6 +77,16 @@
     background-repeat: repeat;
     background-position: bottom center;
   }
+  .my-element {
+    border: 1px solid; /* fallback if gradient not supported */
+    border-image-slice: 1; /* necessary to make the gradient appear */
+    border-image-source: linear-gradient(
+      94.03deg, 
+      rgba(255, 255, 255, 0.2) 0%, 
+      rgba(255, 255, 255, 0.8) 112.64%
+    );
+  }
+  
 }
 
 @layer utilities {

@@ -1,16 +1,28 @@
 "use client";
+import { useEffect } from "react";
+
 interface PaginationProps {
   activeIndex: number;
-  setActiveIndex: (index: number) => void;
+  setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 }
+
 
 export default function Pagination({
   activeIndex,
   setActiveIndex,
 }: PaginationProps) {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // move to the next index (wrap around to 0 after last)
+      setActiveIndex((prev) => (prev + 1) % 4);
+    }, 3000); // change every 3 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, [setActiveIndex]);
+
   return (
     <div className="flex items-center justify-center gap-[8px] pt-[10px] md:pt-[15px] lg:pt-[24px]">
-      {[0, 1,2,3].map((index) => (
+      {[0, 1, 2, 3].map((index) => (
         <div
           key={index}
           onClick={() => setActiveIndex(index)}

@@ -14,7 +14,7 @@ export default function Page() {
       <Hero />
       <About />
       <Services />
-      <Community />
+      {/* <Community /> */}
       <Accountability />
       <Testimonies />
       <Booking />

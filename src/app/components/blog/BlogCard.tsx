@@ -1,3 +1,81 @@
+// "use client";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { FaArrowRight } from "react-icons/fa6";
+
+// interface BlogCardProps {
+//   slug: string;
+//   img: string;
+//   title: string;
+//   text: string;
+//   avatar: string;
+//   authorName: string;
+//   date: string;
+// }
+
+// const BlogCard: React.FC<BlogCardProps> = ({
+//   slug,
+//   img,
+//   title,
+//   text,
+//   avatar,
+//   authorName,
+//   date
+// }) => {
+//   return (
+//     <div className="flex flex-col">
+//       {/* Blog image */}
+//       <div className="w-full h-[160px] md:h-[250px] lg:h-[216px] rounded-[10px] overflow-hidden">
+//         <Image
+//           src={img}
+//           width={600}
+//           height={400}
+//           alt={title}
+//           className="w-full h-full object-cover"
+//         />
+//       </div>
+
+//       {/* Blog details */}
+//       <div className="mt-[16px]">
+//         <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#000] mb-[8px]">
+//           {title}
+//         </h3>
+//         <p className="text-[16px] md:text-[18px] text-[#000000B2] mb-[12px] line-clamp-2">
+//           {text}
+//         </p>
+
+//         <div className="flex items-center gap-4 mb-[12px]">
+//           <div className="flex items-center gap-2">
+//             <div className="w-[32px] h-[32px] rounded-full overflow-hidden">
+//               <Image
+//                 src={avatar}
+//                 width={32}
+//                 height={32}
+//                 alt={authorName}
+//                 className="object-cover w-full h-full"
+//               />
+//             </div>
+//             <p className="text-[#00000066] text-[14px] md:text-[16px]">
+//               {authorName}
+//             </p>
+//           </div>
+//           <p className="text-[#00000066] text-[14px] font-normal md:text-[16px]">
+//             {date}
+//           </p>
+//         </div>
+
+//         {/* Read more link */}
+//         <Link href={`/blog/${slug}`} className="flex items-center gap-2 cursor-pointer">
+//           <p className="text-[16px] text-[#E28101]">Read more</p>
+//           <FaArrowRight color="#E28101" />
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BlogCard;
+
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,65 +85,54 @@ interface BlogCardProps {
   slug: string;
   img: string;
   title: string;
-  text: string;
-  avatar: string;
-  authorName: string;
-  date: string;
+  excerpt: string;
+  author: string;
+  body:string;
+  publishedAt: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
   slug,
   img,
   title,
-  text,
-  avatar,
-  authorName,
-  date
+  excerpt,
+  author,
+  publishedAt,
+  body
 }) => {
   return (
     <div className="flex flex-col">
-      {/* Blog image */}
-      <div className="w-full h-[160px] md:h-[250px] lg:h-[216px] rounded-[10px] overflow-hidden">
+      <div className="w-full h-[216px] rounded-[10px] overflow-hidden">
         <Image
           src={img}
           width={600}
           height={400}
           alt={title}
           className="w-full h-full object-cover"
+          priority={false}
         />
       </div>
 
-      {/* Blog details */}
       <div className="mt-[16px]">
-        <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#000] mb-[8px]">
+        <h3 className="text-[22px] font-medium text-[#000] mb-[8px]">
           {title}
         </h3>
         <p className="text-[16px] md:text-[18px] text-[#000000B2] mb-[12px] line-clamp-2">
-          {text}
+          {excerpt || "No excerpt available."}
         </p>
 
         <div className="flex items-center gap-4 mb-[12px]">
-          <div className="flex items-center gap-2">
-            <div className="w-[32px] h-[32px] rounded-full overflow-hidden">
-              <Image
-                src={avatar}
-                width={32}
-                height={32}
-                alt={authorName}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <p className="text-[#00000066] text-[14px] md:text-[16px]">
-              {authorName}
-            </p>
-          </div>
-          <p className="text-[#00000066] text-[14px] font-normal md:text-[16px]">
-            {date}
+          <p className="text-[#00000066] text-[16px]">{author}</p>
+          <p className="text-[#00000066] text-[16px]">
+            {new Date(publishedAt).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            })}
           </p>
         </div>
 
-        {/* Read more link */}
-        <Link href={`/blog/${slug}`} className="flex items-center gap-2 cursor-pointer">
+        <Link href={`/blog/${slug}`} className="flex items-center gap-2">
           <p className="text-[16px] text-[#E28101]">Read more</p>
           <FaArrowRight color="#E28101" />
         </Link>

@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       className={`flex h-14 items-center justify-center whitespace-nowrap  px-[18px] py-[16px] text-[16px] font-medium duration-150 ease-in-out ${css} ${
         style === "danger" &&
-        "bg-accent text-white rounded-[5px] text-[16px] font-medium cursor-pointer hover-bg-accent"
+        "bg-accent text-white rounded-[5px] text-[16px] font-medium cursor-pointer hover-bg-accent border-[1px] border-white"
       } ${
         style === "nobg" &&
         "border-[2px] border-[#FFFFFF] bg-transparent text-[#FFFFFF] rounded-[5px] cursor-pointer duration-150 ease-in-out hover:bg-[#FFFFFF] hover:text-[#000000]"

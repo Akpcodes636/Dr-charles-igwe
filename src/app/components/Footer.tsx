@@ -1,21 +1,20 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
 import Link from "next/link";
 import Button from "./ui/Button";
 import { Instagram } from "lucide-react";
 import { RiTwitterXFill } from "react-icons/ri";
-// import { FaFacebook } from "react-icons/fa";
 import { ChevronDown } from "lucide-react";
-import { ReactNode } from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface FooterProps {
-  bgColor?: string; // optional so it falls back if not provided
+  bgColor?: string;
 }
 
-// Reusable collapsible footer section for mobile
 const FooterSection = ({
   title,
   children,
@@ -26,13 +25,12 @@ const FooterSection = ({
   isMobile: boolean;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleSection = () => {
     if (isMobile) setIsOpen(!isOpen);
   };
 
   return (
-    <div className="mb-8 mt-[48px] x-[20px]">
+    <div className="mb-8 mt-[48px] x-[20px]" data-aos="fade-up">
       <div
         className="flex justify-between items-center cursor-pointer"
         onClick={toggleSection}
@@ -61,9 +59,8 @@ const FooterSection = ({
   );
 };
 
-// Social icons component
 const SocialIcons = () => (
-  <div className="flex gap-6 mt-4">
+  <div className="flex gap-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
     <Link href="#">
       <GrFacebookOption size={20} color="white" />
     </Link>
@@ -73,7 +70,7 @@ const SocialIcons = () => (
     <Link href="#">
       <RiTwitterXFill size={20} color="white" />
     </Link>
-    <Link href="#">
+    <Link href="https://www.linkedin.com/in/charles-igwe/">
       <FaLinkedinIn size={20} color="white" />
     </Link>
     <Link href="#">
@@ -88,6 +85,14 @@ const Footer = ({ bgColor }: FooterProps) => {
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 80,
+      once: false,
+    });
+  }, []);
+
+  useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
       setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
@@ -98,52 +103,48 @@ const Footer = ({ bgColor }: FooterProps) => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // Navigation Links
   const NavigationLinks = () => (
     <>
-      <Link href="/" className="text-white font-extralight text-[12px]">
-        Home
-      </Link>
-      <Link href="/about" className="text-white font-extralight text-[12px]">
-        About
-      </Link>
-      <Link href="/services" className="text-white font-extralight text-[12px]">
-        Services
-      </Link>
-      <Link href="/blog" className="text-white font-extralight text-[12px]">
-        Blog
-      </Link>
-      <Link href="/contact" className="text-white font-extralight text-[12px]">
-        Contact
-      </Link>
+      {["Home", "About", "Services", "Blog", "Contact"].map((item, i) => (
+        <Link
+          key={item}
+          href={`/${item === "Home" ? "" : item.toLowerCase()}`}
+          className="text-white font-extralight text-[12px]"
+          data-aos="fade-up"
+          data-aos-delay={i * 100}
+        >
+          {item}
+        </Link>
+      ))}
     </>
   );
 
-  const ServiceLinks = () => {
-    return (
-      <>
-        <Link href="/speaking" className="text-white text-[12px]">
-          Public Speaking
+  const ServiceLinks = () => (
+    <>
+      {[
+        { name: "Public Speaking", href: "/speaking" },
+        { name: "Mentorship & Coaching", href: "/mentorship" },
+        {
+          name: "Leadership Development & Training Programs",
+          href: "/leadership",
+        },
+        { name: "Project & Program Management Advisory", href: "/project" },
+      ].map((service, i) => (
+        <Link
+          key={service.name}
+          href={service.href}
+          className="text-white text-[12px]"
+          data-aos="fade-up"
+          data-aos-delay={i * 100}
+        >
+          {service.name}
         </Link>
-        <Link href="/mentorship" className="text-white text-[12px]">
-          Mentorship & Coaching
-        </Link>
-        <Link href="/leadership" className="text-white text-[12px]">
-          Leadership Development & Training Programs
-        </Link>
-        <Link href="/podcast" className="text-white text-[12px]">
-          Podcast & Fireside Chat Host
-        </Link>
-        <Link href="/project" className="text-white text-[12px]">
-          Project & Program Management Advisory
-        </Link>
-      </>
-    );
-  };
+      ))}
+    </>
+  );
 
-  // Newsletter form
   const Newsletter = () => (
-    <div className="w-full max-w-[365px]">
+    <div className="w-full max-w-[365px]" data-aos="fade-right">
       <h2 className="text-[16px] md:text-[18px] font-medium text-white mb-3">
         Subscribe to My Newsletter
       </h2>
@@ -169,43 +170,40 @@ const Footer = ({ bgColor }: FooterProps) => {
   );
 
   return (
-    <footer className={`${bgColor} px-[20px] md:px-[0px] lg:px-[0px]`}>
-      <section className="pt-[40px]  pb-[3px] md:pt-[50px] md:pb-[8px] lg:pt-[80px] lg:pb-[5px]">
+    <footer className={`${bgColor} px-[20px] md:px-[0px]`}>
+      <section
+        className="pt-[40px] pb-[3px] md:pt-[50px] md:pb-[8px] lg:pt-[80px] lg:pb-[5px]"
+        data-aos="fade-up"
+      >
         <div className="">
-          {/* Top section: logo + description */}
-          <div className="text-center mb-[40px]">
+          <div className="text-center mb-[40px]" data-aos="zoom-in">
             <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-white font-allison font-normal">
               Dr. Charles Igwe
             </h1>
-            <p className="-mt-[15px] sm:-mt-[18px] md:-mt-[20px] lg:-mt-[35px] text-white text-center text-[12px] md:text-[13px] max-w-[527px] mx-auto leading-tight">
+            <p className="-mt-[15px] text-white text-center text-[12px] md:text-[13px] max-w-[527px] mx-auto leading-tight">
               Public Speaker | Mentor | Coach | Project & Program Management
               Advisory
             </p>
           </div>
 
-          {/* Grid for sections */}
+          {/* Grid Layout */}
           <div
-            className={`
-    grid mb-[48px]
-    ${
-      isMobile
-        ? "grid-cols-1 gap-y-[32px]"
-        : isTablet
-        ? "grid-cols-2 gap-x-[2px] gap-y-[40px] px-[40px]"
-        : "grid-cols-12 gap-x-[0px] px-[50px]"
-    }
-  `}
+            className={`grid mb-[48px] ${
+              isMobile
+                ? "grid-cols-1 gap-y-[32px]"
+                : isTablet
+                ? "grid-cols-2 gap-x-[2px] gap-y-[40px] px-[40px]"
+                : "grid-cols-12 gap-x-[0px] px-[50px]"
+            }`}
           >
-            {/* Newsletter - spans 5/12 */}
             {!isMobile && (
-              <div className="col-span-5">
+              <div className="col-span-5" data-aos="fade-right">
                 <Newsletter />
               </div>
             )}
 
-            {/* Navigation - spans 2/12 */}
             {!isMobile && (
-              <div className="col-span-2">
+              <div className="col-span-2" data-aos="fade-up">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Navigation
                 </h4>
@@ -215,9 +213,8 @@ const Footer = ({ bgColor }: FooterProps) => {
               </div>
             )}
 
-            {/* Services - spans 3/12 */}
             {!isMobile && (
-              <div className="col-span-3">
+              <div className="col-span-3" data-aos="fade-up">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Services
                 </h4>
@@ -227,9 +224,8 @@ const Footer = ({ bgColor }: FooterProps) => {
               </div>
             )}
 
-            {/* Contact - spans 2/12 */}
             {!isMobile && (
-              <div className="col-span-2">
+              <div className="col-span-2" data-aos="fade-left">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Contact
                 </h4>
@@ -237,14 +233,13 @@ const Footer = ({ bgColor }: FooterProps) => {
                   <span className="text-white">
                     charlesjulius.igwe@gmail.com
                   </span>
-                  {/* <span className="text-white text-[12px]">+1 900 765 47879</span> */}
                   <SocialIcons />
                 </div>
               </div>
             )}
           </div>
 
-          {/* Mobile collapsible sections */}
+          {/* Mobile sections */}
           {isMobile && (
             <>
               <Newsletter />
@@ -259,15 +254,16 @@ const Footer = ({ bgColor }: FooterProps) => {
                   <span className="text-white">
                     charlesjulius.igwe@gmail.com
                   </span>
-                  <span className="text-white">+1 900 765 47879</span>
                   <SocialIcons />
                 </div>
               </FooterSection>
             </>
           )}
 
-          {/* Bottom copyright */}
-          <div className="border-t border-[#FFFFFF40] pt-6 mt-[40px]">
+          <div
+            className="border-t border-[#FFFFFF40] pt-6 mt-[40px]"
+            data-aos="fade-up"
+          >
             <p className="text-white text-[14px] text-center">
               © {currentYear} Dr. Charles Igwe. All Rights Reserved.
             </p>

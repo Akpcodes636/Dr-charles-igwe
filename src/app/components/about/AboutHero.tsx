@@ -7,9 +7,10 @@ import Footer from "../Footer";
 
 const AboutHero = () => {
   const images = [
-    "/images/Igwe-34.png",
-    "/images/Igwe-34.png",
-    "images/Igwe-34.png",
+    "/images/igwe-10.png",
+    "/images/igwe-6.png",
+    "/images/igwe-2.png",
+    "/images/igwe-54.png"
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   return (

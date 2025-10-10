@@ -10,11 +10,10 @@ interface EventCardProps {
   img: string;
   location: string;
   date: string;
-  eventSlug: string;   //
+  slug: string; //
 }
 
-const EventCard = ({ eventSlug, title, img, location, date }: EventCardProps) => {
-    console.log(eventSlug);
+const EventCard = ({ slug, title, img, location, date }: EventCardProps) => {
   return (
     <div className="w-full max-w-[358px] md:max-w-[393px] mx-auto mb-[40px]">
       {/* Event Image */}
@@ -43,11 +42,11 @@ const EventCard = ({ eventSlug, title, img, location, date }: EventCardProps) =>
           <CiCalendar size={18} color="#FFFFFFB2" />
           <p className="text-[#FFFFFFB2] text-[16px] font-normal">{date}</p>
         </div>
-        
-        <Link href={`/gallery/events/${eventSlug}`}>
-        <p className="text-[#FB8C00] text-[12px] font-normal cursor-pointer hover:underline">
-          View Event Details
-        </p>
+
+        <Link href={`/gallery/events/${slug}`}>
+          <p className="text-[#FB8C00] text-[12px] font-normal cursor-pointer hover:underline">
+            View Event Details
+          </p>
         </Link>
       </div>
     </div>

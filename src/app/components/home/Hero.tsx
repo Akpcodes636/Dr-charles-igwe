@@ -2,15 +2,25 @@
 
 import { heroImage } from "@/utils/contents/HomePage.content";
 import Button from "../ui/Button";
-import Image from "next/image";
 import Header from "../Header";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
+import HeroLogos from "../ui/HeroLogos";
+import { useState } from "react";
 
 const Hero = () => {
+  const words = [
+    "Inspiring Growth.",
+    "Empowering Leaders.",
+    "Driving Transformation.",
+  ];
+
+  const [currentWord, setCurrentWord] = useState(0);
+
   return (
-    <section className="bg-[url(/images/Hero-1.png)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
+    <section className="bg-[url(/images/Hero-1.jpg)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
       <Header />
-      <div className="container-sm  pb-[109px]">
+      <div className="container-sm pb-[109px]">
         <div className="mb-[44px] md:mb-[56px] lg:mb-[96px]">
           <h1 className="text-[50px] sm:text-[70px] md:text-[100px] lg:text-[140px] text-white font-allison text-center font-normal">
             Dr. Charles Igwe
@@ -20,67 +30,77 @@ const Hero = () => {
             Advisory
           </p>
         </div>
+
         <div>
-          <h1 className="hidden md:block  text-[37px] text-white text-center font-semibold mb-[16px]">
-            Inspiring Growth. Empowering Leaders. Driving Transformation.
+          {/* Desktop */}
+          <h1 className="hidden md:block text-[56px] text-white text-center font-semibold mb-[16px]">
+            <span
+              className={`${
+                currentWord === 1 ? "text-[#FB8C00]" : "text-white"
+              }`}
+            >
+              <Typewriter
+                words={words}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={150}
+                deleteSpeed={200}
+                delaySpeed={2000}
+                onLoopDone={() =>
+                  setCurrentWord((prev) => (prev + 1) % words.length)
+                }
+                onType={(count) => setCurrentWord(count % words.length)}
+              />
+            </span>
           </h1>
+
+          {/* Mobile */}
           <h1 className="md:hidden lg:hidden text-[32px] text-white font-semibold text-center">
-            Inspiring Growth.
+          <span
+              className={`${
+                currentWord === 1 ? "text-[#FB8C00]" : "text-white"
+              }`}
+            >
+            <Typewriter
+              words={words}
+              loop={false}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+              onLoopDone={() =>
+                setCurrentWord((prev) => (prev + 1) % words.length)
+              }
+              onType={(count) => setCurrentWord(count % words.length)}
+              />
+              </span>
           </h1>
-          <p className="text-white max-w-[358px] md:max-w-[500px] lg:max-w-[901px] mx-auto  text-[16px]  text-center mb-[40px]">
+
+          <p className="text-white max-w-[358px] md:max-w-[500px] lg:max-w-[901px] mx-auto text-[16px] text-center mb-[40px]">
             Program Manager, Educator, and Leadership Coach with a passion for
             mentoring, public speaking, and helping organizations thrive in a
             rapidly changing world.
           </p>
         </div>
+
         <div className="flex items-center flex-col md:flex-row lg:flex-row justify-center gap-[32px] md:gap-[60px] lg:gap-[60px] mb-[80px]">
           <Link href="/booking">
             <Button style="danger" css="" type="button">
               Book Charles to Speak
             </Button>
           </Link>
-          <Link href="/podcast">
+          <Link href="/about">
             <Button style="nobg" css="w-[217px]" type="button">
-              Listen to Podcast
+              Learn more
             </Button>
           </Link>
         </div>
 
-        <div className="flex items-center justify-center gap-[53px] md:gap-[93px] lg:gap-[93px]">
-          {heroImage.map((i, j) => {
-            return (
-              <div
-                className=" w-[40px] h-[40px] md:w-[63.84px] md:h-[63.84px] lg:w-[63px] lg:h-[63px]"
-                key={j}
-              >
-                <Image
-                  src={i.image}
-                  alt=""
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            );
-          })}
+        <div className="flex items-center justify-center">
+          <HeroLogos heroImage={heroImage} />
         </div>
-        {/* <div className="">
-          <div className="flex items-center justify-center gap-[93.94px] ">
-            {heroImage.map((i, j) => {
-              return (
-                <div key={j} className="">
-                  <Image
-                    src={i.image}
-                    alt="logos"
-                    width={500}
-                    height={500}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div> */}
       </div>
     </section>
   );

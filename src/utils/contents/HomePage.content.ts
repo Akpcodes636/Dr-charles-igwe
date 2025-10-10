@@ -44,6 +44,15 @@ export const heroImage = [
   {
     image: "/images/Logo-5.png",
   },
+  {
+    image:"/images/Logo-6.png",
+  },
+  {
+    image:"/images/Logo-7.png",
+  },
+  {
+    image:"/images/Logo-8.png"
+  }
 ];
 
 export const Servicestext = [

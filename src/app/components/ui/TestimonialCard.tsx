@@ -10,7 +10,7 @@ type TestimonialCardProps = {
 
 const TestimonialCard = ({ image, text, name, role }: TestimonialCardProps) => {
   return (
-    <div className="w-[200px] md:w-[300px] lg:w-[330px] h-[259px] md:h-[300px] lg:h-[383px] overflow-hidden shrink-0">
+    <div className="max-w-[200px] md:max-w-[300px] lg:max-w-[330px] w-full h-[259px] md:h-[300px] lg:h-[383px] overflow-hidden shrink-0">
       {/* Image + Quote */}
       <div className="relative w-full h-[204px] md:h-[230px] lg:h-[310px]">
         <Image

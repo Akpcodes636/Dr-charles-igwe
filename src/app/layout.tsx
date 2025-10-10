@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Allison, Poppins } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 
 const allison = Allison({
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${allison.variable} ${poppins.variable} antialiased`}
       >
         {children}
+        <Toaster position="bottom-right" richColors closeButton />
       </body>
     </html>
   );

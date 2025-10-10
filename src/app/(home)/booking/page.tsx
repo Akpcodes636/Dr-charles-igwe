@@ -3,8 +3,84 @@ import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import Button from "@/app/components/ui/Button";
 import Image from "next/image";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Booking = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+  
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+  
+    // Grab key values
+    const firstName = formData.get("firstName")?.toString().trim();
+    const lastName = formData.get("lastName")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+    const bookingOptions = formData.getAll("booking_options");
+  
+    // ✅ Step 1: Basic validation
+    if (!firstName || !lastName) {
+      toast.warning("Please provide your first and last name.");
+      setLoading(false);
+      return;
+    }
+  
+    if (!email) {
+      toast.warning("Please enter your email address.");
+      setLoading(false);
+      return;
+    }
+  
+    // Simple email regex check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.warning("Please enter a valid email address.");
+      setLoading(false);
+      return;
+    }
+  
+    if (!message) {
+      toast.warning("Please include a message.");
+      setLoading(false);
+      return;
+    }
+  
+    if (bookingOptions.length === 0) {
+      toast.warning("Please select at least one booking option.");
+      setLoading(false);
+      return;
+    }
+  
+    // ✅ Step 2: Add access key and proceed
+    formData.append("access_key", "58e857f7-a17d-4ec0-b8c2-9223c32cfd63");
+  
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        toast.success("Your booking request has been sent successfully!");
+        form.reset();
+      } else {
+        toast.error("Something went wrong, please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please check your internet connection.");
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+
   return (
     <section>
       {/* Desktop Header */}
@@ -53,10 +129,13 @@ const Booking = () => {
                 <h1 className="hidden md:hidden lg:block text-center text-[24px] font-semibold leading-[100%] mb-[24px]">
                   Book Charles Igwe
                 </h1>
-                <form className="w-full max-w-[600px] mx-auto space-y-6 flex  flex-col">
+                <form
+                  onSubmit={handleSubmit}
+                  noValidate
+                  className="w-full max-w-[600px] mx-auto space-y-6 flex flex-col"
+                >
                   {/* First + Last Name */}
                   <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-                    {/* First Name */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="firstName"
@@ -66,12 +145,13 @@ const Booking = () => {
                       </label>
                       <input
                         id="firstName"
+                        name="firstName"
                         type="text"
+                        required
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       />
                     </div>
 
-                    {/* Last Name */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="lastName"
@@ -81,7 +161,9 @@ const Booking = () => {
                       </label>
                       <input
                         id="lastName"
+                        name="lastName"
                         type="text"
+                        required
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       />
                     </div>
@@ -89,7 +171,6 @@ const Booking = () => {
 
                   {/* Email + Phone Number */}
                   <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-                    {/* Email */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="email"
@@ -99,13 +180,13 @@ const Booking = () => {
                       </label>
                       <input
                         id="email"
+                        name="email"
                         type="email"
                         required
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       />
                     </div>
 
-                    {/* Phone */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="phone"
@@ -115,6 +196,7 @@ const Booking = () => {
                       </label>
                       <input
                         id="phone"
+                        name="phone"
                         type="tel"
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       />
@@ -123,7 +205,6 @@ const Booking = () => {
 
                   {/* Company + Country */}
                   <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-                    {/* Company */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="company"
@@ -133,6 +214,7 @@ const Booking = () => {
                       </label>
                       <select
                         id="company"
+                        name="company"
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       >
                         <option value="">Select Company</option>
@@ -141,7 +223,6 @@ const Booking = () => {
                       </select>
                     </div>
 
-                    {/* Country */}
                     <div className="flex flex-col w-full">
                       <label
                         htmlFor="country"
@@ -151,6 +232,7 @@ const Booking = () => {
                       </label>
                       <input
                         id="country"
+                        name="country"
                         type="text"
                         className="w-full h-[48px] border border-[#00000099] rounded px-3 focus:outline-none"
                       />
@@ -175,6 +257,8 @@ const Booking = () => {
                         >
                           <input
                             type="checkbox"
+                            name="booking_options"
+                            value={option}
                             className="w-[21px] h-[21px] border border-[#00000099] rounded focus:ring-0"
                           />
                           <span>{option}</span>
@@ -194,17 +278,21 @@ const Booking = () => {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       required
                       className="w-full h-[224px] border border-[#00000099] rounded p-3 resize-none focus:outline-none"
                     />
                   </div>
+
+                  {/* Submit Button */}
                   <div className="flex items-start justify-start w-full">
                     <Button
                       style="danger"
-                      type="button"
-                      css="w-[217px] h-[56px]"
+                      type="submit"
+                      css="w-[217px] h-[56px] flex justify-center items-center"
+                      disabled={loading}
                     >
-                      Submit
+                      {loading ? "Submitting..." : "Submit"}
                     </Button>
                   </div>
                 </form>
