@@ -56,7 +56,7 @@ const Hero = () => {
           </h1>
 
           {/* Mobile */}
-          <h1 className="md:hidden lg:hidden text-[32px] text-white font-semibold text-center">
+          <h1 className="md:hidden lg:hidden text-[28px] text-white font-semibold text-center">
           <span
               className={`${
                 currentWord === 1 ? "text-[#FB8C00]" : "text-white"
@@ -67,8 +67,8 @@ const Hero = () => {
               loop={false}
               cursor
               cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
+              typeSpeed={150}
+              deleteSpeed={200}
               delaySpeed={2000}
               onLoopDone={() =>
                 setCurrentWord((prev) => (prev + 1) % words.length)
