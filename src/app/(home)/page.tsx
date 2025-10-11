@@ -1,7 +1,7 @@
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Services from "../components/home/Service";
-import Community from "../components/home/Community";
+// import Community from "../components/home/Community";
 import Accountability from "../components/home/Accountability";
 import Testimonies from "../components/home/Testimonies";
 import Booking from "../components/home/Booking";

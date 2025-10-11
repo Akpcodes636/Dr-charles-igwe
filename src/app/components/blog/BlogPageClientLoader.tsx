@@ -1,7 +1,7 @@
 "use client";
+
 import { client } from "@/sanity/lib/client";
-import { PortableText } from "@portabletext/react";
-//  import { getSinglePost, getRelatedPosts } from "@/sanity/lib/queries";
+import { PortableText, PortableTextBlock } from "@portabletext/react";
 import { IoCalendarClearOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,86 +11,109 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { getRelatedPosts, getSinglePost } from "@/sanity/schemaTypes/queries";
 import PageLoader from "../ui/PageLoader";
-//  import { getRelatedPosts, getSinglePost } from "@/sanity/schemaTypes/queries";
+import GoBlog from "../ui/GoBlog";
+import { Blog } from "@/Types";
 
 interface BlogPageClientLoaderProps {
-    slug: string;
+  slug: string;
+}
+
+export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps) {
+  const [post, setPost] = useState<Blog | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const fetchedPost = await client.fetch<Blog>(getSinglePost, { slug });
+        const fetchedRelated = await client.fetch<Blog[]>(getRelatedPosts, { slug });
+        setPost(fetchedPost);
+        setRelatedPosts(fetchedRelated);
+      } catch (err) {
+        console.error("Error fetching blog data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <PageLoader />
+      </div>
+    );
   }
-  
-  export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps) {
-    const [post, setPost] = useState<any>(null);
-    const [relatedPosts, setRelatedPosts] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        setLoading(true);
-        try {
-          const fetchedPost = await client.fetch(getSinglePost, { slug });
-          const fetchedRelated = await client.fetch(getRelatedPosts, { slug });
-          setPost(fetchedPost);
-          setRelatedPosts(fetchedRelated);
-        } catch (err) {
-          console.error("Error fetching blog data:", err);
-        } finally {
-          setLoading(false);
-        }
-      };
-  
-      fetchData();
-    }, [slug]);
+
+  if (!post) {
+    return (
+      <div className="flex justify-center items-center h-screen text-xl text-gray-500">
+        Blog post not found.
+      </div>
+    );
+  }
+
   return (
     <section className="bg-[#FFFFFF]">
       <Header />
-      {loading ? (
-    <div className="flex justify-center items-center h-screen">
-      <PageLoader />
-    </div>
-  ) : (
+
       <div className="container-sm mx-auto py-[32px] md:py-[90px]">
+        <GoBlog />
+
         {/* Main post */}
         <div className="w-full max-w-[358px] sm:max-w-full md:max-w-full lg:max-w-full mx-auto h-[240px] rounded-[10px] mb-[44px]">
           <Image
-            src={post.img}
+            src={post.mainImage?.asset.url || "/default.jpg"}
             width={800}
             height={500}
-            alt={post.title}
+            alt={post.title || "Blog Image"}
             className="w-full h-full object-cover rounded-[10px]"
             priority={false}
           />
         </div>
 
+        {/* Author + Date */}
         <div className="flex items-center justify-center gap-[40px]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/avatar.png"
+              src={post.author?.image?.asset?.url || "/images/avatar.png"}
               width={32}
               height={32}
               alt="Author avatar"
               className="rounded-full"
             />
-            <p className="text-[#00000066] text-[16px]">{post.author}</p>
+            <p className="text-[#00000066] text-[16px]">
+              {post.author?.name || "Unknown"}
+            </p>
           </div>
 
           <div className="flex items-center gap-2">
             <IoCalendarClearOutline color="#00000066" />
             <p className="text-[#00000066] text-[16px]">
-              {new Date(post.publishedAt).toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "short",
-                year: "numeric",
-              })}
+              {post.publishedAt
+                ? new Date(post.publishedAt).toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric",
+                  })
+                : "Unknown date"}
             </p>
           </div>
         </div>
 
+        {/* Title */}
         <h3 className="text-[26px] text-[#000] text-center mt-[32px] mb-[24px]">
           {post.title}
         </h3>
 
+        {/* Body */}
         <div className="prose prose-lg md:prose-xl lg:prose-2xl mx-auto mb-[40px] prose-headings:font-semibold prose-headings:text-[#000] prose-p:text-[#000000B2] prose-p:leading-relaxed prose-li:marker:text-[#E28101] prose-a:text-[#E28101] prose-a:no-underline hover:prose-a:underline prose-table:shadow-md prose-table:rounded-xl prose-table:border border-[#ddd] prose-th:bg-[#E28101] prose-th:text-white prose-th:font-semibold prose-th:p-3 prose-td:p-3 prose-td:border-t border-[#eee] overflow-x-auto">
           <PortableText
-            value={post.body}
+            value={(post.body as PortableTextBlock[]) || []}
             components={{
               block: {
                 h1: ({ children }) => (
@@ -128,7 +151,7 @@ interface BlogPageClientLoaderProps {
                 em: ({ children }) => <em className="italic">{children}</em>,
                 link: ({ value, children }) => (
                   <a
-                    href={value.href}
+                    href={value?.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#E28101] hover:underline"
@@ -137,110 +160,72 @@ interface BlogPageClientLoaderProps {
                   </a>
                 ),
               },
-              types: {
-                table: ({ value }) => (
-                  <div className="overflow-x-auto my-8">
-                    <table className="min-w-full border border-[#ddd] rounded-xl text-left">
-                      <thead className="bg-[#E28101] text-white">
-                        <tr>
-                          {value.rows[0].cells.map(
-                            (cell: string, i: number) => (
-                              <th key={i} className="p-3 font-semibold">
-                                {cell}
-                              </th>
-                            )
-                          )}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {value.rows.slice(1).map((row: any, i: number) => (
-                          <tr
-                            key={i}
-                            className={
-                              i % 2 === 0 ? "bg-white" : "bg-[#FAFAFA]"
-                            }
-                          >
-                            {row.cells.map((cell: string, j: number) => (
-                              <td
-                                key={j}
-                                className="p-3 border-t border-[#eee] text-[#000000B2]"
-                              >
-                                {cell}
-                              </td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                ),
-              },
             }}
           />
         </div>
 
         {/* Related Blog Section */}
-        <div className="mt-[90px]">
-          <h2 className="text-center text-[26px] text-[#000] font-medium mb-[32px]">
-            Related Blog
-          </h2>
+        {relatedPosts.length > 0 && (
+          <div className="mt-[90px]">
+            <h2 className="text-center text-[26px] text-[#000] font-medium mb-[32px]">
+              Related Blog
+            </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {relatedPosts.map((blog: any) => (
-              <div key={blog.slug} className="flex flex-col">
-                <div className="w-full h-[216px] rounded-[10px] overflow-hidden">
-                  <Image
-                    src={blog.img}
-                    width={600}
-                    height={400}
-                    alt={blog.title}
-                    className="w-full h-full object-cover"
-                    priority={false}
-                  />
-                </div>
-
-                <div className="mt-[16px]">
-                  <h3 className="text-[22px] font-medium text-[#000] mb-[8px]">
-                    {blog.title}
-                  </h3>
-                  <p className="text-[16px] text-[#000000B2] mb-[12px] line-clamp-2">
-                    {blog.excerpt ||
-                      blog.body
-                        ?.map((block: any) =>
-                          block.children
-                            ?.map((child: any) => child.text)
-                            .join("")
-                        )
-                        .join(" ")
-                        .slice(0, 150) + "..."}
-                  </p>
-
-                  <div className="flex items-center gap-4 mb-[12px]">
-                    <p className="text-[#00000066] text-[16px]">
-                      {blog.author}
-                    </p>
-                    <p className="text-[#00000066] text-[16px]">
-                      {new Date(blog.publishedAt).toLocaleDateString("en-GB", {
-                        day: "2-digit",
-                        month: "short",
-                        year: "numeric",
-                      })}
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedPosts.map((blog) => (
+                <div key={blog._id} className="flex flex-col">
+                  <div className="w-full h-[216px] rounded-[10px] overflow-hidden">
+                    <Image
+                      src={blog.mainImage?.asset.url || "/default.jpg"}
+                      width={600}
+                      height={400}
+                      alt={blog.title}
+                      className="w-full h-full object-cover"
+                      priority={false}
+                    />
                   </div>
 
-                  <Link
-                    href={`/blog/${blog.slug}`}
-                    className="flex items-center gap-2 text-[#E28101]"
-                  >
-                    Read more <FaArrowRight color="#E28101" />
-                  </Link>
+                  <div className="mt-[16px]">
+                    <h3 className="text-[22px] font-medium text-[#000] mb-[8px]">
+                      {blog.title}
+                    </h3>
+                    <p className="text-[16px] text-[#000000B2] mb-[12px] line-clamp-2">
+                      {blog.excerpt ||
+                        blog.description ||
+                        "No description available."}
+                    </p>
+
+                    <div className="flex items-center gap-4 mb-[12px]">
+                      <p className="text-[#00000066] text-[16px]">
+                        {blog.author?.name || "Unknown"}
+                      </p>
+                      <p className="text-[#00000066] text-[16px]">
+                        {blog.publishedAt
+                          ? new Date(blog.publishedAt).toLocaleDateString(
+                              "en-GB",
+                              {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                              }
+                            )
+                          : "Unknown date"}
+                      </p>
+                    </div>
+
+                    <Link
+                      href={`/blog/${blog.slug}`}
+                      className="flex items-center gap-2 text-[#E28101]"
+                    >
+                      Read more <FaArrowRight color="#E28101" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      )}
 
       <Footer bgColor="bg-[#000000]" />
     </section>

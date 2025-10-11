@@ -18,9 +18,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { IoFilter, IoClose } from "react-icons/io5";
+import { Category } from "@/Types";
+
 
 interface BlogFilterProps {
-  categories: any[];
+  categories: Category[];
   selectedCategory: string | null;
   setSelectedCategory: (categoryId: string | null) => void;
 }

@@ -9,7 +9,7 @@ export default function Loader() {
       <ImSpinner3
         size={40}
         className="animate-spin"
-        color="white"
+        color="black"
       />
     </div>
   );

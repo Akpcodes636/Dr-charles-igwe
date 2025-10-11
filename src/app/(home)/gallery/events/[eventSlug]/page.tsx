@@ -206,14 +206,11 @@ import EventPageClientLoader from "@/app/components/Event/EventPageClientLoader"
 
 
 // import EventPageClientLoader from "./EventPageClientLoader";
-
-interface EventPageProps {
-  params: {
-    eventSlug: string;
-  };
-}
-
-export default function Page({ params }: EventPageProps) {
-  const { eventSlug } = params;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ eventSlug: string }>;
+}) {
+  const { eventSlug } = await params; // ✅ Await because params is a Promise
   return <EventPageClientLoader eventSlug={eventSlug} />;
 }

@@ -66,7 +66,6 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Button from "@/app/components/ui/Button";
 import EventCard from "@/app/components/ui/EventCard";
-import PageLoader from "@/app/components/ui/PageLoader";
 import { CiSearch } from "react-icons/ci";
 import { getEvents } from "@/sanity/lib/client";
 import Loader from "@/app/components/ui/Loader";
@@ -110,7 +109,7 @@ export default function EventsPage() {
   );
 
   return (
-    <section className="bg-[#000000] border-[1px] border-white">
+    <section className="bg-[#0A1F44] border-[1px] border-white">
       <Header />
       {/* <h1 className="text-white text-8xl">Hello World!!!</h1> */}
       {loading ? (

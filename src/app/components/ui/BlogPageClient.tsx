@@ -2,16 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import BlogPageClient from "./BlogPageClient";
-import Loader from "./Loader";
 import PageLoader from "./PageLoader";
+import { Blog, Category } from "@/Types";
 
-interface Props {
-  featured: any;
-  blogs: any;
-  categories: any;
+interface BlogWithLoaderProps {
+  featured: Blog[];
+  blogs: Blog[];
+  categories: Category[];
 }
 
-export default function BlogWithLoader({ featured, blogs, categories }: Props) {
+
+export default function BlogWithLoader({ featured, blogs, categories }: BlogWithLoaderProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

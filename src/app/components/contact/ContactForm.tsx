@@ -62,9 +62,7 @@ export default function ContactForm() {
       } else {
         toast.error("Failed to send message. Please try again.");
       }
-    } catch (error) {
-      toast.error("Something went wrong. Please check your connection.");
-    } finally {
+    }  finally {
       setLoading(false);
     }
   };

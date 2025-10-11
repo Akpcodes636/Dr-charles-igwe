@@ -82,12 +82,11 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 interface BlogCardProps {
-  slug: string;
+  slug?: string;
   img: string;
   title: string;
   excerpt: string;
   author: string;
-  body:string;
   publishedAt: string;
 }
 
@@ -97,8 +96,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   title,
   excerpt,
   author,
-  publishedAt,
-  body
+  publishedAt
 }) => {
   return (
     <div className="flex flex-col">

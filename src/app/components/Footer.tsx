@@ -8,8 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 interface FooterProps {
   bgColor?: string;
@@ -30,7 +29,7 @@ const FooterSection = ({
   };
 
   return (
-    <div className="mb-8 mt-[48px] x-[20px]" data-aos="fade-up">
+    <div className="mb-8 mt-[48px] x-[20px]">
       <div
         className="flex justify-between items-center cursor-pointer"
         onClick={toggleSection}
@@ -60,7 +59,7 @@ const FooterSection = ({
 };
 
 const SocialIcons = () => (
-  <div className="flex gap-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
+  <div className="flex gap-6 mt-4" >
     <Link href="#">
       <GrFacebookOption size={20} color="white" />
     </Link>
@@ -84,13 +83,7 @@ const Footer = ({ bgColor }: FooterProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 80,
-      once: false,
-    });
-  }, []);
+ 
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -105,13 +98,11 @@ const Footer = ({ bgColor }: FooterProps) => {
 
   const NavigationLinks = () => (
     <>
-      {["Home", "About", "Services", "Blog", "Contact"].map((item, i) => (
+      {["Home", "About", "Services", "Blog", "Contact"].map((item) => (
         <Link
           key={item}
           href={`/${item === "Home" ? "" : item.toLowerCase()}`}
           className="text-white font-extralight text-[12px]"
-          data-aos="fade-up"
-          data-aos-delay={i * 100}
         >
           {item}
         </Link>
@@ -129,13 +120,11 @@ const Footer = ({ bgColor }: FooterProps) => {
           href: "/leadership",
         },
         { name: "Project & Program Management Advisory", href: "/project" },
-      ].map((service, i) => (
+      ].map((service) => (
         <Link
           key={service.name}
           href={service.href}
           className="text-white text-[12px]"
-          data-aos="fade-up"
-          data-aos-delay={i * 100}
         >
           {service.name}
         </Link>
@@ -144,7 +133,7 @@ const Footer = ({ bgColor }: FooterProps) => {
   );
 
   const Newsletter = () => (
-    <div className="w-full max-w-[365px]" data-aos="fade-right">
+    <div className="w-full max-w-[365px]">
       <h2 className="text-[16px] md:text-[18px] font-medium text-white mb-3">
         Subscribe to My Newsletter
       </h2>
@@ -173,11 +162,10 @@ const Footer = ({ bgColor }: FooterProps) => {
     <footer className={`${bgColor} px-[20px] md:px-[0px]`}>
       <section
         className="pt-[40px] pb-[3px] md:pt-[50px] md:pb-[8px] lg:pt-[80px] lg:pb-[5px]"
-        data-aos="fade-up"
       >
         <div className="">
-          <div className="text-center mb-[40px]" data-aos="zoom-in">
-            <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-white font-allison font-normal">
+          <div className="text-center mb-[40px]">
+            <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[80px] text-white font-allison font-normal">
               Dr. Charles Igwe
             </h1>
             <p className="-mt-[15px] text-white text-center text-[12px] md:text-[13px] max-w-[527px] mx-auto leading-tight">
@@ -197,13 +185,13 @@ const Footer = ({ bgColor }: FooterProps) => {
             }`}
           >
             {!isMobile && (
-              <div className="col-span-5" data-aos="fade-right">
+              <div className="col-span-5">
                 <Newsletter />
               </div>
             )}
 
             {!isMobile && (
-              <div className="col-span-2" data-aos="fade-up">
+              <div className="col-span-2">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Navigation
                 </h4>
@@ -214,7 +202,7 @@ const Footer = ({ bgColor }: FooterProps) => {
             )}
 
             {!isMobile && (
-              <div className="col-span-3" data-aos="fade-up">
+              <div className="col-span-3">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Services
                 </h4>
@@ -225,7 +213,7 @@ const Footer = ({ bgColor }: FooterProps) => {
             )}
 
             {!isMobile && (
-              <div className="col-span-2" data-aos="fade-left">
+              <div className="col-span-2">
                 <h4 className="text-white text-[16px] font-semibold mb-4">
                   Contact
                 </h4>
@@ -262,7 +250,7 @@ const Footer = ({ bgColor }: FooterProps) => {
 
           <div
             className="border-t border-[#FFFFFF40] pt-6 mt-[40px]"
-            data-aos="fade-up"
+            // data-aos="fade-up"
           >
             <p className="text-white text-[14px] text-center">
               © {currentYear} Dr. Charles Igwe. All Rights Reserved.

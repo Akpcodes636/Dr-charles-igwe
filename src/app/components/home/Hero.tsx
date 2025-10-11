@@ -20,9 +20,9 @@ const Hero = () => {
   return (
     <section className="bg-[url(/images/Hero-1.jpg)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
       <Header />
-      <div className="container-sm pb-[109px]">
+      <div className="container-sm pt-[40px] pb-[109px]">
         <div className="mb-[44px] md:mb-[56px] lg:mb-[96px]">
-          <h1 className="text-[50px] sm:text-[70px] md:text-[100px] lg:text-[140px] text-white font-allison text-center font-normal">
+          <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[80px] text-white font-allison text-center font-normal mb-[14px]">
             Dr. Charles Igwe
           </h1>
           <p className="-mt-[15px] sm:-mt-[18px] md:-mt-[20px] lg:-mt-[35px] text-white text-center text-[12px] md:text-[13px] lg:text-[13px] font-normal leading-[100%] max-w-[248px] md:max-w-[400px] lg:max-w-[527px] mx-auto">

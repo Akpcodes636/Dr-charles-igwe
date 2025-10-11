@@ -1,5 +1,4 @@
 "use client";
-import { Servicestext } from "@/utils/contents/HomePage.content";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -2,7 +2,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const HeroLogos = ({ heroImage }: { heroImage: any[] }) => {
+interface HeroImage {
+  image: string; // Adjust this if your data structure is different
+}
+
+
+const HeroLogos = ({ heroImage }: { heroImage: HeroImage[] }) => {
   return (
     <div className="relative overflow-hidden w-[500px]">
       <motion.div

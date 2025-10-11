@@ -73,9 +73,7 @@ const Booking = () => {
       } else {
         toast.error("Something went wrong, please try again.");
       }
-    } catch (error) {
-      toast.error("Network error. Please check your internet connection.");
-    } finally {
+    }  finally {
       setLoading(false);
     }
   };
