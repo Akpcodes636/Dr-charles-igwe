@@ -78,7 +78,7 @@ export default function BlogPage() {
                 excerpt={featured.excerpt || ""}
                 author={featured.author?.name || "Unknown Author"}
                 publishedAt={featured.publishedAt || new Date().toISOString()}
-                img={featured.mainImage?.asset.url || "/fallback-image.jpg"}
+                img={featured.img || "/fallback-image.jpg"}
                 slug={featured.slug || ""}
               />
             </div>
@@ -100,9 +100,9 @@ export default function BlogPage() {
                   key={b._id}
                   title={b.title}
                   excerpt={b.excerpt || ""}
-                  author={b.author?.name || "Unknown Author"}
+                  author={typeof b.author === "string" ? b.author : b.author?.name || "Unknown Author"}
                   publishedAt={b.publishedAt || new Date().toISOString()}
-                  img={b.mainImage?.asset.url || "/fallback-image.jpg"}
+                  img={b.img || "/fallback-image.jpg"}
                   slug={b.slug || ""}
                 />
               ))

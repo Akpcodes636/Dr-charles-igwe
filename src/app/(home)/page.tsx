@@ -1,11 +1,11 @@
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Services from "../components/home/Service";
-// import Community from "../components/home/Community";
 import Accountability from "../components/home/Accountability";
 import Testimonies from "../components/home/Testimonies";
 import Booking from "../components/home/Booking";
 import Footer from "../components/Footer";
+import Community from "../components/home/Community";
 
 export default function Page() {
   return (
@@ -14,7 +14,7 @@ export default function Page() {
       <Hero />
       <About />
       <Services />
-      {/* <Community /> */}
+      <Community />
       <Accountability />
       <Testimonies />
       <Booking />

@@ -12,7 +12,7 @@ const About = () => {
     "/images/Igwe-9.png",
     "/images/Public-speaking-1.png",
     "/images/Igwe-34.png",
-    "/images/mentor-1.png",
+    "/images/Igwe-34.png",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 

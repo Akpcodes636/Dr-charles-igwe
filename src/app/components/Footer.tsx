@@ -72,7 +72,7 @@ const SocialIcons = () => (
     <Link href="https://www.linkedin.com/in/charles-igwe/">
       <FaLinkedinIn size={20} color="white" />
     </Link>
-    <Link href="#">
+    <Link href="https://www.youtube.com/@dr_charlescafe">
       <IoLogoYoutube size={20} color="white" />
     </Link>
   </div>

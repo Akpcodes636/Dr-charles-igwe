@@ -31,6 +31,7 @@ export interface Blogs {
   author?: Author;
   categories?: Category[];
   publishedAt?: string;
+  img?:string;
 }
 
 export interface FeaturedPost extends Blogs {
@@ -96,7 +97,7 @@ export interface Blog {
   };
   excerpt?: string;
   description?: string;
-  author?: Author;
+  author?: string;
   categories?: Category[];
   publishedAt?: string;
   body?: PortableTextBlock[];

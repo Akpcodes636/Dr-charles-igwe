@@ -29,6 +29,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
       try {
         const fetchedPost = await client.fetch<Blog>(getSinglePost, { slug });
         const fetchedRelated = await client.fetch<Blog[]>(getRelatedPosts, { slug });
+        console.log(fetchedPost);
         setPost(fetchedPost);
         setRelatedPosts(fetchedRelated);
       } catch (err) {
@@ -67,7 +68,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
         {/* Main post */}
         <div className="w-full max-w-[358px] sm:max-w-full md:max-w-full lg:max-w-full mx-auto h-[240px] rounded-[10px] mb-[44px]">
           <Image
-            src={post.mainImage?.asset.url || "/default.jpg"}
+            src={post.img || "/default.jpg"}
             width={800}
             height={500}
             alt={post.title || "Blog Image"}
@@ -80,14 +81,14 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
         <div className="flex items-center justify-center gap-[40px]">
           <div className="flex items-center gap-2">
             <Image
-              src={post.author?.image?.asset?.url || "/images/avatar.png"}
+              src="/images/avatar.png"
               width={32}
               height={32}
               alt="Author avatar"
               className="rounded-full"
             />
             <p className="text-[#00000066] text-[16px]">
-              {post.author?.name || "Unknown"}
+              {post.author || "Unknown"}
             </p>
           </div>
 
@@ -176,7 +177,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
                 <div key={blog._id} className="flex flex-col">
                   <div className="w-full h-[216px] rounded-[10px] overflow-hidden">
                     <Image
-                      src={blog.mainImage?.asset.url || "/default.jpg"}
+                      src={blog.img || "/default.jpg"}
                       width={600}
                       height={400}
                       alt={blog.title}
@@ -197,7 +198,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
 
                     <div className="flex items-center gap-4 mb-[12px]">
                       <p className="text-[#00000066] text-[16px]">
-                        {blog.author?.name || "Unknown"}
+                        {blog.author || "Unknown"}
                       </p>
                       <p className="text-[#00000066] text-[16px]">
                         {blog.publishedAt

@@ -18,7 +18,7 @@ export const getAllBlogsQuery = `
   title,
   "slug": slug.current,
   "img": mainImage.asset->url,
-  author,
+  "author": author->name,
   publishedAt,
   "excerpt": coalesce(excerpt, pt::text(body)[0..150] + "..."),
   body,

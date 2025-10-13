@@ -6,16 +6,45 @@ import Header from "../Header";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 import HeroLogos from "../ui/HeroLogos";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  // const words = [
+  //   "Inspiring Growth.",
+  //   "Empowering Leaders.",
+  //   "Driving Transformation.",
+  // ];
+
+  // const [currentWord, setCurrentWord] = useState(0);
   const words = [
     "Inspiring Growth.",
     "Empowering Leaders.",
     "Driving Transformation.",
   ];
+  const colors = ["#FFFFFF", "#FB8C00", "#FFFFFF"];
 
-  const [currentWord, setCurrentWord] = useState(0);
+ const [index, setIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const word = words[index];
+    const interval = setInterval(() => {
+      setDisplayedText(word.slice(0, i + 1));
+      i++;
+      if (i === word.length) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setIndex((prev) => (prev + 1) % words.length);
+        }, 2000);
+      }
+    }, 150);
+
+    return () => clearInterval(interval);
+  }, [index]);
+
+  // --- Dynamically change cursor color based on word color ---
+  const cursorColor = colors[index % colors.length];
 
   return (
     <section className="bg-[url(/images/Hero-1.jpg)] bg-cover md:bg-cover lg:bg-cover bg-center md:bg-center lg:bg-bottom bg-no-repeat">
@@ -33,15 +62,36 @@ const Hero = () => {
 
         <div>
           {/* Desktop */}
-          <h1 className="hidden md:block text-[56px] text-white text-center font-semibold mb-[16px]">
+          <h1 className="hidden md:block text-[56px] text-center font-semibold mb-[16px]">
             <span
+              style={{
+                color: colors[index % colors.length],
+                transition: "color 0.3s ease",
+              }}
+            >
+              {displayedText}
+            </span>
+            <span
+              style={{
+                color: cursorColor,
+                transition: "color 0.3s ease",
+              }}
+              className="animate-pulse"
+            >
+              |
+            </span>
+          </h1>
+
+          {/* Mobile */}
+          <h1 className="md:hidden lg:hidden text-[28px] text-white font-semibold text-center">
+            {/* <span
               className={`${
                 currentWord === 1 ? "text-[#FB8C00]" : "text-white"
               }`}
             >
               <Typewriter
                 words={words}
-                loop={true}
+                loop={false}
                 cursor
                 cursorStyle="|"
                 typeSpeed={150}
@@ -52,30 +102,16 @@ const Hero = () => {
                 }
                 onType={(count) => setCurrentWord(count % words.length)}
               />
-            </span>
-          </h1>
-
-          {/* Mobile */}
-          <h1 className="md:hidden lg:hidden text-[28px] text-white font-semibold text-center">
-          <span
-              className={`${
-                currentWord === 1 ? "text-[#FB8C00]" : "text-white"
-              }`}
-            >
-            <Typewriter
-              words={words}
-              loop={false}
-              cursor
-              cursorStyle="|"
-              typeSpeed={150}
-              deleteSpeed={200}
-              delaySpeed={2000}
-              onLoopDone={() =>
-                setCurrentWord((prev) => (prev + 1) % words.length)
-              }
-              onType={(count) => setCurrentWord(count % words.length)}
-              />
-              </span>
+            </span> */}
+             <span
+            style={{
+              color: colors[index % colors.length],
+              transition: "color 0.3s ease",
+            }}
+          >
+            {displayedText}
+          </span>
+          <span className="text-[#FB8C00]">|</span>
           </h1>
 
           <p className="text-white max-w-[358px] md:max-w-[500px] lg:max-w-[901px] mx-auto text-[16px] text-center mb-[40px]">
