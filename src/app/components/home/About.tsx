@@ -33,7 +33,7 @@ const About = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <div className="w-full mx-auto max-w-[470px] md:max-w-[500px] lg:max-w-[605px] h-[270px] md:h-[380px] lg:h-[456px] border-[3px] border-[#E28101] rounded-[10px]">
+              <div className="w-full mx-auto max-w-full md:max-w-full lg:max-w-[605px] h-[270px] md:h-[380px] lg:h-[456px] border-[3px] border-[#E28101] rounded-[10px]">
                 <Image
                   src={images[currentIndex]}
                   width={500}
@@ -55,7 +55,7 @@ const About = () => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <p className="text-[#FFFFFF] font-normal text-[16px] leading-[24px] w-full max-w-[358px] md:max-w-[500px] mx-auto lg:max-w-[605px] pt-[32px] pb-[40px]">
+              <p className="text-[#FFFFFF] font-normal text-[16px] leading-[24px] w-full max-w-full md:max-w-full mx-auto lg:max-w-[605px] pt-[32px] pb-[40px]">
                 Dr. Charles Igwe is a Program Manager, educator, and leadership
                 coach with over a decade of experience leading complex projects
                 and developing talent in highly regulated industries. As the

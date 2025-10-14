@@ -18,12 +18,12 @@ export const getAllBlogsQuery = `
   title,
   "slug": slug.current,
   "img": mainImage.asset->url,
-  "author": author->name,
+  "author": author,
   publishedAt,
   "excerpt": coalesce(excerpt, pt::text(body)[0..150] + "..."),
   body,
   featured,
-   categories[]->{ // Add this
+  categories[]->{ // Add this
         _id,
         title
   }

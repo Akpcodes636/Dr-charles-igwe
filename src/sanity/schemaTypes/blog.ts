@@ -53,12 +53,18 @@ export const blog = defineType({
         "Mark this post as featured to display it at the top of the blog page.",
     }),
     defineField({
-        name: "excerpt",
-        title: "Excerpt",
-        type: "text",
-        description: "Short summary of the blog post for previews or cards.",
-        validation: (Rule) => Rule.max(200),
-      }),
-      
+      name: "excerpt",
+      title: "Excerpt",
+      type: "text",
+      description: "Short summary of the blog post for previews or cards.",
+      validation: (Rule) => Rule.max(200),
+    }),
+    defineField({
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "category" }] }],
+      description: "Select categories for this post.",
+    }),
   ],
 });

@@ -32,7 +32,7 @@ export default function BlogPage() {
           getBlogs(),
           getCategories(),
         ]);
-
+        console.log(blogsData);
         setFeatured(featuredData);
         setBlogs(blogsData);
         setCategories(categoriesData);
@@ -76,7 +76,7 @@ export default function BlogPage() {
               <BlogCardPreview
                 title={featured.title}
                 excerpt={featured.excerpt || ""}
-                author={featured.author?.name || "Unknown Author"}
+                author={featured.author || "Unknown Author"}
                 publishedAt={featured.publishedAt || new Date().toISOString()}
                 img={featured.img || "/fallback-image.jpg"}
                 slug={featured.slug || ""}
@@ -100,7 +100,7 @@ export default function BlogPage() {
                   key={b._id}
                   title={b.title}
                   excerpt={b.excerpt || ""}
-                  author={typeof b.author === "string" ? b.author : b.author?.name || "Unknown Author"}
+                  author={b.author || "Charles Igwesss"}
                   publishedAt={b.publishedAt || new Date().toISOString()}
                   img={b.img || "/fallback-image.jpg"}
                   slug={b.slug || ""}

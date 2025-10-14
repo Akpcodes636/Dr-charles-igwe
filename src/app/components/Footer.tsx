@@ -9,7 +9,6 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
 
-
 interface FooterProps {
   bgColor?: string;
 }
@@ -59,7 +58,7 @@ const FooterSection = ({
 };
 
 const SocialIcons = () => (
-  <div className="flex gap-6 mt-4" >
+  <div className="flex gap-6 mt-4">
     <Link href="#">
       <GrFacebookOption size={20} color="white" />
     </Link>
@@ -82,8 +81,6 @@ const Footer = ({ bgColor }: FooterProps) => {
   const [currentYear] = useState(new Date().getFullYear());
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-
- 
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -160,9 +157,7 @@ const Footer = ({ bgColor }: FooterProps) => {
 
   return (
     <footer className={`${bgColor} px-[20px] md:px-[0px]`}>
-      <section
-        className="pt-[40px] pb-[3px] md:pt-[50px] md:pb-[8px] lg:pt-[80px] lg:pb-[5px]"
-      >
+      <section className="pt-[40px] pb-[3px] md:pt-[50px] md:pb-[8px] lg:pt-[80px] lg:pb-[5px]">
         <div className="">
           <div className="text-center mb-[40px]">
             <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[80px] text-white font-allison font-normal">
@@ -180,8 +175,8 @@ const Footer = ({ bgColor }: FooterProps) => {
               isMobile
                 ? "grid-cols-1 gap-y-[32px]"
                 : isTablet
-                ? "grid-cols-2 gap-x-[2px] gap-y-[40px] px-[40px]"
-                : "grid-cols-12 gap-x-[0px] px-[50px]"
+                  ? "grid-cols-2 gap-x-[2px] gap-y-[40px] px-[40px]"
+                  : "grid-cols-12 gap-x-[0px] px-[50px]"
             }`}
           >
             {!isMobile && (
@@ -218,9 +213,7 @@ const Footer = ({ bgColor }: FooterProps) => {
                   Contact
                 </h4>
                 <div className="flex flex-col gap-[12px] text-[12px]">
-                  <span className="text-white">
-                    charlesjulius.igwe@gmail.com
-                  </span>
+                  <span className="text-white">Charles.igwe@ci3pro.ca</span>
                   <SocialIcons />
                 </div>
               </div>

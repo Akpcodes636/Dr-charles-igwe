@@ -70,7 +70,7 @@ export default function ContactForm() {
   return (
     <section>
       <div className="container-sm mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-y-[96px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gp-y-[96px]">
           {/* Contact Info */}
           <div className="w-full h-full order-1 shadow-[0px_4px_16px_1px_#00000014]">
             <div className="w-full min-h-[285px] lg:h-full px-[16px] md:px-[30px] pt-[32px] pb-[64px] lg:p-[80px_30px_214px] bg-[#16366F] rounded-[5px]">

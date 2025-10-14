@@ -28,7 +28,7 @@ export interface Blogs {
   };
   excerpt?: string;
   description?: string;
-  author?: Author;
+  author?: string;
   categories?: Category[];
   publishedAt?: string;
   img?:string;

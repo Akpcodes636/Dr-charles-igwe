@@ -10,7 +10,7 @@ const AboutHero = () => {
       <div className="py-[32px] md:py-[50px] lg:pt-[205px] container-sm mx-auto flex items-center justify-center flex-col md:flex-row lg:flex-row gap-[30px]">
         <div className="mb-[8px]">
           {/* <div className="max-w-[358px] sm:max-w-[400px] md:max-w-[300px] lg:max-w-[605px] mx-auto h-[240px] md:h-[400px] lg:h-[456px]"> */}
-          <div className="max-w-[358px] sm:max-w-[400px] md:max-w-[500px] md:h-[450px] lg:max-w-[605px] lg:h-[456px] w-full h-[240px] sm:h-[400px]">
+          <div className=" max-w-full mx-auto sm:max-w-[400px] md:max-w-[500px] md:h-[450px] lg:max-w-[605px] lg:h-[456px] w-full h-[240px] sm:h-[400px]">
             <Image
               src="/images/Img.png"
               width={500}

@@ -33,7 +33,7 @@ const BlogCardPreview: React.FC<BlogCardPreviewProps> = ({
         />
       </div>
 
-      <div className="mt-[24px] mx-auto max-w-[358px] sm:max-w-full md:max-w-full  lg:max-w-[606px] mb-[16px]">
+      <div className="mt-[24px] mx-auto max-w-full sm:max-w-full md:max-w-full  lg:max-w-[606px] mb-[16px]">
         <p className="text-[#FB8C00] text-[16px] font-medium mb-[8px]">
           Featured
         </p>

@@ -61,10 +61,9 @@ export default function EventPageClientLoader({
 
         console.log(fetchedEvent);
 
-        setTimeout(() => {
+       
           setEvent(fetchedEvent);
           setLoading(false);
-        }, 2000);
       } catch (err) {
         console.error("Error fetching event:", err);
         setLoading(false);
@@ -90,15 +89,14 @@ export default function EventPageClientLoader({
 
               {/* Banner */}
               <div className="pt-[40px]">
-                <div className="max-w-full mx-auto h-[200px] md:h-[240px] rounded-[10px] overflow-hidden">
+                {/* <div className="max-w-full  mx-auto rounded-[10px] overflow-hidden"> */}
+                <div className="w-full h-[40vh] md:h-[60vh] rounded-[10px] overflow-hidden">
                   <Image
                     src={event.img || "/images/placeholder.png"}
                     width={800}
                     height={500}
                     alt={event.title}
                     className="w-full h-full object-cover"
-                    placeholder="blur"
-                    blurDataURL="/images/placeholder-blur.png"
                   />
                 </div>
 
@@ -149,11 +147,11 @@ export default function EventPageClientLoader({
                     <h3 className="text-white text-[20px] md:text-[22px] font-medium md:font-semibold mb-[24px]">
                       Photos
                     </h3>
-                    <div className="flex flex-col lg:flex-row gap-[24px]">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px]">
                       {event.galleryImages.map((photo, index) => (
                         <div
                           key={index}
-                          className="w-full max-w-full md:h-[200px] h-[160px] mx-auto rounded-[10px] overflow-hidden"
+                          className="w-full max-w-full md:min-h-[200px]  min-h-[160px] mx-auto rounded-[10px] overflow-hidden"
                         >
                           <Image
                             src={photo.url}
@@ -180,7 +178,7 @@ export default function EventPageClientLoader({
                       {event.videos.map((video, index) => (
                         <div
                           key={index}
-                          className="relative mx-auto w-full md:h-[200px] h-[160px] rounded-[10px] overflow-hidden"
+                          className="relative mx-auto w-full md:min-h-[200px] min-h-[160px] rounded-[10px] overflow-hidden"
                         >
                           <Image
                             src={getYouTubeThumbnail(video.url)}
