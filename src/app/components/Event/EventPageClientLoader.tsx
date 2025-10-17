@@ -96,7 +96,7 @@ export default function EventPageClientLoader({
                     width={800}
                     height={500}
                     alt={event.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
 
