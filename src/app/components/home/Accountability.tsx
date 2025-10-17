@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,7 +28,7 @@ const Accountability = () => {
             data-aos-delay="200"
           >
             <Image
-              src="/images/Igwe-3.png"
+              src="/images/igwe-3.png"
               alt="Pictures of Dr Charles and friends"
               width={500}
               height={500}

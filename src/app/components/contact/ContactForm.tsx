@@ -62,7 +62,7 @@ export default function ContactForm() {
       } else {
         toast.error("Failed to send message. Please try again.");
       }
-    }  finally {
+    } finally {
       setLoading(false);
     }
   };
@@ -98,7 +98,7 @@ export default function ContactForm() {
                         Email Us
                       </h2>
                       <p className="text-[14px] lg:text-[16px] text-[#FFFFFFB2]">
-                        charlesjulius.igwe@gmail.com
+                        Charles.igwe@ci3pro.ca
                       </p>
                     </div>
                   </Link>
@@ -134,7 +134,11 @@ export default function ContactForm() {
                 Send a Message
               </h2>
 
-              <form onSubmit={handleSubmit} noValidate className="space-y-[32px]">
+              <form
+                onSubmit={handleSubmit}
+                noValidate
+                className="space-y-[32px]"
+              >
                 <input
                   type="hidden"
                   name="access_key"

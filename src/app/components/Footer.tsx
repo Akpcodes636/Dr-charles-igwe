@@ -176,7 +176,7 @@ const Footer = ({ bgColor }: FooterProps) => {
                 ? "grid-cols-1 gap-y-[32px]"
                 : isTablet
                   ? "grid-cols-2 gap-x-[2px] gap-y-[40px] px-[40px]"
-                  : "grid-cols-12 gap-x-[0px] px-[50px]"
+                  : "grid-cols-12 gap-x-[0px] px-[30px]"
             }`}
           >
             {!isMobile && (

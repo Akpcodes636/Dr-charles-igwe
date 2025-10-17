@@ -14,7 +14,7 @@ const LeadershipHero = () => {
               alt=""
               width={500}
               height={500}
-              className="w-full h-full object-cover rounded-[10px]"
+              className="w-full h-full object-cover object-top rounded-[10px]"
             />
           </div>
           <div className="flex flex-col xl:py-[44px]">
@@ -43,7 +43,7 @@ const LeadershipHero = () => {
 
           <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  h-[240px] md:h-[300px] lg:h-[424px] mx-auto mb-[32px]">
             <Image
-              src="/images/Leadership.png"
+              src="/images/PMEvolve.png"
               alt=""
               width={500}
               height={500}
@@ -80,10 +80,10 @@ const LeadershipHero = () => {
                 </ul>
               </div>
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
-              <Link href="/booking">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
-                </Button>
+                <Link href="/booking">
+                  <Button style="danger" type="button">
+                    Book Charles to Speak
+                  </Button>
                 </Link>
               </div>
             </div>

@@ -9,8 +9,7 @@ const AboutHero = () => {
     <section className="bg-white">
       <div className="py-[32px] md:py-[50px] lg:pt-[205px] container-sm mx-auto flex items-center justify-center flex-col md:flex-row lg:flex-row gap-[30px]">
         <div className="mb-[8px]">
-          {/* <div className="max-w-[358px] sm:max-w-[400px] md:max-w-[300px] lg:max-w-[605px] mx-auto h-[240px] md:h-[400px] lg:h-[456px]"> */}
-          <div className=" max-w-full mx-auto sm:max-w-[400px] md:max-w-[500px] md:h-[450px] lg:max-w-[605px] lg:h-[456px] w-full h-[240px] sm:h-[400px]">
+          <div className="max-w-full sm:max-w-[400px] md:max-w-[300px] lg:max-w-[605px] mx-auto h-[240px] md:h-[400px] lg:h-[456px]">
             <Image
               src="/images/Img.png"
               width={500}
@@ -27,7 +26,7 @@ const AboutHero = () => {
           </div> */}
         </div>
         <div>
-          <p className="w-full mx-auto max-w-[358px] md:max-w-[500px] lg:max-w-[605px] text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] leading-[24px] md:leading-[26px] lg:leading-[34px] font-normal text-[#000000]">
+          <p className="w-full mx-auto max-w-[350px] md:max-w-[500px] lg:max-w-[605px] text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] leading-[24px] md:leading-[26px] lg:leading-[34px] font-normal text-[#000000]">
             Dr. Charles Igwe is a Program Manager, educator, and leadership
             coach with over a decade of experience leading complex projects and
             developing talent in highly regulated industries. As the host of the
@@ -39,9 +38,9 @@ const AboutHero = () => {
           </p>
           <div className="mt-[20px] md:mt-[10px] lg:mt-[20px] flex items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start">
             <Link href="/booking">
-            <Button style="danger" type="button">
-              Book Charles to Speak
-            </Button>
+              <Button style="danger" type="button">
+                Book Charles to Speak
+              </Button>
             </Link>
           </div>
         </div>
@@ -65,11 +64,11 @@ const AboutHero = () => {
             <li className="w-1/3">LEED GA</li>
           </ul>
           <div className="flex items-center justify-center md:items-start md:justify-start">
-          <Link href="/booking">
-          <Button style="danger" type="button">
-            Book Charles to Speak
-          </Button>
-          </Link>
+            <Link href="/booking">
+              <Button style="danger" type="button">
+                Book Charles to Speak
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="max-w-[358px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[605px] md:h-[400px] lg:h-[465px] w-full mx-auto h-[240px] mb-[24px] ">

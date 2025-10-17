@@ -1,4 +1,6 @@
 // sanity/queries.ts
+import { client } from "../lib/client";
+
 export const getFeaturedPostQuery = `
 *[_type == "blog" && featured == true][0]{
   _id,
@@ -12,23 +14,31 @@ export const getFeaturedPostQuery = `
 }
 `
 
-export const getAllBlogsQuery = `
-*[_type == "blog"] | order(publishedAt desc){
-  _id,
-  title,
-  "slug": slug.current,
-  "img": mainImage.asset->url,
-  "author": author,
-  publishedAt,
-  "excerpt": coalesce(excerpt, pt::text(body)[0..150] + "..."),
-  body,
-  featured,
-  categories[]->{ // Add this
-        _id,
-        title
+export function getAllBlogsQuery(page: number = 1, limit: number = 6) {
+  const start = (page - 1) * limit;
+  const end = start + limit;
+
+  if (isNaN(start) || isNaN(end)) {
+    throw new Error("Invalid pagination numbers");
   }
+
+  // ✅ return the query string
+  return `*[_type == "blog"] | order(publishedAt desc) [${start}...${end}]{
+    _id,
+    title,
+    "slug": slug.current,
+    "img": mainImage.asset->url,
+    "author": author,
+    publishedAt,
+    "excerpt": coalesce(excerpt, pt::text(body)[0..150] + "..."),
+    body,
+    featured,
+    categories[]->{ _id, title }
+  }`;
 }
-`
+
+
+
 export const getSinglePost = `
   *[_type == "blog" && slug.current == $slug][0]{
     title,

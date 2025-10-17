@@ -4,6 +4,7 @@ import { apiVersion, dataset, projectId } from "../env";
 import {
   eventQuery,
   getAllBlogsQuery,
+  // getAllBlogsQuery,
   getCategory,
   getFeaturedPostQuery,
   getSingleEvent,
@@ -20,9 +21,18 @@ export async function getFeaturedPost() {
   return await client.fetch(getFeaturedPostQuery);
 }
 
-export async function getBlogs() {
-  return await client.fetch(getAllBlogsQuery);
+export async function getBlogs(page = 1, limit = 6) {
+  const query = await getAllBlogsQuery(page, limit); // ✅ ensure query is a string
+  const blogs = await client.fetch(query);          // ✅ valid now
+  return blogs;
 }
+
+
+export async function getTotalBlogs() {
+  const query = `count(*[_type == "blog"])`;
+  return await client.fetch(query);
+}
+
 
 export async function getCategories() {
   return await client.fetch(getCategory);

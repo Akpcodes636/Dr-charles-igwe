@@ -2,7 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import { FaRegNewspaper } from "react-icons/fa6";
-import { getBlogs, getFeaturedPost, getCategories } from "@/sanity/lib/client";
+import {
+  getBlogs,
+  getFeaturedPost,
+  getCategories,
+  getTotalBlogs,
+} from "@/sanity/lib/client";
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from "@/sanity/lib/client";
 import Blog from "@/app/components/blog/Bloghero";
 import Loader from "@/app/components/ui/Loader";
 import BlogCardPreview from "@/app/components/blog/BlogCardPreview";
@@ -17,6 +24,15 @@ export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blogs[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalBlogs, setTotalBlogs] = useState(0);
+  const blogsPerPage = 6;
+
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source:string) {
+    return builder.image(source);
+  }
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -25,17 +41,18 @@ export default function BlogPage() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
-
-        const [featuredData, blogsData, categoriesData] = await Promise.all([
-          getFeaturedPost(),
-          getBlogs(),
-          getCategories(),
-        ]);
+        const [featuredData, blogsData, categoriesData, totalCount] =
+          await Promise.all([
+            getFeaturedPost(),
+            getBlogs(currentPage, blogsPerPage),
+            getCategories(),
+            getTotalBlogs(), 
+          ]);
         console.log(blogsData);
         setFeatured(featuredData);
         setBlogs(blogsData);
         setCategories(categoriesData);
+        setTotalBlogs(totalCount);
       } catch (err) {
         console.error("Error fetching data:", err);
       } finally {
@@ -44,7 +61,7 @@ export default function BlogPage() {
     };
 
     fetchData();
-  }, []);
+  }, [currentPage]);
 
   // ✅ Filter blogs safely with typed objects
   const filteredBlogs = blogs.filter((blog) => {
@@ -78,7 +95,11 @@ export default function BlogPage() {
                 excerpt={featured.excerpt || ""}
                 author={featured.author || "Unknown Author"}
                 publishedAt={featured.publishedAt || new Date().toISOString()}
-                img={featured.img || "/fallback-image.jpg"}
+                img={
+                  featured.img
+                    ? urlFor(featured.img).width(800).quality(75).url()
+                    : "/fallback-image.jpg"
+                }
                 slug={featured.slug || ""}
               />
             </div>
@@ -102,7 +123,11 @@ export default function BlogPage() {
                   excerpt={b.excerpt || ""}
                   author={b.author || "Charles Igwesss"}
                   publishedAt={b.publishedAt || new Date().toISOString()}
-                  img={b.img || "/fallback-image.jpg"}
+                  img={
+                    b.img
+                      ? urlFor(b.img).width(800).quality(75).url()
+                      : "/fallback-image.jpg"
+                  }
                   slug={b.slug || ""}
                 />
               ))
@@ -114,6 +139,28 @@ export default function BlogPage() {
                 </p>
               </div>
             )}
+          </div>
+
+          <div className="flex justify-center items-center gap-4 mt-12">
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((prev) => prev - 1)}
+              className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 cursor-pointer"
+            >
+              Previous
+            </button>
+
+            <span className="text-gray-700 font-medium">
+              Page {currentPage} of {Math.ceil(totalBlogs / blogsPerPage)}
+            </span>
+
+            <button
+              disabled={currentPage >= Math.ceil(totalBlogs / blogsPerPage)}
+              onClick={() => setCurrentPage((prev) => prev + 1)}
+              className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 cursor-pointer"
+            >
+              Next
+            </button>
           </div>
         </div>
       )}
