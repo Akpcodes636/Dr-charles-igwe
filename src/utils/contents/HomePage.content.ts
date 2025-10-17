@@ -72,7 +72,7 @@ export const Servicestext = [
     icon: "/icons/podcast.png",
     title: "Podcast & Fireside Chat Host",
     text: "Facilitating impactful conversations with global voices.",
-    link: "/",
+    link: "/podcast",
   },
   {
     icon: "/icons/healthicons.png",

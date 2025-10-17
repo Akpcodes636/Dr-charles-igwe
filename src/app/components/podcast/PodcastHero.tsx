@@ -15,7 +15,7 @@ const PodcastHero = () => {
     <section className="bg-white">
       <div className="container-sm mx-auto">
         <div className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[0px]">
-          <h2 className="text-[24px] font-semibold text-[#000000] text-center md:text-center lg:text-start mb-[24px] md:mb-[32px]">
+          {/* <h2 className="text-[24px] font-semibold text-[#000000] text-center md:text-center lg:text-start mb-[24px] md:mb-[32px]">
             Why Join Live?
           </h2>
 
@@ -50,7 +50,7 @@ const PodcastHero = () => {
           {/* Latest Episodes */}
           <div className="py-[80px]">
             {/*  */}
-            <div className="flex items-center justify-center md:justify-center lg:justify-between mb-[24px] md:mb-[8px]">
+            {/* <div className="flex items-center justify-center md:justify-center lg:justify-between mb-[24px] md:mb-[8px]">
               <h2 className="text-[24px] font-[#000000] text-center font-medium leading-[100%] block md:block lg:hidden mb-[24px]">
                 Latest Episodes
               </h2>
@@ -63,13 +63,13 @@ const PodcastHero = () => {
               >
                 View podcast
               </Link>
-            </div>
+            </div> */}
             {/* Podcast Episodes  */}
-            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-x-[31px]">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-x-[31px]">
               {podcastContent.map((podcast, index) => (
                 <div key={index} className="mb-[64px]">
                   {/* Podcast thumbnail */}
-                  <div className="bg-green-800 w-full max-w-[358px] sm:max-w-[800px] h-[136px] rounded-[10px] mx-auto md:max-w-[393px] md:h-[168px] mb-[24px] md:mb-[16px]">
+                  {/* <div className="bg-green-800 w-full max-w-[358px] sm:max-w-[800px] h-[136px] rounded-[10px] mx-auto md:max-w-[393px] md:h-[168px] mb-[24px] md:mb-[16px]">
                     <Image
                       src={podcast.img}
                       alt={podcast.title}
@@ -80,7 +80,7 @@ const PodcastHero = () => {
                   </div>
 
                   {/* Podcast details */}
-                  <div className="w-full max-w-[358px] sm:max-w-[800px]  mx-auto md:max-w-[393px]">
+                  {/* <div className="w-full max-w-[358px] sm:max-w-[800px]  mx-auto md:max-w-[393px]">
                     <h3 className="text-[#000000] font-medium text-[20px] leading-[100%] mb-[8px]">
                       {podcast.title}
                     </h3>
@@ -110,7 +110,7 @@ const PodcastHero = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div>  */}
 
             {/* Upcoming Events */}
             <div className="py-[96px] ">

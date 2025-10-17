@@ -36,13 +36,13 @@ const PodcastHeader = () => {
             Hosted by Dr. Charles Igwe, featuring authentic conversations on
             leadership, innovation, and growth.
           </p>
-          <div className="flex items-center justify-center mt-[16px]">
+          {/* <div className="flex items-center justify-center mt-[16px]">
             <Link href="/">
             <Button style="nobg" type="button">
               Listen to Podcast
             </Button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
