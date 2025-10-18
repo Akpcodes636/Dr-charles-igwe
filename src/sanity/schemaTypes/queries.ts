@@ -72,23 +72,6 @@ export const getCategory= `
 `
    
 
-// export const eventQuery = `
-// *[_type == "event"]{
-// "slug": slug.current,
-//   title,
-//   location,
-//   date,
-//   "mainImage": mainImage.asset->url,
-//   galleryImages[] {
-//     "url": asset->url
-//   },
-//   videos[] {
-//     title,
-//     url
-//   },
-//   description
-// `
-
 export const eventQuery = `
 *[_type == "event"]{
   "slug": slug.current,
@@ -100,17 +83,6 @@ export const eventQuery = `
 }
 `;
 
-
-// export const getSingleEvent = `*[_type == "event" && slug.current == $slug][0] {
-// "slug": slug.current,
-//   _id,
-//   title,
-//   "img": mainImage.asset->url,
-//   location,
-//   date,
-//   description,
-//   "videoUrl": video.asset->url
-// }`;
 
 
 export const getSingleEvent = `*[_type == "event" && slug.current == $slug][0] {
@@ -139,3 +111,15 @@ export const getSingleEvent = `*[_type == "event" && slug.current == $slug][0] {
   }
 }`;
 
+export const getFiresideChat =`*[_type == "firesideChat"] | order(date desc) {
+  _id,
+  title,
+  "speakerName": speaker.name,
+  "speakerPosition": speaker.position,
+  date,
+  tagline,
+  startDate,
+  endDate,
+  registrationLink,
+  "imageUrl": image.asset->url
+}`

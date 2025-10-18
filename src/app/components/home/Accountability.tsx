@@ -28,7 +28,7 @@ const Accountability = () => {
             data-aos-delay="200"
           >
             <Image
-              src="/images/igwe-3.png"
+              src="/images/igwe.png"
               alt="Pictures of Dr Charles and friends"
               width={500}
               height={500}

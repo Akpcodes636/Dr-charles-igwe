@@ -103,3 +103,15 @@ export interface Blog {
   body?: PortableTextBlock[];
   img?: string;
 }
+
+
+export interface FiresideChat {
+  _id: string
+  title: string
+  speakerName: string
+  speakerPosition: string
+  imageUrl: string
+  date: string
+  tagline: string
+  registrationLink: string
+}

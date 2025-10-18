@@ -4,9 +4,9 @@ import { apiVersion, dataset, projectId } from "../env";
 import {
   eventQuery,
   getAllBlogsQuery,
-  // getAllBlogsQuery,
   getCategory,
   getFeaturedPostQuery,
+  getFiresideChat,
   getSingleEvent,
 } from "../schemaTypes/queries";
 
@@ -44,4 +44,9 @@ export async function getEvents() {
 
 export async function getSingleEventBySlug(eventSlug: string) {
   return await client.fetch(getSingleEvent, { slug: eventSlug });
+}
+
+
+export async function getFiresideChats(){
+  return await client.fetch(getFiresideChat)
 }

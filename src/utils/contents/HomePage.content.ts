@@ -298,30 +298,36 @@ export const kingdomContent = [
     img: "/images/Kingdom-1.png",
     title: "Taopheek A. BABAYEJU",
     text: "Taopheek is a transformation expert with 25+ years in strategy, digital transformation, and organizational change.",
+    link:"https://www.linkedin.com/in/taopheek/"
   },
   {
     img: "/images/Kingdom-2.png",
     title: "Taiwo Abraham",
     text: "Taiwo is a PhD candidate with 15+ years in consulting and teaching, specializing in corporate sustainability and strategic leadership.",
+    link:"https://www.linkedin.com/in/taiwoabraham/"
   },
   {
     img: "/images/Kingdom-3s.png",
     title: "Billy S Mwape",
     text: "Billy is a strategist and agile consultant with 18+ years in banking and mining, specializing in enterprise agility, risk management, and leadership.",
+    link:"https://www.linkedin.com/in/billy-s-mwape-pmp-dac-davsc-89310338/"
   },
   {
     img: "/images/Kingdom-4.png",
     title: "Sepo Mwangelwa",
     text: "Sepo is a behavioral-strategy advisor with 20+ years of experience, specializing in influence, leadership, and AI-era project management.",
+    link:"https://www.linkedin.com/in/sepomwangelwa/"
   },
   {
     img: "/images/Kingdom-5.png",
     title: "Temisan Sagay",
     text: "Alex is a program leader with 10+ years in AI, data, and enterprise transformation, delivering measurable impact and leadership growth.",
+    link:"https://www.linkedin.com/in/temisansagay/"
   },
   {
     img: "/images/Kingdom-6.png",
     title: "Ugochinyere Amaonyeanaso",
     text: "Ugochinyere is an IT Project Manager and Business Operations Analyst with expertise in Agile delivery, workflow automation, and system integration.",
+    link:"https://www.linkedin.com/in/ugochinyereamaonyeanaso-projectmanager/"
   },
 ];
