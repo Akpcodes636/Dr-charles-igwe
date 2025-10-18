@@ -1,15 +1,18 @@
 "use client";
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 const KingdomCard = ({
   img,
   title,
   text,
+  link,
 }: {
   img: string;
   title: string;
   text: string;
+  link: string;
 }) => {
   return (
     <div className="w-full max-w-[358px] md:max-w-full lg:max-w-full mx-auto min-h-[357px] bg-[#EDF3FC] rounded-[5px]">
@@ -39,9 +42,11 @@ const KingdomCard = ({
 
         {/* Button */}
         <div className="flex justify-center">
-          <Button style="border" type="button">
-            View Profile
-          </Button>
+          <Link href={link} target="_blank" rel="noopener noreferrer">
+            <Button style="border" type="button">
+              View Profile
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

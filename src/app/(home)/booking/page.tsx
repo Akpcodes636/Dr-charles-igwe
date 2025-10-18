@@ -92,9 +92,9 @@ const Booking = () => {
           className="
         relative
         h-[224px] sm:h-[320px] md:h-[330px] lg:h-0
-        bg-[url('/images/AKP.png')]
-        md:bg-[url('/images/Akp.png')] lg:bg-none
-        bg-no-repeat bg-cover bg-center
+        bg-[url('/images/igwe-15.png')]
+        md:bg-[url('/images/igwe-15.png')] lg:bg-none
+        bg-no-repeat bg-cover bg-[position:center_20%]
       "
         >
           {/* Gradient Overlay */}
@@ -116,7 +116,7 @@ const Booking = () => {
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-x-[31px]">
               <div className="max-w-[604px] h-[912px] bg-green-600 hidden md:hidden lg:block">
                 <Image
-                  src="/images/Booking.png"
+                  src="/images/igwe-15.png"
                   width={500}
                   height={500}
                   alt=""

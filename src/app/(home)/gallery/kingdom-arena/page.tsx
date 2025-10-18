@@ -27,6 +27,7 @@ const Page = () => {
                   img={item.img}
                   title={item.title}
                   text={item.text}
+                  link={item.link}
                 />
               ))}
             </div>
