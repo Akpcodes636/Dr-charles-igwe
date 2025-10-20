@@ -315,13 +315,13 @@ export const kingdomContent = [
   {
     img: "/images/Kingdom-4.png",
     title: "Sepo Mwangelwa",
-    text: "Sepo is a behavioral-strategy advisor with 20+ years of experience, specializing in influence, leadership, and AI-era project management.",
+    text: "Sepo is a behavioral-strategy advisor specializing in influence, leadership, and AI-era project management.",
     link:"https://www.linkedin.com/in/sepomwangelwa/"
   },
   {
     img: "/images/Kingdom-5.png",
     title: "Temisan Sagay",
-    text: "Alex is a program leader with 10+ years in AI, data, and enterprise transformation, delivering measurable impact and leadership growth.",
+    text: "Temisan is a program leader with 10+ years in AI, data, and enterprise transformation, delivering measurable impact and leadership growth.",
     link:"https://www.linkedin.com/in/temisansagay/"
   },
   {
