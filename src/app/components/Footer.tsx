@@ -33,7 +33,7 @@ const FooterSection = ({
         className="flex justify-between items-center cursor-pointer"
         onClick={toggleSection}
       >
-        <h4 className="text-white text-[18px] font-semibold">{title}</h4>
+        <h2 className="text-white text-[18px] font-semibold">{title}</h2>
         {isMobile && (
           <ChevronDown
             size={20}

@@ -14,7 +14,7 @@ export default function AudioPlayer() {
       {/* Play / Pause */}
       <button
         onClick={togglePlayPause}
-        className="text-[#FFFFFF] text-[20px] hover:scale-110 transition cursor-pointer"
+        className="text-[#FFFFFF] text-[20px] hover:scale-110 transition cursor-pointer" aria-label="button"
       >
         {isPlaying ? <IoMdPause /> : <FaCirclePlay />}
       </button>

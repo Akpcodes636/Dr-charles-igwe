@@ -63,7 +63,9 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
       <Header />
 
       <div className="container-sm mx-auto py-[32px] md:py-[90px]">
+        <div className="py-4">
         <GoBlog />
+        </div>
 
         {/* Main post */}
         <div className="w-full max-w-[358px] sm:max-w-full md:max-w-full lg:max-w-full mx-auto h-[240px] rounded-[10px] mb-[44px]">
