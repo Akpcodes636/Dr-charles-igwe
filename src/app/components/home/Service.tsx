@@ -188,7 +188,7 @@ const Services = () => {
               data-aos-easing="ease-out-cubic"
             >
               <Image
-                src="/images/service-1.png"
+                src="/images/image-16.png"
                 alt="service"
                 width={500}
                 height={500}

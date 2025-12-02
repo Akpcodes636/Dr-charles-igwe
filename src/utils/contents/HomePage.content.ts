@@ -331,3 +331,25 @@ export const kingdomContent = [
     link:"https://www.linkedin.com/in/ugochinyereamaonyeanaso-projectmanager/"
   },
 ];
+
+
+export const serviceContent = [
+  {
+    img:"/images/img25.png",
+    title:"Leadership Coaching & Mentorship",
+    text:"Coaching that helps professionals grow, lead, and transition with clarity.",
+    link:"Book a discovery call"
+  },
+  {
+    img:"/images/Evolve-22.png",
+    title:"Speaking & Workshops",
+    text:"Insightful talks that inspire, equip, and transform audiences.",
+    link:"Invite me to speak"
+  },
+  {
+    img:"/images/AKP--161.png",
+    title:"Fireside Chat Series",
+    text:"Real conversations with global leaders on growth, leadership, and change.",
+    link:"Watch past episodes"
+  }
+]

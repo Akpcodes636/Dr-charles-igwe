@@ -7,9 +7,9 @@ const Page = () => {
   return (
     <>
       <AboutHeader />
-      <div className="-mb-[80px]">
+      {/* <div className="-mb-[80px]">
         <AboutGallery />
-      </div>
+      </div> */}
       <AboutHero />
     </>
   );

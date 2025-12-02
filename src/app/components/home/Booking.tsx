@@ -51,7 +51,7 @@ const Booking = () => {
           {/* ✅ Right Image Section */}
           <div data-aos="fade-left" data-aos-delay="200">
             <Image
-              src="/images/Igwe-4.png"
+              src="/images/image-16i.png"
               width={500}
               height={500}
               alt="picture of dr charles igwe"

@@ -29,7 +29,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
       try {
         const fetchedPost = await client.fetch<Blog>(getSinglePost, { slug });
         const fetchedRelated = await client.fetch<Blog[]>(getRelatedPosts, { slug });
-        console.log(fetchedPost);
+        // console.log(fetchedPost);
         setPost(fetchedPost);
         setRelatedPosts(fetchedRelated);
       } catch (err) {

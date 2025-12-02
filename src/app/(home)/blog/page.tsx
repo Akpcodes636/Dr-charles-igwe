@@ -48,7 +48,7 @@ export default function BlogPage() {
             getCategories(),
             getTotalBlogs(), 
           ]);
-        console.log(blogsData);
+        // console.log(blogsData);
         setFeatured(featuredData);
         setBlogs(blogsData);
         setCategories(categoriesData);
