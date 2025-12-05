@@ -25,7 +25,7 @@ const MentorshipHero = () => {
             </p>
 
             <h3 className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] text-[24px] text-[#000000] mx-auto leading-[100%] font-medium md:font-semibold mb-[16px] text-center">
-              This is for you if you're:
+              This is for you if you&apos;re:
             </h3>
 
             <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto">
@@ -39,8 +39,8 @@ const MentorshipHero = () => {
                   professional navigating cultural or career transitions.
                 </li>
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> A leader who's
-                  questioning what's next.
+                  <span className="text-[#FB8C00]">•</span> A leader who&apos;s
+                  questioning what&apos;s next.
                 </li>
               </ul>
             </div>

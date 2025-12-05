@@ -127,17 +127,17 @@ const Services = () => {
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Intent –</span> Align
-                      with the "why" and the stakeholders
+                      with the &apos;why&apos; and the stakeholders
                     </li>
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Intent –</span> Align
-                      with the "why" and the stakeholders
+                      with the &apos;why&apos; and the stakeholders
                     </li>
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Impact –</span> Measure
-                      what matters, not what's easiest
+                      what matters, not what&apos;s easiest
                     </li>
                   </ul>
 

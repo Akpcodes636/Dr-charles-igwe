@@ -23,7 +23,7 @@ const SpeakingHero = () => {
               and delivered with contagious clarity.
             </p>
             <p className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto text-[16px] md:text-[18px] text-[#000000] font-normal leading-[24px] md:leading-[32px] mb-[16px] md:mb-[28px]">
-              I've spoken to rooms of 30 and auditoriums of 3,000 — but what
+              I&apos;ve spoken to rooms of 30 and auditoriums of 3,000 — but what
               never changes is the outcome: People leave with insight they can
               use and a fire they didn&apos;t expect.
             </p>
