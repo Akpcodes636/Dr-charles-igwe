@@ -8,22 +8,53 @@ const ProjectHero = () => {
     <section className="bg-white">
       <div className="pt-[40px] md:pt-[80px] pb-[80px] md:pb-[100px] container-sm mx-auto">
         <div className="flex flex-col md:flex-col lg:flex-row gap-[30px] pb-[80px]">
-          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] lg:h-[296px] mb-[32px]">
+          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] lg:h-[672px] mb-[32px]">
             <Image
-              src="/images/project-1.png"
+              src="/images/image-16x.png"
               alt=""
               width={500}
               height={500}
-              className="w-full h-full object-cover rounded-[10px]"
+              className="w-full h-full object-cover object-[50%_20%] rounded-[10px]"
             />
           </div>
           <div className="flex flex-col xl:py-[44px]">
             <p className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto text-[16px] md:text-[18px] text-[#000000] font-normal leading-[24px] md:leading-[32px] mb-[32px] md:mb-[28px]">
-              Charles partners with organizations to strengthen project
-              delivery, streamline execution, and ensure alignment with business
-              goals. His advisory services combine proven methodologies with
-              practical insights for measurable outcomes.
+              With 15+ years of leadership and service across infrastructure,
+              energy, tech, manufacturing, and education and nuclear and clean
+              sectors, I partner with organizations to:
             </p>
+
+            <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto mb-[40px]">
+              <ul className="flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> Deliver projects
+                  that don&apos;t just finish — they matter.
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> Advisory Solutions:
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> PMO setup &
+                  transformation
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> Portfolio risk
+                  alignment and delivery audits
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> Program recovery and
+                  turnaround strategies
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> Executive coaching
+                  for project sponsors
+                </li>
+                <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
+                  <span className="text-[#FB8C00]">•</span> The Innovation
+                  Mindset: How to Lead When You Don’t Know the Answer
+                </li>
+              </ul>
+            </div>
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
               <Link href="/booking">
                 <Button style="danger" type="button">
@@ -34,7 +65,7 @@ const ProjectHero = () => {
           </div>
         </div>
 
-        {/* Second column */}
+        {/* Second column
         <div className="flex flex-col itms-center justify-between md:flex-col lg:flex-row-reverse gap-[31px]">
           <h1 className="text-[#000000] text-center font-medium text-[24px] mb-[24px] block md:hidden lg:hidden">
             Expert Guidance, Tailored Solutions
@@ -80,7 +111,7 @@ const ProjectHero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

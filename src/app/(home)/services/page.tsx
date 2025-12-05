@@ -1,5 +1,6 @@
 "use client";
 import Footer from "@/app/components/Footer";
+import Testimonies from "@/app/components/home/Testimonies";
 import ServicesHero from "@/app/components/services/ServiceHero";
 import Button from "@/app/components/ui/Button";
 import ServiceCards from "@/app/components/ui/ServiceCard";
@@ -8,6 +9,7 @@ import {
   Servicestext,
 } from "@/utils/contents/HomePage.content";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -42,7 +44,7 @@ const Services = () => {
                     lg:h-[541px]  mx-auto"
                   >
                     <Image
-                      src="/images/Igwe-3.png"
+                      src="/images/Group-2i.png"
                       alt="Pictures of Dr charles and friends"
                       width={500}
                       height={500}
@@ -97,6 +99,76 @@ const Services = () => {
                 </div>
               </div>
             </div>
+
+            <div className="py-[56px] md:py-[66px] bg-[#16366F] container-sm mx-auto">
+              <div className="mb-[64px]">
+                <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#FFFFFF] text-center mb-4">
+                  Signature Frameworks
+                </h2>
+                <p className="text-[18px] leading-[32px] text-center font-normal text-white">
+                  The CI3 Model – Clarity, Intent, Implementation, Impact. Every
+                  service I offer is powered by my CI3 model. This isn&apos;t
+                  theory. It&apos;s how{" "}
+                  <span className="text-[#FB8C00]">
+                    I led 40+ hydrogen projects, taught 500 students, and
+                    mentored 6+ professionals annually into certified
+                    leadership.
+                  </span>
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <div>
+                  <ul className="list-disc pl-6 space-y-2  lg:space-y-6 mb-2 lg:mb-8 marker:text-[#FB8C00]">
+                    <li className=" text-[16px] md:text-[18px]  font-semibold leading-[32px] text-white">
+                      <span className="text-[#FB8C00]">Clarity –</span> Define
+                      what success looks like
+                    </li>
+
+                    <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
+                      <span className="text-[#FB8C00]">Intent –</span> Align
+                      with the "why" and the stakeholders
+                    </li>
+
+                    <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
+                      <span className="text-[#FB8C00]">Intent –</span> Align
+                      with the "why" and the stakeholders
+                    </li>
+
+                    <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
+                      <span className="text-[#FB8C00]">Impact –</span> Measure
+                      what matters, not what's easiest
+                    </li>
+                  </ul>
+
+                  <p className="text-[16px] md:text-[16px]  lg:text-[18px] font-semibold leading-[32px] text-[#FFFFFF] mb-[16px]">
+                     Still Not Sure Where You Fit?
+                  </p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[18px] leading-[32px] font-normal mb-[32px] text-[#FFFFFF]">
+                    Let&apos;s talk. Whether you need a coach, speaker, or
+                    strategic partner — the best way to start is a conversation.
+                  </p>
+                
+                  <Link href="/booking">
+                  <Button style="danger" type="button">
+                    Book a Free Discovery Call
+                  </Button>
+                  </Link>
+                </div>
+
+                <div className="mx-auto max-w-full sm:max-w-full md:max-w-full lg:max-w-[605px] h-[320px] md:h-[320px] lg:h-[550px] xl:h-[472px] w-full bg-green-800 rounded-[10px]">
+                  <Image
+                    src="/images/Maskg(2).png"
+                    width={500}
+                    height={500}
+                    alt="an image of Charles freeborn"
+                    className="w-full h-full object-cover rounded-[10px]"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <Testimonies />
           </div>
         </div>
         <Footer bgColor="bg-[#000000]" />

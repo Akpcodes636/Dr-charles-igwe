@@ -134,4 +134,8 @@
   .hide-scroll::-webkit-scrollbar {
     display: none;             /* Chrome, Safari */
   }
+
+  .input-class {
+    @apply h-12 w-full rounded-lg border-[#00000033]  px-4 py-3 text-[#000000E5] hover:border focus:border-[2px] focus:bg-white focus:outline-none;
+  }
 }

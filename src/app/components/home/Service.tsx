@@ -41,11 +41,9 @@ const Services = () => {
 
                   <div>
                     <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Public Speaking
-                    </h3>
+                    Public Speaking & Keynote Engagements                    </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Leadership, Innovation, Continuous Improvement — delivered
-                      through impactful talks.
+                    Leadership, innovation, and resilience — told through real stories and with contagious clarity.
                     </p>
                     <Link
                       href="/speaking"
@@ -82,11 +80,10 @@ const Services = () => {
 
                   <div>
                     <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Mentorship & Coaching
+                    Leadership Development & Training Programs
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Guiding emerging leaders with clarity and purpose through
-                      practical training and growth programs.
+                    Transformation doesn&apos;t happen by accident — it&apos;s taught, modeled, and multiplied.
                     </p>
                     <Link
                       href="/mentorship"
@@ -123,13 +120,13 @@ const Services = () => {
 
                   <div>
                     <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Podcast & Fireside Chat Host
+                    Project & Program Management Advisory
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
                       Facilitating impactful conversations with global voices.
                     </p>
                     <Link
-                      href="/mentorship"
+                      href="/project"
                       className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
                     >
                       Learn more
@@ -163,10 +160,10 @@ const Services = () => {
 
                   <div>
                     <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Leadership Development & Training Programs
+                    Mentorship & Coaching
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Strengthening leaders with practical skills for growth.
+                    Helping professionals go from overlooked to in-demand.
                     </p>
                     <Link
                       href="/mentorship"
@@ -220,14 +217,13 @@ const Services = () => {
 
                   <div>
                     <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Project & Program Management Advisory
+                    Podcast & Fireside Chat Host
                     </h3>
                     <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Providing strategic guidance to ensure successful delivery
-                      and long-term impact.
+                    Facilitating impactful conversations with global voices.
                     </p>
                     <Link
-                      href="/mentorship"
+                      href="/podcast"
                       className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
                     >
                       Learn more

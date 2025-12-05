@@ -17,8 +17,8 @@ const ServicesHero = () => {
         className="
           relative
           h-[416px]  sm:h-[420px] md:h-[330px] lg:h-[360px]
-          bg-[url('/images/mobile-contact.png')]
-          md:bg-[url('/images/Hero.png')]
+          bg-[url('/images/blog-img.jpg')]
+          md:bg-[url('/images/blog-img.jpg')]
           bg-no-repeat bg-cover bg-center
         "
       >
@@ -31,7 +31,7 @@ const ServicesHero = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative py-[16px] sm:py-[0px] md:py-[56px] lg:py-[96px]">
+        <div className="relative py-[16px] sm:py-[0px] md:py-[6px] lg:py-[96px]">
           <h3 className="text-white text-center font-semibold text-[22px] md:text-[30px] lg:text-[38px] leading-[28px] md:leading-[100%] lg:leading-[100%] mb-[8px]">
             Services
           </h3>

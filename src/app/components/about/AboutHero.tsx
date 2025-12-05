@@ -28,7 +28,7 @@ const AboutHero = () => {
 
           <div className="bg-red-500 h-[328px] w-full max-w-[605px] rounded-[12px] hidden md:block lg:block">
             <Image
-              src="/images/Photo-1.png"
+              src="/images/Maskg4.png"
               width={500}
               height={500}
               className="w-full h-full object-cover rounded-[10px]"
@@ -83,9 +83,11 @@ const AboutHero = () => {
             welcome. You&apos;re in the right place.
           </p>
           <div>
-            <Button style="danger" type="button">
-              Invite me to speak
-            </Button>
+            <Link href="/booking">
+              <Button style="danger" type="button">
+                Invite me to speak
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -134,10 +136,12 @@ const AboutHero = () => {
             <li>Lean Six Sigma Black Belt.</li>
             <li>LEED Green Associate (LEED GA).</li>
           </ul>
-
+          
+          <Link href="/booking">
           <Button style="danger" type="button">
             Request a proposal
           </Button>
+          </Link>
         </div>
       </div>
 
@@ -157,7 +161,8 @@ const AboutHero = () => {
               tools I use, offering insights into how I approach design and
               problem-solving.
             </p>
-
+          
+          {/* Where does Download Resources link to? */}
             <Button style="danger" type="button">
               Download Resources
             </Button>
@@ -188,83 +193,80 @@ const AboutHero = () => {
                 title={item.title}
                 text={item.text}
                 link={item.link}
+                linkText={item.linkText}
               />
             ))}
           </div>
-         
-         <div className="flex items-center justify-center ">
-          <div className="flex flex-col md:flex-col lg:flex-col xl:flex-row items-center justify-center w-full gap-x-[30px] gap-y-[56px]">
-            {/* Ist card */}
-            <div className=" w-full max-w-full xl:max-w-[393px] h-full">
 
-              {/* Image Section */}
-              <div className="max-w-full md:max-w-full lg:max-w-full xl:max-w-[393px] h-[200px] md:h-[285px] mx-auto w-full rounded-[10px] mb-[24px] overflow-hidden">
-                <Image
-                  src="/images/group-45.png"
-                  alt="An image of Charles igwe"
-                  className="w-full h-full object-cover object-[50%_20%]"
-                  width={500}
-                  height={500}
-                />
+          <div className="flex items-center justify-center ">
+            <div className="flex flex-col md:flex-col lg:flex-col xl:flex-row items-center justify-center w-full gap-x-[30px] gap-y-[56px]">
+              {/* Ist card */}
+              <div className=" w-full max-w-full xl:max-w-[393px] h-full">
+                {/* Image Section */}
+                <div className="max-w-full md:max-w-full lg:max-w-full xl:max-w-[393px] h-[200px] md:h-[285px] mx-auto w-full rounded-[10px] mb-[24px] overflow-hidden">
+                  <Image
+                    src="/images/group-45.png"
+                    alt="An image of Charles igwe"
+                    className="w-full h-full object-cover object-[50%_20%]"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+
+                {/* Text Section */}
+                <div>
+                  <h3 className="text-[20px] text-[#000000] font-medium leading-[100%] mb-[8px] text-start sm:text-center  md:text-center lg:text-center">
+                    Consulting & Strategic Projects
+                  </h3>
+
+                  <p className="text-[16px] md:text-[18px] leading-[24px] font-normal text-[#000000B2] mb-[12px] text-start sm:text-center md:text-center lg:text-center">
+                    I help organizations transform through strategic leadership
+                    and execution.
+                  </p>
+
+                  <Link
+                    href="/project"
+                    className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
+                  >
+                    Request a proposal
+                  </Link>
+                </div>
               </div>
 
-              {/* Text Section */}
-              <div>
-                <h3 className="text-[20px] text-[#000000] font-medium leading-[100%] mb-[8px] text-start sm:text-center  md:text-center lg:text-center">
-                  Consulting & Strategic Projects
-                </h3>
+              {/* 2nd card */}
+              <div className="w-full max-w-full xl:max-w-[393px] h-full">
+                {/* Image Section */}
+                <div className="max-w-full md:max-w-full lg:max-w-full xl:max-w-[393px] h-[200px] md:h-[285px] mx-auto w-full rounded-[10px] mb-[24px] overflow-hidden">
+                  <Image
+                    src="/images/image-16q.png"
+                    alt="An image of Charles igwe"
+                    className="w-full h-full object-cover object-[50%_20%]"
+                    width={500}
+                    height={500}
+                  />
+                </div>
 
-                <p className="text-[16px] md:text-[18px] leading-[24px] font-normal text-[#000000B2] mb-[12px] text-start sm:text-center md:text-center lg:text-center">
-                  I help organizations transform through strategic leadership
-                  and execution.
-                </p>
+                {/* Text Section */}
+                <div>
+                  <h3 className="text-[20px] text-[#000000] font-medium leading-[100%] mb-[8px] text-start sm:text-center  md:text-center lg:text-center">
+                    Want the backstory?
+                  </h3>
 
-                <Link
-                  href="/"
-                  className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
-                >
-                  Request a proposal
-                </Link>
+                  <p className="text-[16px] md:text-[18px] leading-[24px] font-normal text-[#000000B2] mb-[12px] text-start sm:text-center md:text-center lg:text-center">
+                    From tally clerk to PhD — a story of resilience, purpose,
+                    and transformation.
+                  </p>
+
+                  <Link
+                    href="/"
+                    className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
+                  >
+                    Download my CV
+                  </Link>
+                </div>
               </div>
             </div>
-
-            {/* 2nd card */}
-            <div className="w-full max-w-full xl:max-w-[393px] h-full">
-
-              {/* Image Section */}
-              <div className="max-w-full md:max-w-full lg:max-w-full xl:max-w-[393px] h-[200px] md:h-[285px] mx-auto w-full rounded-[10px] mb-[24px] overflow-hidden">
-                <Image
-                  src="/images/image-16q.png"
-                  alt="An image of Charles igwe"
-                  className="w-full h-full object-cover object-[50%_20%]"
-                  width={500}
-                  height={500}
-                />
-              </div>
-
-              {/* Text Section */}
-              <div>
-                <h3 className="text-[20px] text-[#000000] font-medium leading-[100%] mb-[8px] text-start sm:text-center  md:text-center lg:text-center">
-                  Want the backstory?
-                </h3>
-
-                <p className="text-[16px] md:text-[18px] leading-[24px] font-normal text-[#000000B2] mb-[12px] text-start sm:text-center md:text-center lg:text-center">
-                  From tally clerk to PhD — a story of resilience, purpose, and
-                  transformation.
-                </p>
-
-                <Link
-                  href="/"
-                  className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
-                >
-                  Download my CV
-                </Link>
-              </div>
-            </div>
-
           </div>
-
-         </div>
         </div>
       </div>
 

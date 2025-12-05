@@ -45,46 +45,46 @@ export const heroImage = [
     image: "/images/Logo-5.png",
   },
   {
-    image:"/images/Logo-6.png",
+    image: "/images/Logo-6.png",
   },
   {
-    image:"/images/Logo-7.png",
+    image: "/images/Logo-7.png",
   },
   {
-    image:"/images/Logo-8.png"
-  }
+    image: "/images/Logo-8.png",
+  },
 ];
 
 export const Servicestext = [
   {
-    icon: "/icons/microphone.png",
-    title: "Public Speaking",
-    text: "Leadership, Innovation, Continuous Improvement — delivered through impactful talks",
+    icon: "/icons/Vector-1.png",
+    title: "Public Speaking & Keynote Engagements",
+    text: "Leadership, innovation, and resilience — told through real stories and with contagious clarity.",
     link: "/speaking",
   },
   {
-    icon: "/icons/Briefcase.png",
-    title: "Mentorship & Coaching",
-    text: "Guiding emerging leaders with clarity and purpose through practical training and growth programs.",
-    link: "/mentorship",
-  },
-  {
-    icon: "/icons/podcast.png",
-    title: "Podcast & Fireside Chat Host",
-    text: "Facilitating impactful conversations with global voices.",
-    link: "/podcast",
-  },
-  {
-    icon: "/icons/healthicons.png",
+    icon: "/icons/flat_books.png",
     title: "Leadership Development & Training Programs",
-    text: "Strengthening leaders with practical skills for growth",
+    text: "Transformation doesn&apos;t happen by accident — it&apos;s taught, modeled, and multiplied.",
     link: "/leadership",
   },
   {
-    icon: "/icons/Icon.png",
+    icon: "/icons/temaki_crane.png",
     title: "Project & Program Management Advisory",
-    text: "Providing strategic guidance to ensure successful delivery and long-term impact.",
+    text: "Facilitating impactful conversations with global voices.",
     link: "/project",
+  },
+  {
+    icon: "/icons/emoji-flat_handshake.png",
+    title: "Mentorship & Coaching",
+    text: "Helping professionals go from overlooked to in-demand.",
+    link: "/mentorship",
+  },
+  {
+    icon: "/icons/bitcoin-icons_podcast-filled.png",
+    title: "Podcast & Fireside Chat Host",
+    text: "Facilitating impactful conversations with global voices.",
+    link: "/podcast",
   },
 ];
 
@@ -298,58 +298,60 @@ export const kingdomContent = [
     img: "/images/Kingdom-1.png",
     title: "Taopheek A. BABAYEJU",
     text: "Taopheek is a transformation expert with 25+ years in strategy, digital transformation, and organizational change.",
-    link:"https://www.linkedin.com/in/taopheek/"
+    link: "https://www.linkedin.com/in/taopheek/",
   },
   {
     img: "/images/Kingdom-2.png",
     title: "Taiwo Abraham",
     text: "Taiwo is a PhD candidate with 15+ years in consulting and teaching, specializing in corporate sustainability and strategic leadership.",
-    link:"https://www.linkedin.com/in/taiwoabraham/"
+    link: "https://www.linkedin.com/in/taiwoabraham/",
   },
   {
     img: "/images/Kingdom-3s.png",
     title: "Billy S Mwape",
     text: "Billy is a strategist and agile consultant with 18+ years in banking and mining, specializing in enterprise agility, risk management, and leadership.",
-    link:"https://www.linkedin.com/in/billy-s-mwape-pmp-dac-davsc-89310338/"
+    link: "https://www.linkedin.com/in/billy-s-mwape-pmp-dac-davsc-89310338/",
   },
   {
     img: "/images/Kingdom-4.png",
     title: "Sepo Mwangelwa",
     text: "Sepo is a behavioral-strategy advisor specializing in influence, leadership, and AI-era project management.",
-    link:"https://www.linkedin.com/in/sepomwangelwa/"
+    link: "https://www.linkedin.com/in/sepomwangelwa/",
   },
   {
     img: "/images/Kingdom-5.png",
     title: "Temisan Sagay",
     text: "Temisan is a program leader with 10+ years in AI, data, and enterprise transformation, delivering measurable impact and leadership growth.",
-    link:"https://www.linkedin.com/in/temisansagay/"
+    link: "https://www.linkedin.com/in/temisansagay/",
   },
   {
     img: "/images/Kingdom-6.png",
     title: "Ugochinyere Amaonyeanaso",
     text: "Ugochinyere is an IT Project Manager and Business Operations Analyst with expertise in Agile delivery, workflow automation, and system integration.",
-    link:"https://www.linkedin.com/in/ugochinyereamaonyeanaso-projectmanager/"
+    link: "https://www.linkedin.com/in/ugochinyereamaonyeanaso-projectmanager/",
   },
 ];
 
-
 export const serviceContent = [
   {
-    img:"/images/img25.png",
-    title:"Leadership Coaching & Mentorship",
-    text:"Coaching that helps professionals grow, lead, and transition with clarity.",
-    link:"Book a discovery call"
+    img: "/images/img25.png",
+    title: "Leadership Coaching & Mentorship",
+    text: "Coaching that helps professionals grow, lead, and transition with clarity.",
+    link:"https://calendar.app.google/hRezLqXgUea8joJFA",
+    linkText: "Book a discovery call",
   },
   {
-    img:"/images/Evolve-22.png",
-    title:"Speaking & Workshops",
-    text:"Insightful talks that inspire, equip, and transform audiences.",
-    link:"Invite me to speak"
+    img: "/images/Evolve-22.png",
+    title: "Speaking & Workshops",
+    text: "Insightful talks that inspire, equip, and transform audiences.",
+    link:"/speaking",
+    linkText: "Invite me to speak",
   },
   {
-    img:"/images/AKP--161.png",
-    title:"Fireside Chat Series",
-    text:"Real conversations with global leaders on growth, leadership, and change.",
-    link:"Watch past episodes"
-  }
-]
+    img: "/images/AKP--161.png",
+    title: "Fireside Chat Series",
+    text: "Real conversations with global leaders on growth, leadership, and change.",
+    link:"podcast",
+    linkText: "Watch past episodes",
+  },
+];

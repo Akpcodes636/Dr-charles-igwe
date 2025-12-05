@@ -9,9 +9,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const images = [
-    "/images/image00.jpg",
-    "/images/Public-speaking-1.png",
-    "/images/Igwe-34.png",
+    "/images/img1.png",
+    "/images/Maskg4.png",
     "/images/image01.png",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);

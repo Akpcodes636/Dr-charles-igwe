@@ -15,8 +15,8 @@ const Blog = () => {
         className="
           relative
           h-[224px] sm:h-[320px] md:h-[330px] lg:h-[360px]
-          bg-[url('/images/mobile-contact.png')]
-          md:bg-[url('/images/Hero.png')]
+          bg-[url('/images/blog-img.jpg')]
+          md:bg-[url('/images/blog-img.jpg')]
           bg-no-repeat bg-cover bg-center
         "
       >

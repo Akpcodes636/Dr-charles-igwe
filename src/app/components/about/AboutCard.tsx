@@ -8,9 +8,10 @@ interface ServiceItem {
   title: string;
   text: string;
   link: string;
+  linkText:string;
 }
 
-const AboutCard: React.FC<ServiceItem> = ({ img, title, text, link }) => {
+const AboutCard: React.FC<ServiceItem> = ({ img, title, text, link , linkText }) => {
   return (
     <div className="">
       {/* Image Section */}
@@ -35,10 +36,10 @@ const AboutCard: React.FC<ServiceItem> = ({ img, title, text, link }) => {
         </p>
 
         <Link
-          href="/"
-          className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
+          href={link}
+          className="text-[#E28101] text-[16px] font-normal leading-[100%] block text-start sm:text-center"
         >
-          {link}
+          {linkText || "Read More"}
         </Link>
       </div>
     </div>

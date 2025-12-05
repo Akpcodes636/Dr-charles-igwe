@@ -14,7 +14,7 @@ export default function Pagination({
   useEffect(() => {
     const interval = setInterval(() => {
       // move to the next index (wrap around to 0 after last)
-      setActiveIndex((prev) => (prev + 1) % 4);
+      setActiveIndex((prev) => (prev + 1) % 3);
     }, 3000); // change every 3 seconds
 
     return () => clearInterval(interval); // cleanup on unmount
@@ -22,7 +22,7 @@ export default function Pagination({
 
   return (
     <div className="flex items-center justify-center gap-[8px] pt-[10px] md:pt-[15px] lg:pt-[24px]">
-      {[0, 1, 2, 3].map((index) => (
+      {[0, 1, 2].map((index) => (
         <div
           key={index}
           onClick={() => setActiveIndex(index)}

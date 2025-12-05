@@ -80,35 +80,33 @@ const Header = () => {
           } fixed inset-0 z-30 bg-black/40 backdrop-blur-[2px] xl:hidden`}
         />
 
-          
-          {/* {/* Hamburger Menu (mobile only) */}
-          <div className="flex items-center justify-end lg:hidden w-full">
-            <div
-              onClick={openNavMenu}
-              className="flex items-center justify-center rounded-full bg-white p-2 cursor-pointer"
-            >
-              <RxHamburgerMenu size={28} className="text-black" />
-            </div>
-          </div> 
-        <div className="container-sm flex items-center justify-between gap-10">
-
+        {/* {/* Hamburger Menu (mobile only) */}
+        <div className="flex items-center justify-end lg:hidden w-full">
+          <div
+            onClick={openNavMenu}
+            className="flex items-center justify-center rounded-full bg-white p-2 cursor-pointer"
+          >
+            <RxHamburgerMenu size={28} className="text-black" />
+          </div>
+        </div>
+        <div className="container-sm flex items-center justify-center gap-10">
           {/* Nav Links */}
           <nav
-            className={`${
-              openNav
-                ? "translate-x-0 duration-150"
-                : "duration-150 max-lg:translate-x-[200%]"
-            } fixed left-0 right-0 top-0 z-50 min-h-screen px-8 pt-10 pb-20 max-lg:bg-white lg:relative lg:left-0 lg:right-0 lg:bottom-0 xl:static lg:flex-col lg:min-h-full lg:p-0`}
+            className={`
+              ${openNav ? "translate-x-0 duration-150" : "duration-150 max-lg:translate-x-[200%]"}
+              fixed left-0 right-0 top-0 z-50 min-h-screen px-8 pt-10 pb-20 max-lg:bg-white
+              lg:relative lg:left-0 lg:right-0 lg:bottom-0 xl:static lg:flex-col lg:min-h-full lg:p-0 text-center
+            `}
           >
             {/* Close Icon (mobile only) */}
-            <div className="flex justify-end lg:hidden">
+            <div className="flex items-end justify-end lg:hidden">
               <X
                 onClick={closeNav}
                 size={24}
                 className="text-black cursor-pointer"
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center">
               {/* Nav Links */}
               <ul className="flex flex-col items-center justify-center text-[16px] font-normal text-[#00000080] max-lg:mt-9 lg:flex-row gap-10 lg:gap-[70px] xl:gap-[97px]">
                 {navLinks?.map((l, i) => (
@@ -178,7 +176,6 @@ const Header = () => {
               </Button>
             </Link>
           </div>
-
         </div>
       </div>
     </header>
