@@ -13,7 +13,7 @@ const ContactHero = () => {
       {/* Hero Background */}
       <div
         className="
-          h-[240px] sm:h-[320px] md:h-[350px] lg:h-[376px]
+          h-[300px] sm:h-[340px] md:h-[350px] lg:h-[376px]
           bg-[url('/images/mobile-contact.png')]
           md:bg-[url('/images/Hero.png')]
           bg-no-repeat bg-cover bg-center
