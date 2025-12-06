@@ -4,11 +4,13 @@ import Header from "@/app/components/Header";
 import Button from "@/app/components/ui/Button";
 import CheckButton from "@/app/components/ui/checkbox";
 import InputField from "@/app/components/ui/InputField";
+import { useRouter } from "next/navigation"; // import the route
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const Booking = () => {
+  const router = useRouter(); // initialize router
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     fullName: "",
@@ -107,6 +109,9 @@ const Booking = () => {
           otherOption: "",
           bookingOptions: [],
         });
+
+        // Redirect to your Google Calendar link
+        router.push("https://calendar.app.google/hRezLqXgUea8joJFA");
       } else {
         toast.error("Something went wrong, please try again.");
       }
@@ -200,35 +205,45 @@ const Booking = () => {
                   name="bookingOptions"
                   title="Public Speaking & Keynote Engagements"
                   value="Public Speaking"
-                  checked={formValues.bookingOptions.includes("Public Speaking")}
+                  checked={formValues.bookingOptions.includes(
+                    "Public Speaking"
+                  )}
                   onChange={handleInputChange}
                 />
                 <CheckButton
                   name="bookingOptions"
                   title="Business Consultation"
                   value="Business Consultation"
-                  checked={formValues.bookingOptions.includes("Business Consultation")}
+                  checked={formValues.bookingOptions.includes(
+                    "Business Consultation"
+                  )}
                   onChange={handleInputChange}
                 />
                 <CheckButton
                   name="bookingOptions"
                   title="Leadership Development & Training Programs"
                   value="Leadership Development"
-                  checked={formValues.bookingOptions.includes("Leadership Development")}
+                  checked={formValues.bookingOptions.includes(
+                    "Leadership Development"
+                  )}
                   onChange={handleInputChange}
                 />
                 <CheckButton
                   name="bookingOptions"
                   title="Project & Program Management Advisory"
                   value="Project Management"
-                  checked={formValues.bookingOptions.includes("Project Management")}
+                  checked={formValues.bookingOptions.includes(
+                    "Project Management"
+                  )}
                   onChange={handleInputChange}
                 />
                 <CheckButton
                   name="bookingOptions"
                   title="Mentorship & Coaching"
                   value="Mentorship & Coaching"
-                  checked={formValues.bookingOptions.includes("Mentorship & Coaching")}
+                  checked={formValues.bookingOptions.includes(
+                    "Mentorship & Coaching"
+                  )}
                   onChange={handleInputChange}
                 />
                 <div className="flex items-center gap-x-2">
@@ -284,7 +299,7 @@ const Booking = () => {
               <Button
                 style="danger"
                 type="submit"
-                css="w-[217px]"
+                css="w-[217px] h-[56px]"
                 disabled={loading}
               >
                 {loading ? "Submitting..." : "Submit"}

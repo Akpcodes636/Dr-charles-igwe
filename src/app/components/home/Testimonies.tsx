@@ -41,41 +41,11 @@ const Testimonies = () => {
       role: "Career Transition Coach",
     },
     {
-      image: "/images/Testimonial-2.png",
+      image: "/images/Testimonial-1.png",
       text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
       name: "Fola F. Alabi",
       role: "Strategic Project Leader",
-    },
-    {
-      image: "/images/Testimonial-2.png",
-      text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
-      name: "Fola F. Alabi",
-      role: "Strategic Project Leader",
-    },
-    {
-      image: "/images/Testimonial-2.png",
-      text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
-      name: "Fola F. Alabi",
-      role: "Strategic Project Leader",
-    },
-    // {
-    //   image: "/images/Testimonial-2.png",
-    //   text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
-    //   name: "Fola F. Alabi",
-    //   role: "Strategic Project Leader",
-    // },
-    // {
-    //   image: "/images/Testimonial-2.png",
-    //   text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
-    //   name: "Fola F. Alabi",
-    //   role: "Strategic Project Leader",
-    // },
-    // {
-    //   image: "/images/Testimonial-2.png",
-    //   text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
-    //   name: "Fola F. Alabi",
-    //   role: "Strategic Project Leader",
-    // },
+    }
   ];
 
   return (

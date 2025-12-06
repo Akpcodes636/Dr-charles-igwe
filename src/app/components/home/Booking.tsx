@@ -25,7 +25,7 @@ const Booking = () => {
             data-aos="fade-right"
             className="text-center md:text-start mb-[24px]"
           >
-            <p className="text-white font-extralight text-[16px] md:text-[18px] lg:text-[24px]">
+            <p className="text-white font-semibold text-[16px] md:text-[18px] lg:text-[24px]">
               BOOK YOUR{" "}
             </p>
             <h3 className="text-[18px] md:text-[20px] lg:text-[40px] font-semibold leading-[100%] text-white">

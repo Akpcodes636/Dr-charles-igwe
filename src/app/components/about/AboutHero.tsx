@@ -21,7 +21,7 @@ const AboutHero = () => {
             />
           </div> */}
           <p className="w-full mx-auto max-w-[358px] md:max-w-[500px] lg:max-w-[605px] text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] leading-[24px] md:leading-[26px] lg:leading-[32px] text-[#000000] font-semibold mb-0 md:mb-[32px]">
-            I&apos;m Dr. Charles Nnaemeka Igwe, educator, leadership coach, and
+            I&apos;m Dr. Charles Igwe, educator, leadership coach, and
             Program Manager leading over 40 innovation projects in Canada&apos;s
             nuclear sector.
           </p>
@@ -53,8 +53,8 @@ const AboutHero = () => {
           <div>
             <div className="mt-[20px] md:mt-[10px] lg:mt-[20px] flex items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start">
               <Link href="/booking">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
+                <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                Book a discovery call
                 </Button>
               </Link>
             </div>
@@ -69,7 +69,7 @@ const AboutHero = () => {
           <p className="text-[#FFFFFF] text-[16px] md:text-[17px] lg:text-[20px] xl:text-[20px] leading-[24px] md:leading-[24px] lg:leading-[32px]">
             That&apos;s why I mentor immigrant professionals into certification
             and leadership. Why I teach 200+ postgraduate students every year.
-            And why I speak, coach, and write , to help individuals and teams
+            And why I speak, coach, and write, to help individuals and teams
             unlock hidden strengths and turn strategy into lasting change.
           </p>
           <p className="text-[#FFFFFF] text-[16px] md:text-[17px] lg:text-[20px] xl:text-[20px] leading-[24px] md:leading-[24px] lg:leading-[32px]">
@@ -84,7 +84,7 @@ const AboutHero = () => {
           </p>
           <div>
             <Link href="/booking">
-              <Button style="danger" type="button">
+              <Button style="danger" type="button" css="w-[217px] h-[56px]">
                 Invite me to speak
               </Button>
             </Link>
@@ -138,7 +138,7 @@ const AboutHero = () => {
           </ul>
           
           <Link href="/booking">
-          <Button style="danger" type="button">
+          <Button style="danger" type="button" css="w-[217px] h-[56px]">
             Request a proposal
           </Button>
           </Link>
@@ -163,7 +163,7 @@ const AboutHero = () => {
             </p>
           
           {/* Where does Download Resources link to? */}
-            <Button style="danger" type="button">
+            <Button style="danger" type="button" css="w-[217px] h-[56px]">
               Download Resources
             </Button>
           </div>

@@ -167,7 +167,7 @@ export default function EventsPage() {
             </h3>
             <div className="flex items-center justify-center">
               <Link href="/booking">
-                <Button type="button" style="danger">
+                <Button type="button" style="danger" css="w-[217px] h-[56px]">
                   Book Charles to Speak
                 </Button>
               </Link>

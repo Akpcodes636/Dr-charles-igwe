@@ -71,8 +71,8 @@ export default function ContactForm() {
     <section>
       <div className="container-sm mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gp-y-[96px]">
-          {/* Contact Info */}
-          <div className="w-full h-full order-1 shadow-[0px_4px_16px_1px_#00000014]">
+          {/* Left Side: Get in Touch */}
+          <div className="w-full h-full shadow-[0px_4px_16px_1px_#00000014]">
             <div className="w-full min-h-[285px] lg:h-full px-[16px] md:px-[30px] pt-[32px] pb-[64px] lg:p-[80px_30px_214px] bg-[#16366F] rounded-[5px]">
               <div>
                 <div className="mb-[16px] text-center lg:text-start">
@@ -98,7 +98,7 @@ export default function ContactForm() {
                         Email Us
                       </h2>
                       <p className="text-[14px] lg:text-[16px] text-[#FFFFFFB2]">
-                        Charles.igwe@ci3pro.ca
+                      charlesjulius.igwe@gmail.com
                       </p>
                     </div>
                   </Link>
@@ -127,11 +127,11 @@ export default function ContactForm() {
             </div>
           </div>
 
-          {/* Form Section */}
+          {/* Right Side: Send us a Message Form */}
           <div className="w-full h-full bg-white shadow-[0px_4px_16px_1px_#00000014]">
             <div className="py-[40px] px-[25px] lg:py-[53px] lg:px-[52px]">
               <h2 className="font-semibold text-[24px] text-center mb-[24px] text-[#16366F]">
-                Send a Message
+                Send us a Message
               </h2>
 
               <form

@@ -14,7 +14,7 @@ const Blog = () => {
       <div
         className="
           relative
-          h-[224px] sm:h-[320px] md:h-[330px] lg:h-[360px]
+          h-[224px] sm:h-[280px] md:h-[330px] lg:h-[280px]
           bg-[url('/images/blog-img.jpg')]
           md:bg-[url('/images/blog-img.jpg')]
           bg-no-repeat bg-cover bg-center
@@ -22,7 +22,6 @@ const Blog = () => {
       >
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/30"></div>
-
 
         {/* Mobile/Tablet Header */}
         <div className="relative block md:block lg:hidden">
@@ -35,8 +34,8 @@ const Blog = () => {
             Blog
           </h3>
           <p className="max-w-[330px] md:max-w-[500px] lg:max-w-[774px] mx-auto w-full text-white text-center text-[14px] md:text-[16px] lg:text-[18px] leading-[20px] md:leading-[24px] lg:leading-[28px]">
-            Have a question or want to work together? Send a message—I&apos;d
-            love to hear from you.
+            Insights on leadership, growth, and innovation to help you thrive in
+            a changing world.
           </p>
         </div>
       </div>

@@ -29,8 +29,8 @@ const SpeakingHero = () => {
             </p>
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
               <Link href="/booking">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
+                <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                  Invite Charles to Speak
                 </Button>
               </Link>
             </div>
@@ -39,7 +39,7 @@ const SpeakingHero = () => {
 
         {/* Second column */}
         <div className="flex flex-col itms-center justify-between md:flex-col lg:flex-row-reverse gap-[34px]">
-          <h1 className="text-[#000000] text-center font-medium text-[24px] mb-[24px] block md:hidden lg:hidden">
+          <h1 className="text-[#000000] text-center font-medium text-[24px] mb-[24px] block md:block lg:hidden">
           Signature Talks Include:
           </h1>
 
@@ -49,7 +49,7 @@ const SpeakingHero = () => {
               alt=""
               width={500}
               height={500}
-              className="w-full h-full object-cover object-top rounded-[10px]"
+              className="w-full h-full object-cover rounded-[10px]"
             />
           </div>
 
@@ -86,8 +86,8 @@ const SpeakingHero = () => {
               </div>
               <div className="flex items-center justify-center md:items-center md:justify-center  lg:items-start lg:justify-start">
                 <Link href="/booking">
-                  <Button style="danger" type="button">
-                    Book Charles to Speak
+                  <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                    Invite Charles to Speak
                   </Button>
                 </Link>
               </div>

@@ -35,7 +35,7 @@ const KingdomCard = ({
           <h3 className="text-center text-[#000000] text-[20px] font-medium leading-[100%] pb-[8px]">
             {title}
           </h3>
-          <p className="text-[16px] font-normal leading-[140%] pb-[24px] text-[#000000B2] text-center">
+          <p className="text-[16px] font-normal leading-[140%] pb-[24px] text-[#000000B2]">
             {text}
           </p>
         </div>
@@ -43,7 +43,7 @@ const KingdomCard = ({
         {/* Button */}
         <div className="flex justify-center">
           <Link href={link} target="_blank" rel="noopener noreferrer">
-            <Button style="border" type="button">
+            <Button style="border" type="button" css="w-[343px] sm:w-[220px] md:w-[220px] lg:w-[323px] xl:w-[343px] h-[45px]" >
               View Profile
             </Button>
           </Link>

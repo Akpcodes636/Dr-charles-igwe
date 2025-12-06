@@ -17,7 +17,7 @@ const PodcastHeader = () => {
       {/* Hero Background */}
       <div
         className="
-              h-[328px] sm:h-[320px] md:h-[350px] lg:h-[312px]
+              h-[288px] sm:h-[320px] md:h-[350px] lg:h-[232px]
               bg-[url('/images/podcast-1.jpg')]
               md:bg-[url('/images/podcast-1.jpg')]
               bg-no-repeat bg-cover bg-center

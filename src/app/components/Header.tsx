@@ -162,7 +162,7 @@ const Header = () => {
             {/* CTA Button (mobile only, inside nav) */}
             <div className="mt-10 max-w-full w-[217px] h-[56px] mx-auto lg:hidden flex items-center justify-center">
               <Link href="/booking">
-                <Button type="button" style="danger" css="w-full">
+                <Button type="button" style="danger" css="w-[217px] h-[56px]">
                   Book Charles to Speak
                 </Button>
               </Link>
@@ -171,7 +171,7 @@ const Header = () => {
           {/* CTA Button (desktop only) */}
           <div className="hidden lg:block">
             <Link href="/booking">
-              <Button type="button" style="danger" css="w-[217px]">
+              <Button type="button" style="danger" css="w-[217px] h-[56px]">
                 Book Charles to Speak
               </Button>
             </Link>

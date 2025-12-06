@@ -8,7 +8,7 @@ const MentorshipHero = () => {
     <section className="bg-white">
       <div className="pt-[40px] md:pt-[80px] b-[80px] md:b-[100px]">
         <div className="flex flex-col md:flex-col lg:flex-row gap-[30px] pb-[80px] container-sm mx-auto">
-          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] lg:h-[464px] mb-[32px]">
+          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] md:h-[350px] lg:h-[464px] mb-[32px]">
             <Image
               src="/images/img-6.png"
               alt=""
@@ -24,31 +24,31 @@ const MentorshipHero = () => {
               real-world experience with radical empathy.
             </p>
 
-            <h3 className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] text-[24px] text-[#000000] mx-auto leading-[100%] font-medium md:font-semibold mb-[16px] text-center">
+            <h3 className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] text-[24px] text-[#000000] mx-auto leading-[100%] font-medium md:font-semibold  mb-[16px] text-center">
               This is for you if you&apos;re:
             </h3>
 
-            <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto">
-              <ul className="flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
+            <div className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[606px] mx-auto">
+              <ul className="list-disc list-outside marker:text-[#FB8C00] pl-6 flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> An emerging project
-                  manager stuck at “almost ready”.
+                  An emerging project manager stuck at “almost ready”.
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> A mid-career
-                  professional navigating cultural or career transitions.
+                  A mid-career professional navigating cultural or career
+                  transitions.
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> A leader who&apos;s
-                  questioning what&apos;s next.
+                  A leader who's questioning what's next.
                 </li>
               </ul>
             </div>
 
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
               <Link href="/booking">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
+                <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                  Book a Coaching Call
                 </Button>
               </Link>
             </div>
@@ -61,13 +61,13 @@ const MentorshipHero = () => {
             Coaching Outcomes:
           </h1>
 
-          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  h-[240px] md:h-[300px] lg:h-[424px] mx-auto mb-[32px]">
+          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  h-[240px] md:h-[500px] lg:h-[424px] mx-auto mb-[32px]">
             <Image
               src="/images/Maskg2.png"
               alt=""
               width={500}
               height={500}
-              className="w-full h-full object-cover object-[50%_20%] rounded-[10px] "
+              className="w-full h-full object-cover object-[50%_40%] rounded-[10px] "
             />
           </div>
 
@@ -77,26 +77,30 @@ const MentorshipHero = () => {
             </h3>
             <div className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[800px] xl:max-w-[600px] mx-auto">
               <div className="pb-[40px] md:pb-[32px]">
-                <ul className="list-disc l-6 space-y-6 marker:text-[#FB8C00]">
+                <ul className="list-disc list-outside marker:text-[#FB8C00] pl-6 space-y-6">
                   <li className="text-[16px] md:text-[16px] lg:text-[18px] text-[#FFFFFF]">
                     A tailored growth plan with strategic milestones
                   </li>
+
                   <li className="text-[16px] md:text-[16px] lg:text-[18px] text-[#FFFFFF]">
                     Interview, certification, or promotion readiness
                   </li>
+
                   <li className="text-[16px] md:text-[16px] lg:text-[18px] text-[#FFFFFF]">
                     Weekly momentum + lifetime mindset shift
                   </li>
+
                   <li className="text-[16px] md:text-[16px] lg:text-[18px] text-[#FFFFFF]">
                     Past mentees now lead programs in tech, construction,
                     energy, and public policy.
                   </li>
                 </ul>
               </div>
+
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
                 <Link href="/booking">
-                  <Button style="danger" type="button">
-                    Book Charles to Speak
+                  <Button style="danger" type="button" css="w-[217px] h-[56px]">
+                    Book a Coaching Call
                   </Button>
                 </Link>
               </div>

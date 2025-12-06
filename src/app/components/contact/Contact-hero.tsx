@@ -14,8 +14,8 @@ const ContactHero = () => {
       <div
         className="
           h-[300px] sm:h-[340px] md:h-[350px] lg:h-[376px]
-          bg-[url('/images/mobile-contact.png')]
-          md:bg-[url('/images/Hero.png')]
+          bg-[url('/images/Mgroup.png')]
+          md:bg-[url('/images/Mgroup.png')]
           bg-no-repeat bg-cover bg-center
         "
       >

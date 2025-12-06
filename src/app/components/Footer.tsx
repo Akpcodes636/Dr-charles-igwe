@@ -95,7 +95,7 @@ const Footer = ({ bgColor }: FooterProps) => {
 
   const NavigationLinks = () => (
     <>
-      {["Home", "About", "Services", "Blog", "Contact"].map((item) => (
+      {["Home", "About", "Services", "Blog", "Contact Us"].map((item) => (
         <Link
           key={item}
           href={`/${item === "Home" ? "" : item.toLowerCase()}`}
@@ -110,7 +110,7 @@ const Footer = ({ bgColor }: FooterProps) => {
   const ServiceLinks = () => (
     <>
       {[
-        { name: "Public Speaking", href: "/speaking" },
+        { name: "Public Speaking & Keynote Engagements", href: "/speaking" },
         { name: "Mentorship & Coaching", href: "/mentorship" },
         {
           name: "Leadership Development & Training Programs",
@@ -213,7 +213,9 @@ const Footer = ({ bgColor }: FooterProps) => {
                   Contact
                 </h4>
                 <div className="flex flex-col gap-[12px] text-[12px]">
-                  <span className="text-white">Charles.igwe@ci3pro.ca</span>
+                  <span className="text-white">
+                    charlesjulius.igwe@gmail.com
+                  </span>
                   <SocialIcons />
                 </div>
               </div>

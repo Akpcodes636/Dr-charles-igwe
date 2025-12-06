@@ -16,7 +16,7 @@ const ServicesHero = () => {
       <div
         className="
           relative
-          h-[416px]  sm:h-[420px] md:h-[330px] lg:h-[360px]
+          h-[280px] sm:h-[300px] md:h-[330px] lg:h-[280px]
           bg-[url('/images/blog-img.jpg')]
           md:bg-[url('/images/blog-img.jpg')]
           bg-no-repeat bg-cover bg-center
@@ -36,10 +36,9 @@ const ServicesHero = () => {
             Services
           </h3>
           <p className="max-w-[330px] md:max-w-[500px] lg:max-w-[774px] mx-auto w-full text-white text-center text-[14px] md:text-[16px] lg:text-[18px] leading-[20px] md:leading-[24px] lg:leading-[28px] mb-[24px] md:mb-[40px]">
-            Empowering individuals and organizations through leadership,
-            mentorship, and transformative learning experiences.
+          From boardrooms to classrooms, I help leaders and organizations move from complexity to clarity — and from ideas to measurable impact.
           </p>
-          <div className="flex flex-col gap-y-[32px] md:flex-row md:gap-x-[60px] items-center justify-center  md:items-center md:justify-center">
+          {/* <div className="flex flex-col gap-y-[32px] md:flex-row md:gap-x-[60px] items-center justify-center  md:items-center md:justify-center">
             <Link href="/booking">
               <Button style="danger" type="button">
                 Book Charles to Speak
@@ -50,7 +49,7 @@ const ServicesHero = () => {
                 Listen to Podcast
               </Button>
             </Link> */}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 // Reusable card
 interface ServiceCardProps {
@@ -38,9 +39,12 @@ interface ServiceCardProps {
           </p>
           <Link
             href={link}
-            className="text-[#FB8C00] font-normal text-[12px] underline"
+            className="text-[#FB8C00] font-normal text-[16px]"
           >
-            Learn more
+            <div className="flex items-center gap-[13px]">
+            Learn more <span><FaArrowRight color="#FB8C00" size={20} /></span>
+
+            </div>
           </Link>
         </div>
       </div>

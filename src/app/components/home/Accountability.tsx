@@ -71,7 +71,7 @@ const Accountability = () => {
                   </div>
 
                   {/* Text box */}
-                  <div className="w-full max-w-[298px] md:max-w-[359px] rounded-md">
+                  <div className="w-full max-w-[298px] md:max-w-[585px] rounded-md">
                     <h3 className="text-[16px] leading-[24px] md:leading-[28px] font-normal text-[#FFFFFF]">
                       {item.title}
                     </h3>

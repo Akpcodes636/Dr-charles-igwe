@@ -21,11 +21,11 @@ const Community = () => {
                 className="w-full h-full object-contain hidden md:hidden lg:block"
               />
               <Image
-                src="/images/Mobile-Igwe.png"
+                src="/images/AKP--161.png"
                 width={500}
                 height={500}
                 alt="a picture of dr charles igwe"
-                className="w-full h-full object-contain block md:block lg:hidden"
+                className="w-full h-full object-cover object-[30%_10%] block md:block lg:hidden border-[1.8px] border-[#E28101] rounded-[10px]"
               />
             </div>
             <div className="text-white pt-[40px] md:pt-[0px] lg:pt-[0px]">
@@ -36,14 +36,14 @@ const Community = () => {
 
               <Audio />
 
-              <div className=" flex items-center pt-[30px] gap-[8px] flex-col md:flex-col lg:flex-row">
+              <div className="flex items-center pt-[30px] gap-[8px] flex-col md:flex-col lg:flex-row">
                 <Link href="/booking">
-                  <Button style="danger" type="button">
+                  <Button style="danger" css="w-[300px] h-[56px]" type="button">
                     Listen to the Fireside Chat Podcast
                   </Button>
                 </Link>
                 <Link href="/podcast">
-                  <Button style="nobg" type="button" css="max-w-[513px]">
+                  <Button style="nobg" css="w-[300px] h-[56px]" type="button">
                     Register for Upcoming Events
                   </Button>
                 </Link>

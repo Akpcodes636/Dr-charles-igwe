@@ -102,7 +102,7 @@
   }
   
   .scroller[data-speed="fast"] {
-    --_animation-duration: 10s;
+    --_animation-duration: 8s;
   }
   
   .scroller[data-speed="slow"] {
@@ -111,7 +111,8 @@
   
   @keyframes scroll {
     to {
-      transform: translate(calc(-50% - 0.5rem));
+      /* transform: translate(calc(-50% - 0.5rem)); */
+      transform: translateX(-50%);
     }
   }
   @media (min-width: 430px) {

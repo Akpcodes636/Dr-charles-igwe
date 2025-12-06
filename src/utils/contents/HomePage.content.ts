@@ -65,13 +65,13 @@ export const Servicestext = [
   {
     icon: "/icons/flat_books.png",
     title: "Leadership Development & Training Programs",
-    text: "Transformation doesn&apos;t happen by accident — it&apos;s taught, modeled, and multiplied.",
+    text: "Transformation doesn't happen by accident — it's taught, modeled, and multiplied.",
     link: "/leadership",
   },
   {
     icon: "/icons/temaki_crane.png",
     title: "Project & Program Management Advisory",
-    text: "Facilitating impactful conversations with global voices.",
+    text: "Good projects don’t just need Gantt charts — they need guts, governance, and growth alignment.",
     link: "/project",
   },
   {

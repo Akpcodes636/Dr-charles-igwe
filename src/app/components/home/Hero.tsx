@@ -50,8 +50,8 @@ const Hero = () => {
             <h1 className="text-[50px] sm:text-[70px] md:text-[80px] lg:text-[80px] text-white font-allison text-center font-normal mb-[14px]">
               Dr. Charles Igwe
             </h1>
-            <p className="-mt-[15px] sm:-mt-[18px] md:-mt-[20px] lg:-mt-[35px] text-white text-center text-[12px] md:text-[13px] lg:text-[13px] font-normal leading-[100%] max-w-[248px] md:max-w-[400px] lg:max-w-[527px] mx-auto">
-              Public Speaker | Mentor | Coach | Project & Program Management
+            <p className="-mt-[15px] sm:-mt-[18px] md:-mt-[20px] lg:-mt-[35px] text-white text-center text-[12px] md:text-[13px] lg:text-[13px] font-normal leading-[24px] max-w-[256px] md:max-w-[400px] lg:max-w-[527px] mx-auto">
+              Public Speaker |  Mentor |  Coach |  Project & Program Management
               Advisory
             </p>
           </div>
@@ -95,21 +95,22 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-white max-w-[340px] md:max-w-[500px] lg:max-w-[901px] mx-auto text-[16px] text-center mb-[40px]">
-              Program Manager, Educator, and Leadership Coach with a passion for
-              mentoring, public speaking, and helping organizations thrive in a
-              rapidly changing world.
+            <p className="text-white max-w-[358px] md:max-w-[500px] lg:max-w-[983px] mx-auto text-[16px] text-center mb-[40px]">
+              Sync to Your Future. Whether you&apos;re leading a team, shifting
+              careers, or building something bold, I work at the intersection of
+              strategy, story, and execution, helping people and organizations
+              move with purpose.
             </p>
           </div>
 
           <div className="flex items-center flex-col md:flex-row lg:flex-row justify-center gap-[12px] md:gap-[60px] lg:gap-[60px] mb-[30px] md:mb-[80px]">
             <Link href="/booking">
-              <Button style="danger" css="" type="button">
+              <Button style="danger" css="w-[217px] h-[56px]" type="button">
                 Book Charles to Speak
               </Button>
             </Link>
             <Link href="/about">
-              <Button style="nobg" css="w-[217px]" type="button">
+              <Button style="nobg" css="w-[217px] h-[56px]" type="button">
                 Learn more
               </Button>
             </Link>

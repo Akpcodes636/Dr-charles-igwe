@@ -59,7 +59,7 @@ const About = () => {
                 into their next chapter ,with clarity, courage, and conviction.
               </p>
               <p className="text-[#FFFFFF] font-normal text-[16px] leading-[24px] w-full max-w-full md:max-w-full mx-auto lg:max-w-[605px]  mb-[40px]">
-                I&apos;m Dr. Charles Nnaemeka Igwe, educator, leadership coach,
+                I&apos;m Dr. Charles Igwe, educator, leadership coach,
                 and Program Manager leading over 40 innovation projects in
                 Canada&apos;s nuclear sector. I host the Fireside Chat series,
                 where I sit down with global leaders to explore the forces that
@@ -74,7 +74,7 @@ const About = () => {
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
                 <Link href="/about">
                   <Button style="danger" type="button" css="w-[217px] h-[56px]">
-                    Explore my Story
+                  Explore my Work
                   </Button>
                 </Link>
               </div>

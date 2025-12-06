@@ -18,7 +18,9 @@ interface BlogPageClientLoaderProps {
   slug: string;
 }
 
-export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps) {
+export default function BlogPageClientLoader({
+  slug,
+}: BlogPageClientLoaderProps) {
   const [post, setPost] = useState<Blog | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +30,9 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
       setLoading(true);
       try {
         const fetchedPost = await client.fetch<Blog>(getSinglePost, { slug });
-        const fetchedRelated = await client.fetch<Blog[]>(getRelatedPosts, { slug });
+        const fetchedRelated = await client.fetch<Blog[]>(getRelatedPosts, {
+          slug,
+        });
         // console.log(fetchedPost);
         setPost(fetchedPost);
         setRelatedPosts(fetchedRelated);
@@ -64,7 +68,7 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
 
       <div className="container-sm mx-auto py-[32px] md:py-[90px]">
         <div className="py-4">
-        <GoBlog />
+          <GoBlog />
         </div>
 
         {/* Main post */}
@@ -119,41 +123,70 @@ export default function BlogPageClientLoader({ slug }: BlogPageClientLoaderProps
             value={(post.body as PortableTextBlock[]) || []}
             components={{
               block: {
-                h1: ({ children }) => (
-                  <h1 className="text-3xl md:text-4xl font-bold text-[#000] mt-10 mb-6 leading-tight">
-                    {children}
+                h1: (props) => (
+                  <h1
+                    {...props}
+                    className="text-3xl md:text-4xl font-bold text-[#000] mt-10 mb-6 leading-tight"
+                  >
+                    {props.children}
                   </h1>
                 ),
-                h2: ({ children }) => (
-                  <h2 className="text-2xl md:text-3xl font-semibold text-[#000] mt-8 mb-4">
-                    {children}
+
+                h2: (props) => (
+                  <h2
+                    {...props}
+                    className="text-2xl md:text-3xl font-semibold text-[#000] mt-8 mb-4"
+                  >
+                    {props.children}
                   </h2>
                 ),
-                normal: ({ children }) => (
-                  <p className="text-[18px] md:text-[20px] text-[#000000B2] leading-[30px] mb-6">
-                    {children}
+
+                normal: (props) => (
+                  <p
+                    {...props}
+                    className="text-[18px] md:text-[20px] text-[#000000B2] leading-[30px] mb-6"
+                  >
+                    {props.children}
                   </p>
                 ),
               },
+
               list: {
-                bullet: ({ children }) => (
-                  <ul className="list-disc ml-6 space-y-2 text-[#000000B2]">
-                    {children}
+                bullet: (props) => (
+                  <ul
+                    {...props}
+                    className="list-disc ml-6 space-y-2 text-[#000000B2]"
+                  >
+                    {props.children}
                   </ul>
                 ),
-                number: ({ children }) => (
-                  <ol className="list-decimal ml-6 space-y-2 text-[#000000B2]">
-                    {children}
+
+                number: (props) => (
+                  <ol
+                    {...props}
+                    className="list-decimal ml-6 space-y-2 text-[#000000B2]"
+                  >
+                    {props.children}
                   </ol>
                 ),
               },
+
               marks: {
-                strong: ({ children }) => (
-                  <strong className="font-semibold">{children}</strong>
+                strong: (props) => (
+                  <strong {...props} className="font-semibold">
+                    {props.children}
+                  </strong>
                 ),
-                em: ({ children }) => <em className="italic">{children}</em>,
-                link: ({ value, children }) => (
+
+                em: (props) => (
+                  <em {...props} className="italic">
+                    {props.children}
+                  </em>
+                ),
+
+                link: ({ value, children, ...rest }) => (
                   <a
+                    {...rest}
                     href={value?.href}
                     target="_blank"
                     rel="noopener noreferrer"

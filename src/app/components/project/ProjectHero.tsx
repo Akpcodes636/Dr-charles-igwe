@@ -8,7 +8,7 @@ const ProjectHero = () => {
     <section className="bg-white">
       <div className="pt-[40px] md:pt-[80px] pb-[80px] md:pb-[100px] container-sm mx-auto">
         <div className="flex flex-col md:flex-col lg:flex-row gap-[30px] pb-[80px]">
-          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] lg:h-[672px] mb-[32px]">
+          <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[500px] xl:max-w-[605px]  mx-auto h-[240px] md:h-[500px] lg:h-[672px] mb-[32px]">
             <Image
               src="/images/image-16x.png"
               alt=""
@@ -24,41 +24,43 @@ const ProjectHero = () => {
               sectors, I partner with organizations to:
             </p>
 
-            <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto mb-[40px]">
-              <ul className="flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
+            <div className="w-full max-w-[358px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[606px] mx-auto mb-[40px]">
+              <ul className="list-disc list-outside marker:text-[#FB8C00] pl-6 flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> Deliver projects
-                  that don&apos;t just finish — they matter.
+                  Deliver projects that don&apos;t just finish — they matter.
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> Advisory Solutions:
+                  Advisory Solutions:
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> PMO setup &
-                  transformation
+                  PMO setup &amp; transformation
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> Portfolio risk
-                  alignment and delivery audits
+                  Portfolio risk alignment and delivery audits
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> Program recovery and
-                  turnaround strategies
+                  Program recovery and turnaround strategies
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> Executive coaching
-                  for project sponsors
+                  Executive coaching for project sponsors
                 </li>
+
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  <span className="text-[#FB8C00]">•</span> The Innovation
-                  Mindset: How to Lead When You Don’t Know the Answer
+                  The Innovation Mindset: How to Lead When You Don&apos;t Know
+                  the Answer
                 </li>
               </ul>
             </div>
+
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
               <Link href="/booking">
-                <Button style="danger" type="button">
-                  Book Charles to Speak
+                <Button style="danger" type="button" css="w-[271px] h-[56px]">
+                  Book a Strategy Consultation
                 </Button>
               </Link>
             </div>

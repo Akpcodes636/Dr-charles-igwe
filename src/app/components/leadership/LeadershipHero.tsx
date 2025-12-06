@@ -30,7 +30,7 @@ const LeadershipHero = () => {
               </h3>
 
               <div className="w-full max-w-[358px] sm:max-w-[500px]  md:max-w-[800px] lg:max-w-[606px] mx-auto">
-                <ul className="flex flex-col gap-[24px] mb-[40px] md:mb-[32px]">
+                <ul className="flex flex-col gap-y-[24px] mb-[40px] md:mb-[32px]">
                   <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
                     <span className="text-[#FB8C00]">•</span> Strategic Thinking
                     & Decision Intelligence
@@ -52,7 +52,7 @@ const LeadershipHero = () => {
             </div>
             <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
               <Link href="/booking">
-                <Button style="danger" type="button">
+                <Button style="danger" type="button" css="w-[260px] h-[56px]">
                   Request a Custom Program
                 </Button>
               </Link>
@@ -62,7 +62,7 @@ const LeadershipHero = () => {
 
         {/* Second column */}
         <div className="flex flex-col itms-center justify-between md:flex-col lg:flex-row-reverse gap-[31px] bg-[#0A1F44] container-sm mx-auto py-[42px] md:py-[92px]">
-          <h1 className="text-[#FFFFFF] text-center font-medium text-[24px] mb-[24px] block md:hidden lg:hidden">
+          <h1 className="text-[#FFFFFF] text-center font-semibold text-[24px] mb-[24px] block md:hidden lg:hidden">
             Delivered Through:
           </h1>
 
@@ -103,7 +103,7 @@ const LeadershipHero = () => {
               </div>
               <div className="flex items-center justify-center md:items-center md:justify-center lg:items-start lg:justify-start">
                 <Link href="/booking">
-                  <Button style="danger" type="button">
+                  <Button style="danger" type="button" css="w-[260px] h-[56px]">
                     Request a Custom Program
                   </Button>
                 </Link>

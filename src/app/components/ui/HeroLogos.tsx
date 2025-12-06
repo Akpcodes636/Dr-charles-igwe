@@ -9,7 +9,7 @@ interface HeroImage {
 
 const HeroLogos = ({ heroImage }: { heroImage: HeroImage[] }) => {
   return (
-    <div className="relative overflow-hidden w-[500px]">
+    <div className="relative overflow-hidden w-[1000px]">
       <motion.div
         className="flex items-center justify-center gap-[53px] md:gap-[93px] lg:gap-[93px]"
         animate={{ x: ["0%", "-100%"] }}
