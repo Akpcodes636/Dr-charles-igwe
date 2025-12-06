@@ -155,17 +155,17 @@ const Services = () => {
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Intent –</span> Align
-                      with the 'why' and the stakeholders
+                      with the &apos;why&apos; and the stakeholders
                     </li>
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Intent –</span> Align
-                      with the 'why' and the stakeholders
+                      with the &apos;why&apos; and the stakeholders
                     </li>
 
                     <li className="text-[16px] md:text-[18px] font-semibold leading-[32px] text-white">
                       <span className="text-[#FB8C00]">Impact –</span> Measure
-                      what matters, not what's easiest
+                      what matters, not what&apos;s easiest
                     </li>
                   </ul>
 
@@ -174,7 +174,7 @@ const Services = () => {
                   </p>
 
                   <p className="text-[16px] md:text-[16px] lg:text-[18px] leading-[32px] font-normal mb-[32px] text-[#FFFFFF]">
-                    Let's talk. Whether you need a coach, speaker, or strategic
+                    Let&apos;s talk. Whether you need a coach, speaker, or strategic
                     partner — the best way to start is a conversation.
                   </p>
 

@@ -40,7 +40,7 @@ const MentorshipHero = () => {
                 </li>
 
                 <li className="text-[16px] md:text-[18px] font-[400] leading-[24px] md:leading-[100%] text-[#000000]">
-                  A leader who's questioning what's next.
+                  A leader who&apos;s questioning what's next.
                 </li>
               </ul>
             </div>
