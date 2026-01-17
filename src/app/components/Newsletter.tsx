@@ -39,8 +39,13 @@ const Newsletter = () => {
 
       toast.success("Successfully subscribed to the newsletter!");
       setEmail("");
-    } catch (err: any) {
-      toast.error(err.message || "Subscription failed");
+    } catch (err: unknown) {
+      // Narrow the unknown type to Error
+  if (err instanceof Error) {
+    toast.error(err.message);
+  } else {
+    toast.error("Subscription failed");
+  }
     } finally {
       setLoading(false);
     }

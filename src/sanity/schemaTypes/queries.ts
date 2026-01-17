@@ -1,5 +1,4 @@
 // sanity/queries.ts
-import { client } from "../lib/client";
 
 export const getFeaturedPostQuery = `
 *[_type == "blog" && featured == true][0]{

@@ -6,13 +6,15 @@ import Link from "next/link";
 import HeroLogos from "../ui/HeroLogos";
 import { useEffect, useState } from "react";
 
+const words = [
+  "Inspiring Growth.",
+  "Empowering Leaders.",
+  "Driving Transformation.",
+];
+
+const colors = ["#FFFFFF", "#FB8C00", "#FFFFFF"];
+
 const Hero = () => {
-  const words = [
-    "Inspiring Growth.",
-    "Empowering Leaders.",
-    "Driving Transformation.",
-  ];
-  const colors = ["#FFFFFF", "#FB8C00", "#FFFFFF"];
 
   const [index, setIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");

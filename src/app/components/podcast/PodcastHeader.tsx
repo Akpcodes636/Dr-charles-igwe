@@ -1,9 +1,5 @@
 "use client";
-
-"use client";
-import Link from "next/link";
 import Header from "../Header";
-import Button from "../ui/Button";
 import Image from "next/image";
 
 const PodcastHeader = () => {

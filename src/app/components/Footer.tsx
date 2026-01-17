@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect, ReactNode } from "react";
 import Link from "next/link";
-import Button from "./ui/Button";
 import { Instagram } from "lucide-react";
 import { RiTwitterXFill } from "react-icons/ri";
 import { ChevronDown } from "lucide-react";
