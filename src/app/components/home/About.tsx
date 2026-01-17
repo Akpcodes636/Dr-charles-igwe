@@ -32,14 +32,15 @@ const About = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <div className="w-full mx-auto max-w-full md:max-w-full lg:max-w-[605px] h-[270px] md:h-[380px] lg:h-[456px] border-[3px] border-[#E28101] rounded-[10px]">
+              <div className="w-full mx-auto max-w-[605px] h-[270px] md:h-[380px] lg:h-[456px] border-[3px] border-[#E28101] rounded-[10px]">
+              {/* <div> */}
                 <Image
                   src={images[currentIndex]}
-                  width={500}
-                  height={500}
+                  width={1000}
+                  height={1000}
                   alt="Picture of Dr Charles Igwe"
                   className="w-full h-full object-cover rounded-[10px]"
-                />
+                /> 
               </div>
               <Pagination
                 activeIndex={currentIndex}

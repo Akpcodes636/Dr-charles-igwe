@@ -52,7 +52,7 @@ const AboutHero = () => {
           </p>
           <div>
             <div className="mt-[20px] md:mt-[10px] lg:mt-[20px] flex items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start">
-              <Link href="/booking">
+              <Link href="/booking" target="_blank" rel="noopener noreferrer">
                 <Button style="danger" type="button" css="w-[217px] h-[56px]">
                 Book a discovery call
                 </Button>
@@ -83,7 +83,7 @@ const AboutHero = () => {
             welcome. You&apos;re in the right place.
           </p>
           <div>
-            <Link href="/booking">
+            <Link href="/booking" target="_blank" rel="noopener noreferrer">
               <Button style="danger" type="button" css="w-[217px] h-[56px]">
                 Invite me to speak
               </Button>
@@ -163,9 +163,11 @@ const AboutHero = () => {
             </p>
           
           {/* Where does Download Resources link to? */}
+          <Link href="https://payhip.com/CI3" target="_blank" rel="noopener noreferrer">
             <Button style="danger" type="button" css="w-[217px] h-[56px]">
               Download Resources
             </Button>
+          </Link>
           </div>
           <div>
             <Image
@@ -258,7 +260,9 @@ const AboutHero = () => {
                   </p>
 
                   <Link
-                    href="/"
+                    href="https://drive.google.com/file/d/1PXup89ziAGaMl0ApvdFAHpjRuVY5vSA1/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#E28101] text-[16px] font-normal leading-[100%] text-start sm:text-center md:text-center lg:text-center block"
                   >
                     Download my CV

@@ -6,6 +6,7 @@ import Image from "next/image";
 import SubHeader from "../ui/Subheader";
 import { AccountabilityText } from "@/utils/contents/HomePage.content";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 const Accountability = () => {
   useEffect(() => {
@@ -86,9 +87,11 @@ const Accountability = () => {
               data-aos="fade-left"
               data-aos-delay={200 + AccountabilityText.length * 150}
             >
+              <Link href="https://discord.gg/TtRttaZv" target="_blank" rel="noopener noreferrer">
               <Button type="button" style="danger" css="w-[217px] h-[56px]">
                 Join the Community
               </Button>
+              </Link>
             </div>
           </div>
         </div>

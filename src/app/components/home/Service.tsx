@@ -2,216 +2,89 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SubHeader from "../ui/Subheader";
 import Image from "next/image";
 import Link from "next/link";
+import SubHeader from "../ui/Subheader";
+import { services } from "@/utils/contents/HomePage.content";
+
+const ServiceCard = ({
+  title,
+  description,
+  icon,
+  link,
+}: {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+}) => {
+  return (
+    <div
+      className="h-[232px] bg-[#16366F] rounded-[5px] p-[21px]
+                 transition-all duration-300 hover:bg-[#E28101]
+                 group cursor-pointer"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-cubic"
+    >
+      {/* Icon */}
+      <div
+        className="bg-white w-[40px] h-[40px] flex items-center justify-center
+                   rounded-[5px] mb-[16px]
+                   group-hover:bg-black transition-all duration-300"
+      >
+        <Image
+          src={icon}
+          width={22}
+          height={19}
+          alt="icon"
+          className="object-contain"
+        />
+      </div>
+
+      {/* Content */}
+      <h3
+        className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px]
+                   text-white font-medium leading-[28px] mb-[8px]
+                   group-hover:text-black transition-all duration-300"
+      >
+        {title}
+      </h3>
+
+      <p
+        className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px]
+                   mb-[8px] line-clamp-2
+                   group-hover:text-black transition-all duration-300"
+      >
+        {description}
+      </p>
+
+      <Link
+        href={link}
+        className="text-[#FB8C00] font-normal text-[12px] underline
+                   group-hover:text-black transition-all duration-300"
+      >
+        Learn more
+      </Link>
+    </div>
+  );
+};
 
 const Services = () => {
   useEffect(() => {
-    AOS.init({ duration: 3000, once: true });
+    AOS.init({ once: true });
   }, []);
 
   return (
     <section>
       <SubHeader text="Our Services" />
-      <div className="py-[40px] container-sm mx-auto bg-[#0A1F44]">
-        <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-[40px] mb-[58px]">
-            {/* 1️⃣ Public Speaking */}
-            <div
-              className="w-full mx-auto max-w-[358px] md:max-w-[393px] h-[232px] bg-[#16366F] rounded-[5px] transition-all duration-300 hover:bg-[#E28101] hover:cursor-pointer group"
-              data-aos="fade-right"
-              data-aos-delay="100"
-              data-aos-duration="1500"
-              data-aos-easing="ease-out-cubic"
-            >
-              <div className="py-[21px] px-[16px]">
-                <div className="">
-                  <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[5px] mb-[16px] group-hover:bg-black transition-all duration-300">
-                    <div className="w-[22px] h-[19px]">
-                      <Image
-                        src="/icons/microphone.png"
-                        width={500}
-                        height={500}
-                        alt="icon"
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                  </div>
 
-                  <div>
-                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Public Speaking & Keynote Engagements{" "}
-                    </h3>
-                    <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Leadership, Innovation, Continuous Improvement — delivered
-                      through impactful talks
-                    </p>
-                    <Link
-                      href="/speaking"
-                      className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
-                    >
-                      Learn more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 2️⃣ Mentorship & Coaching */}
-            <div
-              className="w-full mx-auto max-w-[358px] md:max-w-[393px] h-[232px] bg-[#16366F] rounded-[5px] transition-all duration-300 hover:bg-[#E28101] hover:cursor-pointer group"
-              data-aos="fade-right"
-              data-aos-delay="100"
-              data-aos-duration="1500"
-              data-aos-easing="ease-out-cubic"
-            >
-              <div className="py-[21px] px-[16px]">
-                <div className="">
-                  <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[5px] mb-[16px] group-hover:bg-black transition-all duration-300">
-                    <div className="w-[22px] h-[19px]">
-                      <Image
-                        src="/icons/Briefcase.png"
-                        width={500}
-                        height={500}
-                        alt="icon"
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Leadership Development & Training Programs
-                    </h3>
-                    <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Guiding emerging leaders with clarity and purpose through
-                      practical training and growth programs.
-                    </p>
-                    <Link
-                      href="/mentorship"
-                      className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
-                    >
-                      Learn more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 3️⃣ Podcast & Fireside Chat Host */}
-            <div
-              className="w-full mx-auto max-w-[358px] md:max-w-[393px] h-[232px] bg-[#16366F] rounded-[5px] transition-all duration-300 hover:bg-[#E28101] hover:cursor-pointer group"
-              data-aos="fade-right"
-              data-aos-delay="100"
-              data-aos-duration="1500"
-              data-aos-easing="ease-out-cubic"
-            >
-              <div className="py-[21px] px-[16px]">
-                <div className="">
-                  <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[5px] mb-[16px] group-hover:bg-black transition-all duration-300">
-                    <div className="w-[22px] h-[19px]">
-                      <Image
-                        src="/icons/podcast.png"
-                        width={500}
-                        height={500}
-                        alt="icon"
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                      Project & Program Management Advisory
-                    </h3>
-                    <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Facilitating impactful conversations with global voices.
-                    </p>
-                    <Link
-                      href="/project"
-                      className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
-                    >
-                      Learn more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-col lg:flex-col xl:flex-row items-center justify-center gap-[31px]">
-            {/* 4️⃣ Leadership Development */}
-            <div className="w-full max-w-[358px] md:max-w-[393px]">
-              <div className="h-[232px] bg-[#16366F] rounded-[5px] transition-all duration-300 hover:bg-[#E28101] hover:cursor-pointer group">
-                <div className="py-[21px] px-[16px]">
-                  <div>
-                    <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[5px] mb-[16px] group-hover:bg-black transition-all duration-300">
-                      <div className="w-[22px] h-[19px]">
-                        <Image
-                          src="/icons/healthicons.png"
-                          width={500}
-                          height={500}
-                          alt="icon"
-                          className="object-contain w-full h-full"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                        Mentorship & Coaching
-                      </h3>
-                      <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                        Strengthening leaders with practical skills for growth
-                      </p>
-                      <Link
-                        href="/mentorship"
-                        className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
-                      >
-                        Learn more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 6️⃣ Project & Program Management */}
-            <div className="w-full max-w-[358px] md:max-w-[393px]">
-              <div className="h-[232px] bg-[#16366F] rounded-[5px] transition-all duration-300 hover:bg-[#E28101] hover:cursor-pointer group">
-                <div className="py-[21px] px-[16px]">
-                  <div>
-                    <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-[5px] mb-[16px] group-hover:bg-black transition-all duration-300">
-                      <div className="w-[22px] h-[19px]">
-                        <Image
-                          src="/icons/Icon.png"
-                          width={500}
-                          height={500}
-                          alt="icon"
-                          className="object-contain w-full h-full"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-[16px] md:text-[17px] lg:text-[18px] xl:text-[22px] text-white font-medium leading-[28px] mb-[8px] group-hover:text-black transition-all duration-300">
-                        Podcast & Fireside Chat Host
-                      </h3>
-                      <p className="text-[#FFFFFFB2] font-normal text-[16px] leading-[24px] mb-[8px] line-clamp-2 group-hover:text-black transition-all duration-300">
-                      Providing strategic guidance to ensure successful delivery and long-term impact.
-                      </p>
-                      <Link
-                        href="/podcast"
-                        className="text-[#FB8C00] font-normal text-[12px] underline group-hover:text-black transition-all duration-300"
-                      >
-                        Learn more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="bg-[#0A1F44] py-[40px]">
+        <div className="container-sm mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-[40px]">
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
           </div>
         </div>
       </div>

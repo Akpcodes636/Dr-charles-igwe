@@ -98,7 +98,7 @@ export default function ContactForm() {
                         Email Us
                       </h2>
                       <p className="text-[14px] lg:text-[16px] text-[#FFFFFFB2]">
-                      charlesjulius.igwe@gmail.com
+                        charles.igwe@ci3pro.ca
                       </p>
                     </div>
                   </Link>

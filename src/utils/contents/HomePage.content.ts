@@ -80,12 +80,12 @@ export const Servicestext = [
     text: "Helping professionals go from overlooked to in-demand.",
     link: "/mentorship",
   },
-  {
-    icon: "/icons/bitcoin-icons_podcast-filled.png",
-    title: "Podcast & Fireside Chat Host",
-    text: "Facilitating impactful conversations with global voices.",
-    link: "/podcast",
-  },
+  // {
+  //   icon: "/icons/bitcoin-icons_podcast-filled.png",
+  //   title: "Podcast & Fireside Chat Host",
+  //   text: "Facilitating impactful conversations with global voices.",
+  //   link: "/podcast",
+  // },
 ];
 
 export const communityText = [
@@ -353,5 +353,37 @@ export const serviceContent = [
     text: "Real conversations with global leaders on growth, leadership, and change.",
     link:"podcast",
     linkText: "Watch past episodes",
+  },
+];
+
+
+export const services = [
+  {
+    title: "Public Speaking & Keynote Engagements",
+    description:
+      "Leadership, Innovation, Continuous Improvement — delivered through impactful talks",
+    icon: "/icons/microphone.png",
+    link: "/speaking",
+  },
+  {
+    title: "Leadership Development & Training Programs",
+    description:
+      "Guiding emerging leaders with clarity and purpose through practical training and growth programs.",
+    icon: "/icons/Briefcase.png",
+    link: "/mentorship",
+  },
+  {
+    title: "Project & Program Management Advisory",
+    description:
+      "Facilitating impactful conversations with global voices.",
+    icon: "/icons/podcast.png",
+    link: "/project",
+  },
+  {
+    title: "Mentorship & Coaching",
+    description:
+      "Strengthening leaders with practical skills for growth",
+    icon: "/icons/healthicons.png",
+    link: "/mentorship",
   },
 ];

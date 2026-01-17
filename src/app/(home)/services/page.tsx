@@ -179,7 +179,7 @@ const Services = () => {
                   </p>
 
                   <Link href="/booking">
-                    <Button style="danger" type="button">
+                    <Button style="danger" type="button" css="w-[250px] h-[56px]">
                       Book a Free Discovery Call
                     </Button>
                   </Link>

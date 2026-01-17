@@ -42,10 +42,22 @@ const Testimonies = () => {
     },
     {
       image: "/images/Testimonial-1.png",
-      text: "“Dr. Charles is more than a leader; he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him.”",
+      text: "“Charles is an exceptional leader, speaker, and educator. His ability to simplify complex ideas and connect with his audience is remarkable, whether he’s presenting or teaching.”",
       name: "Fola F. Alabi",
       role: "Strategic Project Leader",
-    }
+    },
+    // {
+    //   image: "/images/Testimonial-1.png",
+    //   text: "“I am more than happy to attest to the level of energy and commitment, as well as knowledge and enthusiasm, that Charles has brought to every event and interaction I have had the pleasure to engage in with him. In my experience Charles brings rare gifts and tremendous value to everything he gets involved with.”",
+    //   name: "Deanna E.Davies",
+    //   role: "Professor & Facilitator",
+    // }
+    // {
+    //   image: "/images/Testimonial-1.png",
+    //   text: "“Charles is an exceptional leader, speaker, and educator. His ability to simplify complex ideas and connect with his audience is remarkable, whether he’s presenting or teaching.”",
+    //   name: "Fola F.Alabi",
+    //   role: "Strategic Project Leader",
+    // }
   ];
 
   return (

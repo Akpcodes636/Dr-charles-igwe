@@ -7,7 +7,8 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { ChevronDown } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import { GrFacebookOption } from "react-icons/gr";
+import { SiDiscord, SiTiktok } from "react-icons/si";
+import Newsletter from "./Newsletter";
 
 interface FooterProps {
   bgColor?: string;
@@ -58,22 +59,30 @@ const FooterSection = ({
 };
 
 const SocialIcons = () => (
-  <div className="flex gap-6 mt-4">
-    <Link href="#">
-      <GrFacebookOption size={20} color="white" />
+  <div className="flex gap-4 mt-4">
+    <Link href="https://www.tiktok.com/@dr_khase"  target="_blank" rel="noopener noreferrer">
+      <SiTiktok size={20} color="white" />
     </Link>
-    <Link href="#">
+
+    <Link href="https://www.instagram.com/khase1712"  target="_blank" rel="noopener noreferrer">
       <Instagram size={20} color="white" />
     </Link>
-    <Link href="#">
+    <Link href="https://x.com/khase24"  target="_blank" rel="noopener noreferrer">
       <RiTwitterXFill size={20} color="white" />
     </Link>
-    <Link href="https://www.linkedin.com/in/charles-igwe/">
+    <Link href="https://www.linkedin.com/in/charles-igwe/"  target="_blank" rel="noopener noreferrer">
       <FaLinkedinIn size={20} color="white" />
     </Link>
-    <Link href="https://www.youtube.com/@dr_charlescafe">
+    <Link href="https://www.youtube.com/@dr_charlescafe"  target="_blank" rel="noopener noreferrer">
       <IoLogoYoutube size={20} color="white" />
     </Link>
+     <Link
+    href="https://discord.gg/TtRttaZv"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <SiDiscord size={20} color="white" />
+  </Link>
   </div>
 );
 
@@ -129,31 +138,34 @@ const Footer = ({ bgColor }: FooterProps) => {
     </>
   );
 
-  const Newsletter = () => (
-    <div className="w-full max-w-[365px]">
-      <h2 className="text-[16px] md:text-[18px] font-medium text-white mb-3">
-        Subscribe to My Newsletter
-      </h2>
-      <p className="text-[14px] text-[#FFFFFFA6] mb-4">
-        Get insights on leadership, growth, and innovation delivered straight to
-        your inbox.
-      </p>
-      <div className="relative w-full max-w-[400px]">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="w-full bg-[#FFFFF163] placeholder-white px-4 h-[56px] rounded-md focus:outline-none focus:ring-2 focus:ring-[#ffffff80] text-white"
-        />
-        <Button
-          css="absolute right-0 top-0 bottom-1 w-[111px] h-[56px] rounded-none!"
-          style="danger"
-          type="button"
-        >
-          Subscribe
-        </Button>
-      </div>
-    </div>
-  );
+  // const Newsletter = () => (
+  //   <div className="w-full max-w-[365px]">
+  //     <h2 className="text-[16px] md:text-[18px] font-medium text-white mb-3">
+  //       Subscribe to My Newsletter
+  //     </h2>
+  //     <p className="text-[14px] text-[#FFFFFFA6] mb-4">
+  //       Get insights on leadership, growth, and innovation delivered straight to
+  //       your inbox.
+  //     </p>
+  //     <div className="relative w-full max-w-[400px]">
+  //       <input
+  //         type="email"
+  //         placeholder="Enter your email"
+  //         className="w-full bg-[#FFFFF163] placeholder-white px-4 h-[56px] rounded-md focus:outline-none focus:ring-2 focus:ring-[#ffffff80] text-white"
+  //       />
+  //       <Button
+  //         css="absolute right-0 top-0 bottom-1 w-[111px] h-[56px] rounded-none!"
+  //         style="danger"
+  //         type="button"
+  //       >
+  //         Subscribe
+  //       </Button>
+  //     </div>
+  //   </div>
+  // );
+
+ <Newsletter />
+  
 
   return (
     <footer className={`${bgColor} px-[20px] md:px-[0px]`}>
@@ -214,7 +226,7 @@ const Footer = ({ bgColor }: FooterProps) => {
                 </h4>
                 <div className="flex flex-col gap-[12px] text-[12px]">
                   <span className="text-white">
-                    charlesjulius.igwe@gmail.com
+                       charles.igwe@ci3pro.ca
                   </span>
                   <SocialIcons />
                 </div>
@@ -235,7 +247,7 @@ const Footer = ({ bgColor }: FooterProps) => {
               <FooterSection title="Contact" isMobile={isMobile}>
                 <div className="flex flex-col gap-[16px] text-[14px]">
                   <span className="text-white">
-                    charlesjulius.igwe@gmail.com
+                    charles.igwe@ci3pro.ca
                   </span>
                   <SocialIcons />
                 </div>

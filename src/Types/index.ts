@@ -1,6 +1,5 @@
 import { PortableTextBlock } from "@portabletext/types";
 
-
 export interface Category {
   _id: string;
   title: string;
