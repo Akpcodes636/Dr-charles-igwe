@@ -41,7 +41,7 @@ const Testimonies = () => {
       role: "Career Transition Coach",
     },
     {
-      image: "/images/Testimonial-1.png",
+      image: "/images/Testimonial-1.jpg",
       text: "“Charles is an exceptional leader, speaker, and educator. His ability to simplify complex ideas and connect with his audience is remarkable, whether he’s presenting or teaching.”",
       name: "Fola F. Alabi",
       role: "Strategic Project Leader",

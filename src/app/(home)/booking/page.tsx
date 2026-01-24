@@ -4,13 +4,13 @@ import Header from "@/app/components/Header";
 import Button from "@/app/components/ui/Button";
 import CheckButton from "@/app/components/ui/checkbox";
 import InputField from "@/app/components/ui/InputField";
-import { useRouter } from "next/navigation"; // import the route
+// import { useRouter } from "next/navigation"; // import the route
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const Booking = () => {
-  const router = useRouter(); // initialize router
+  // const router = useRouter(); // initialize router
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     fullName: "",
@@ -73,7 +73,7 @@ const Booking = () => {
 
     try {
       const formData = new FormData();
-      formData.append("access_key", "9e76435a-6ff4-4026-9335-fafc81148a96");
+      formData.append("access_key", "f2a19cd9-2902-4a38-88ae-bc549f9665d5");
       formData.append("fullName", formValues.fullName);
       // formData.append("lastName", formValues.lastName);
       formData.append("email", formValues.email);
@@ -111,7 +111,7 @@ const Booking = () => {
         });
 
         // Redirect to your Google Calendar link
-        router.push("https://calendar.app.google/hRezLqXgUea8joJFA");
+       window.open("https://calendar.app.google/hRezLqXgUea8joJFA", "_blank");
       } else {
         toast.error("Something went wrong, please try again.");
       }

@@ -351,7 +351,7 @@ export const serviceContent = [
     img: "/images/AKP--161.png",
     title: "Fireside Chat Series",
     text: "Real conversations with global leaders on growth, leadership, and change.",
-    link:"podcast",
+    link:"https://open.spotify.com/show/4J7Xkp2ZPTnmTqW9OTG5xq?si=H6F_y6OURfSKxuq8wjOXAA",
     linkText: "Watch past episodes",
   },
 ];

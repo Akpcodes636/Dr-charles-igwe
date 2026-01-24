@@ -18,6 +18,8 @@ export async function POST(req: Request) {
     const LIST_ID = process.env.MAILCHIMP_LIST_ID;
     const API_KEY = process.env.MAILCHIMP_API_KEY;
     const DATACENTER = API_KEY?.split("-")[1]; // ex: us21
+    
+
 
     if (!LIST_ID || !API_KEY || !DATACENTER) {
       const response: ApiResponse = { message: "Mailchimp environment variables not set" };

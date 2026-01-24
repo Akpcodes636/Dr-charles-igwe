@@ -16,7 +16,7 @@ const Services = () => {
     <section>
       <div>
         <ServicesHero />
-        <div>
+        <div className="">
           <div className=" bg-white pt-[48px] md:pt-[80px] pb-[60px] md:pb-[80px]">
             <h1 className="text-[24px] md:text-[28px] font-medium md:font-semibold text-[#000000] leading-[100%] mb-[8px] md:mb-[8px] text-center">
               What I offer?
@@ -26,7 +26,8 @@ const Services = () => {
               frameworks, and one belief: Leadership is not a title — it&apos;s
               an invitation to build futures that matter.
             </p>
-            <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-[24px]">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[24px] container-sm mx-auto">
               {Servicestext.map((service, i) => (
                 <div key={i} className="">
                   <ServiceCards
@@ -38,6 +39,7 @@ const Services = () => {
                 </div>
               ))}
             </div>
+
             <div>
               <div className="container-sm mx-auto bg-white pt-[96px]">
                 <h1 className="text-[#000000] text-center font-medium text-[24px] md:text-[28px] leading-[100%]">
@@ -92,6 +94,7 @@ const Services = () => {
                       ))}
                     </div>
                     <div className="flex items-center justify-center md:items-start md:justify-start lg:items-start lg:justify-start">
+                      <Link  href="https://discord.gg/TtRttaZv" target="_blank" rel="noopener noreferrer">
                       <Button
                         type="button"
                         style="danger"
@@ -99,6 +102,7 @@ const Services = () => {
                       >
                         Join the Community
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

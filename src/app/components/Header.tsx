@@ -60,9 +60,9 @@ const Header = () => {
   };
   const openNavMenu = () => setOpenNav(true);
 
-  const toggleDropdown = (title: string) => {
-    setOpenDropdown(openDropdown === title ? null : title);
-  };
+ const toggleDropdown = (title: string) => {
+  setOpenDropdown(openDropdown === title ? null : title);
+};
 
   return (
     <header className="bg-transparent md:bg-transparent lg:bg-white xl:bg-white p-[12px]">
@@ -115,9 +115,8 @@ const Header = () => {
                       <button
                         type="button"
                         onClick={() => toggleDropdown(l.title)}
-                        onMouseEnter={() =>
-                          window.innerWidth >= 1024 && setOpenDropdown(l.title)
-                        }
+                        onMouseEnter={() => setOpenDropdown(l.title)}
+                        //  onMouseLeave={() => setOpenDropdown(null)}
                         className="hover:text-black flex items-center justify-center gap-1 cursor-pointer"
                       >
                         {l.title}
@@ -137,7 +136,7 @@ const Header = () => {
                     {l.children && openDropdown === l.title && (
                       <ul
                         onMouseLeave={() =>
-                          window.innerWidth >= 1024 && setOpenDropdown(null)
+                          setOpenDropdown(null)
                         }
                         className="absolute left-0 top-full mt-2 min-w-[180px] flex flex-col bg-white shadow-2xl rounded-lg z-50"
                       >

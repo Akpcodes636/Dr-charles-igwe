@@ -57,6 +57,12 @@ const Newsletter = () => {
         Subscribe to My Newsletter
       </h2>
 
+      {/* <p className="mt-3 text-[12px] leading-[16px] text-[#FFFFFF80]">
+      By subscribing, you agree to receive marketing and promotional emails from us.
+      You can unsubscribe at any time.
+      </p> */}
+
+
       <p className="text-[14px] text-[#FFFFFFA6] mb-4">
         Get insights on leadership, growth, and innovation delivered straight to
         your inbox.
@@ -83,6 +89,11 @@ const Newsletter = () => {
           {loading ? "subscribing..." : "Subscribe"}
         </Button>
       </div>
+
+       <p className="mt-3 text-[14px] text-[#FFFFFFA6]">
+    By subscribing, you agree to receive marketing and promotional emails from
+    us. You can unsubscribe at any time.
+  </p>
     </div>
   );
 };
