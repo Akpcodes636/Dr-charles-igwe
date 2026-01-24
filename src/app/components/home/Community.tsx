@@ -42,7 +42,7 @@ const Community = () => {
                     Listen to the Fireside Chat Podcast
                   </Button>
                 </Link>
-                <Link href="/event">
+                <Link href="/podcast">
                   <Button style="nobg" css="w-[300px] h-[56px]" type="button">
                     Register for Upcoming Events
                   </Button>
