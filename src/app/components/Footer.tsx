@@ -76,7 +76,7 @@ const SocialIcons = () => (
       <IoLogoYoutube size={20} color="white" />
     </Link>
      <Link
-    href="https://discord.gg/TtRttaZv"
+    href="https://discord.gg/h3UuHpR5pP"
     target="_blank"
     rel="noopener noreferrer"
   >

@@ -42,7 +42,7 @@ const Testimonies = () => {
     },
     {
       image: "/images/Testimonial-1.jpg",
-      text: "“Charles is an exceptional leader, speaker, and educator. His ability to simplify complex ideas and connect with his audience is remarkable, whether he’s presenting or teaching.”",
+      text: "Dr.Charles is more than a leader, he is a connector, a motivator, and an innovator who inspires those fortunate enough to work with him”",
       name: "Fola F. Alabi",
       role: "Strategic Project Leader",
     },

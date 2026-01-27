@@ -87,7 +87,7 @@ const Accountability = () => {
               data-aos="fade-left"
               data-aos-delay={200 + AccountabilityText.length * 150}
             >
-              <Link href="https://discord.gg/TtRttaZv" target="_blank" rel="noopener noreferrer">
+              <Link href="https://discord.gg/h3UuHpR5pP" target="_blank" rel="noopener noreferrer">
               <Button type="button" style="danger" css="w-[217px] h-[56px]">
                 Join the Community
               </Button>
