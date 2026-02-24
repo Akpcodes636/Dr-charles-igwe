@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import React, { useState } from "react";
 import Button from "../ui/Button";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { RiTwitterXFill } from "react-icons/ri";
 import { toast } from "sonner";
+import { SiDiscord } from "react-icons/si";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -108,17 +109,33 @@ export default function ContactForm() {
                       Follow us on social media
                     </h3>
                     <div className="flex gap-6 mt-4">
-                      <Link href="#">
-                        <FaFacebookF size={20} color="white" />
-                      </Link>
-                      <Link href="#">
-                        <FaInstagram size={20} color="white" />
-                      </Link>
-                      <Link href="#">
+                      <Link
+                        href="https://x.com/khase24"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <RiTwitterXFill size={20} color="white" />
                       </Link>
-                      <Link href="#">
+                      <Link
+                        href="https://www.instagram.com/khase1712"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaInstagram size={20} color="white" />
+                      </Link>
+                      <Link
+                        href="https://www.linkedin.com/in/charles-igwe/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <FaLinkedinIn size={20} color="white" />
+                      </Link>
+                      <Link
+                        href="https://discord.gg/h3UuHpR5pP"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <SiDiscord size={20} color="white" />
                       </Link>
                     </div>
                   </div>
