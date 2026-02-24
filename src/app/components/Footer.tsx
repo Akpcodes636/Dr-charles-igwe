@@ -103,7 +103,7 @@ const Footer = ({ bgColor }: FooterProps) => {
 
   const NavigationLinks = () => (
     <>
-      {["Home", "About", "Services", "Blog", "Contact Us"].map((item) => (
+      {["Home", "About", "Services", "Blog", "Contact"].map((item) => (
         <Link
           key={item}
           href={`/${item === "Home" ? "" : item.toLowerCase()}`}
