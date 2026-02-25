@@ -310,7 +310,7 @@ export const kingdomContent = [
     img: "/images/Kingdom-3s.png",
     title: "Billy S Mwape",
     text: "Billy is a strategist and agile consultant with 18+ years in banking and mining, specializing in enterprise agility, risk management, and leadership.",
-    link: "https://www.linkedin.com/in/billy-s-mwape-pmp-dac-davsc-89310338/",
+    link: "https://www.linkedin.com/in/billy-s-mwape-pmp-89310338",
   },
   {
     img: "/images/Kingdom-4.png",
